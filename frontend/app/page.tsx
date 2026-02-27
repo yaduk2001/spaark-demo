@@ -127,7 +127,7 @@ export default function Home() {
               {[
                 { title: "Vision", desc: "Our Vision is to become a globally recognized technology enterprise that connects Digital, Finance, Online Commerce, and Blockchain Innovation while providing structured opportunities for customers and partners to build sustainable, High-Growth Online Businesses within the Spaark Ecosystem.", icon: Zap },
                 { title: "Mission", desc: "Our Mission is to develop secure, scalable, and future-ready digital platforms that empower individuals and businesses to participate in the Global Digital Economy through transparent and innovative online business models.", icon: Globe },
-                { title: "Values", desc: "Transparency, Community, and Innovation.", icon: ShieldCheck }
+                { title: "Values", desc: "Clarity. Safety. Reliability. Unity and Innovation embody Spaark's core values.", icon: ShieldCheck }
               ].map((item, i) => (
                 <div key={i} className="card-angular p-6 flex gap-6 hover:bg-white/5 transition-all duration-300 hover:-translate-y-1">
                   <div className="mt-1 w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/30">

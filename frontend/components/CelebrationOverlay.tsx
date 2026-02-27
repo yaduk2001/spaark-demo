@@ -16,8 +16,8 @@ export default function CelebrationOverlay() {
 
         const tryPlayAudio = () => {
             if (!audioRef.current) {
-                const audio = new Audio('/audio/calm-music.mp3');
-                audio.volume = 0.05; // Subtle volume, calm and non-intrusive
+                const audio = new Audio('/audio/AUD-20260227-WA0039.mp3');
+                audio.volume = 0.5; // Clearly audible background music
                 audio.loop = true;
                 audioRef.current = audio;
             }
