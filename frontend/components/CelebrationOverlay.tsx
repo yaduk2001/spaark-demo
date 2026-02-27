@@ -17,8 +17,12 @@ export default function CelebrationOverlay() {
         const tryPlayAudio = () => {
             if (!audioRef.current) {
                 const audio = new Audio('/audio/AUD-20260227-WA0039.mp3');
-                audio.volume = 0.5; // Clearly audible background music
+                audio.volume = 0.5;
                 audio.loop = true;
+                // Lock volume — reset immediately if anything tries to change it
+                audio.addEventListener('volumechange', () => {
+                    if (audio.volume !== 0.5) audio.volume = 0.5;
+                });
                 audioRef.current = audio;
             }
 
