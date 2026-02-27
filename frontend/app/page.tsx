@@ -190,7 +190,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl font-black uppercase tracking-tight text-center text-white mb-16">WHY CHOOSE SPAARK GLOBAL?</h2>
+          <h2 className="text-4xl font-black uppercase tracking-tight text-center text-white mb-16">WHY CHOOSE SPAARK EXCHANGE?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { title: "Decentralized Power", desc: "Full control of your assets with our non-custodial architecture.", icon: Network, image: "/images/7.jpeg" },
@@ -243,7 +243,6 @@ export default function Home() {
                   <div>
                     <p className="text-xs font-bold text-zinc-500 uppercase mb-1">Initial Allocation</p>
                     <p className="text-xl font-black text-white">9000 XSPK Tokens</p>
-                    <p className="text-sm text-zinc-400 mt-1">With $50 Subscription</p>
                   </div>
                   <div>
                     <p className="text-xs font-bold text-[#D4AF37] uppercase mb-1">Activation Condition</p>
@@ -293,9 +292,10 @@ export default function Home() {
                     <div className="md:w-1/3">
                       <p className="text-xl font-bold text-[#D4AF37] uppercase mb-1 drop-shadow-md">Royalty Distribution Criteria</p>
                     </div>
-                    <p className="text-sm text-zinc-300 md:w-2/3 md:text-left border-l md:border-l-0 md:border-r-0 border-white/10 pl-4 md:pl-0">
-                      A $1 Royalty distribution will be directed from each new partner enrolment and added to the Royalty Pool. All such contributions will be accumulated for a full calendar month. At the end of the month, the total accumulated royalty amount will be calculated and distributed among eligible partners based on their rank and fulfillment of the requirement eligibility criteria.
-                    </p>
+                    <div className="text-sm text-zinc-300 md:w-2/3 md:text-left border-l md:border-l-0 md:border-r-0 border-white/10 pl-4 md:pl-0 space-y-2">
+                      <p><span className="text-[#D4AF37] font-bold mr-1">1.</span> A $1 Royalty distribution will be directed from each new partner enrolment and added to the Royalty Pool. All such contributions will be accumulated for a full calendar month.</p>
+                      <p><span className="text-[#D4AF37] font-bold mr-1">2.</span> At the end of the month, the total accumulated royalty amount will be calculated and distributed among eligible partners based on their rank and fulfillment of the requirement eligibility criteria.</p>
+                    </div>
                   </div>
 
                   {/* Levels Grid */}
@@ -360,7 +360,7 @@ export default function Home() {
                 <Coins className="text-[#D4AF37] animate-gold-pulse" size={32} />
                 <h3 className="text-3xl font-black uppercase text-white">EXAMPLE OF COMMUNITY DEVELOPMENT CALCULATION</h3>
               </div>
-              <div className="grid md:grid-cols-2 gap-x-16 gap-y-4 font-mono text-zinc-300">
+              <div className="flex flex-col font-mono text-zinc-300">
                 {[
                   { l: "Direct Reward ($15 x 6)", v: "$90.00" },
                   { l: "Level 1: $0.875 x 6 Team Growth Partners", v: "$5.25" },
