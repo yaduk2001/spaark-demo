@@ -41,7 +41,7 @@ export default function Footer() {
                                 onClick={() => setShowPdfModal(false)}
                                 className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-[#D4AF37] text-black font-black uppercase tracking-wider text-sm hover:bg-[#f0c93a] transition-colors"
                             >
-                                🇬🇧 English
+                                English
                             </a>
                             <a
                                 href="/Spaark Exchange BusinesS PDF/Spaark_Exchange_Hindi.pdf"
@@ -49,7 +49,7 @@ export default function Footer() {
                                 onClick={() => setShowPdfModal(false)}
                                 className="flex items-center justify-center gap-2 w-full py-3 rounded-xl border border-[#D4AF37]/40 bg-[#D4AF37]/10 text-[#D4AF37] font-black uppercase tracking-wider text-sm hover:bg-[#D4AF37]/20 transition-colors"
                             >
-                                🇮🇳 Hindi
+                                Hindi
                             </a>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ export default function Footer() {
                                             className="flex items-center gap-1.5 text-sm text-zinc-500 hover:text-[#FACC15] transition-colors duration-300 font-medium text-left"
                                         >
                                             <FileDown size={13} className="shrink-0" />
-                                            Download Business PDF
+                                            Download Spaark Business PDF
                                         </button>
                                     </li>
                                 </ul>
