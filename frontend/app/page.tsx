@@ -395,8 +395,8 @@ export default function Home() {
                 { reward: "$13.5", label: "2nd Rank Achievement Reward", subtext: "2nd level 36 team growth partners Assistant Manager" },
                 { reward: "$81.00", label: "3rd Rank Achievement Reward", subtext: "3rd 216 team growth partners Manager" },
                 { reward: "$486.00 + Phone", label: "4th Rank Achievement Reward", subtext: "1296 Team Growth Partners Senior Manager" },
-                { reward: "$2,916.00 + Bike", label: "5th Rank Achievement Reward", subtext: "7776 Team Growth Partners Regional Manager" },
-                { reward: "$17,496.00 + Car", label: "6th Rank Achievement Reward", subtext: "46656 Team Growth Partners Director" },
+                { reward: "$2,916.00 or Bike + 4Night & 5Days Singapore Tour", label: "5th Rank Achievement Reward", subtext: "7776 Team Growth Partners Regional Manager" },
+                { reward: "$17,496.00 or Car + 7 Night & 8 Days Switzerland Tour", label: "6th Rank Achievement Reward", subtext: "46656 Team Growth Partners Director" },
               ].map((item, i) => (
                 <div key={i} className="card-premium p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-500">
                   <div className="text-xl font-bold text-white mb-6 min-h-[4rem] flex items-center">{item.subtext}</div>
@@ -418,32 +418,32 @@ export default function Home() {
           <div className="space-y-8">
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2028" title="Spaark XSPK and Token Official Launch" description="Launching of Spaark Token, a proprietary digital asset designed to support ecosystem Transactions, Rewards, and Platform Utility." image="/images/IMG_20260121_204808.jpg" imageFit="cover" />
+                <FuturePlanCard step="2028" title="Official Launch of Spaark Exchange & XSPK Tokens" description="Launching of Spaark Token, a proprietary digital asset designed to support ecosystem Transactions, Rewards, and Platform Utility." image="/images/IMG_20260121_204808.jpg" imageFit="cover" />
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2029" title="Spaark online hub official launch" description="Introduction of a Global Online Market Hub enabling Digital Commerce, Services, and Entrepreneurial participation through Spaark-powered platform." image="/images/IMG_20260121_210255 (1).jpg" isReversed={true} imageFit="contain" />
+                <FuturePlanCard step="2029" title="Official Launch of Spaark Online Market Hub" description="Introduction of a Global Online Market Hub enabling Digital Commerce, Services, and Entrepreneurial participation through Spaark-powered platform." image="/images/IMG_20260121_210255 (1).jpg" isReversed={true} imageFit="contain" />
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2030" title="Spaark online game official launch" description="Expansion into Online Gaming Platforms, integrating Digital Economies and user engagement within the broader Spaark Ecosystem." image="/images/IMG_20260121_204726.jpg" imageFit="cover" />
+                <FuturePlanCard step="2030" title="Official Launch of Spaark Online Games" description="Expansion into Online Gaming Platforms, integrating Digital Economies and user engagement within the broader Spaark Ecosystem. Focused on Kids Education and Cognitive Development." image="/images/IMG_20260121_204726.jpg" imageFit="cover" />
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2031" title="E book library official launch" description="Launch of our comprehensive digital E-book library providing educational resources and content for the global Spaark community." image="/images/IMG_20260121_210255 (1).jpg" isReversed={true} imageFit="cover" />
+                <FuturePlanCard step="2031" title="Official Launch of Spaark E-Book Library" description="Launch of our comprehensive digital E-book library providing educational resources and content for the global Spaark community." image="/images/IMG_20260121_210255 (1).jpg" isReversed={true} imageFit="cover" />
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2032" title="Spaark Exchange" description="Launch of Spaark Exchange. In 2032, XSPK Coins will be listed on up to seven international crypto exchanges. Alongside this milestone, development of the Spaark Network Blockchain will officially commence." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
+                <FuturePlanCard step="2032" title="Spaark Exchange" description="Launch of Spaark Exchange. XSPK Coins will be listed on up to seven international crypto exchanges. Alongside this milestone, development of the Spaark Network Blockchain will officially commence." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2036" title="Spaark Blockchain officially launching" description="Deployment of Spaark Blockchain, a proprietary blockchain infrastructure focused on security, scalability, and enterprise-grade performance." image="/images/IMG_20260121_204921.jpg" isReversed={true} imageFit="cover" />
+                <FuturePlanCard step="2036" title="Spaark Blockchain officially launching" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. The Smart Blockchain Backend will be started in 2032, and XSPK Tokens will be converted into XSPK Coins. Alongside this milestone, XSPK Coins will be listed on up to seven international crypto exchanges." image="/images/IMG_20260121_204921.jpg" isReversed={true} imageFit="cover" />
               </div>
             </div>
           </div>
