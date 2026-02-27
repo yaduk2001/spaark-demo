@@ -400,7 +400,18 @@ export default function Home() {
               ].map((item, i) => (
                 <div key={i} className="card-premium p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-500">
                   <div className="text-xl font-bold text-white mb-6 min-h-[4rem] flex items-center">{item.subtext}</div>
-                  <div className="text-4xl font-black text-[#D4AF37] mb-6 animate-gold-pulse">{item.reward}</div>
+                  {item.reward.includes(" or ") ? (() => {
+                    const [cash, physical] = item.reward.split(" or ");
+                    return (
+                      <div className="mb-6 flex flex-col items-center gap-2">
+                        <div className="text-4xl font-black text-[#D4AF37] animate-gold-pulse">{cash}</div>
+                        <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest">or</div>
+                        <div className="text-sm font-bold text-white bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-xl px-4 py-2 leading-snug">{physical}</div>
+                      </div>
+                    );
+                  })() : (
+                    <div className="text-4xl font-black text-[#D4AF37] mb-6 animate-gold-pulse">{item.reward}</div>
+                  )}
                   <div className="mt-auto px-4 py-2 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-wider text-zinc-400">{item.label}</div>
                 </div>
               ))}
