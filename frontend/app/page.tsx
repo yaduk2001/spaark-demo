@@ -9,7 +9,6 @@ import MembershipCounter from "@/components/MembershipCounter";
 import FuturePlanCard from "@/components/FuturePlanCard";
 import Footer from "@/components/Footer";
 import WhitepaperSection from "@/components/WhitepaperSection";
-import CelebrationOverlay from '@/components/CelebrationOverlay';
 import SparkCoin from "@/components/SparkCoin";
 
 // CORPORATE FADE ANIMATION
@@ -21,7 +20,6 @@ const fadeInUp: Variants = {
 export default function Home() {
   return (
     <div className="bg-rich-pattern min-h-screen text-white font-sans overflow-x-hidden selection:bg-[#BF953F]/30 relative">
-      <CelebrationOverlay />
 
       {/* CIRCUIT PATTERN BACKGROUND (PDF Style) */}
       <div className="fixed inset-0 pointer-events-none z-0 opacity-10"
@@ -400,13 +398,14 @@ export default function Home() {
               ].map((item, i) => (
                 <div key={i} className="card-premium p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-500">
                   <div className="text-xl font-bold text-white mb-6 min-h-[4rem] flex items-center">{item.subtext}</div>
-                  {item.reward.includes(" or ") ? (() => {
-                    const [cash, physical] = item.reward.split(" or ");
+                  {item.reward.includes("Tour") ? (() => {
+                    const plusIdx = item.reward.indexOf(" + ");
+                    const main = item.reward.substring(0, plusIdx);
+                    const tour = item.reward.substring(plusIdx + 3);
                     return (
                       <div className="mb-6 flex flex-col items-center gap-2">
-                        <div className="text-4xl font-black text-[#D4AF37] animate-gold-pulse">{cash}</div>
-                        <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest">or</div>
-                        <div className="text-sm font-bold text-white bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-xl px-4 py-2 leading-snug">{physical}</div>
+                        <div className="text-4xl font-black text-[#D4AF37] animate-gold-pulse">{main}</div>
+                        <div className="text-sm font-bold text-white bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-xl px-4 py-2 leading-snug">+ {tour}</div>
                       </div>
                     );
                   })() : (
@@ -454,7 +453,7 @@ export default function Home() {
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2036" title="Spaark Blockchain officially launching" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. The Smart Blockchain Backend will be started in 2032, and XSPK Tokens will be converted into XSPK Coins. Alongside this milestone, XSPK Coins will be listed on up to seven international crypto exchanges." image="/images/IMG_20260121_204921.jpg" isReversed={true} imageFit="cover" />
+                <FuturePlanCard step="2036" title="Official Launch of Spaark Blockchain" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. The Smart Blockchain Backend will be started in 2032, and XSPK Tokens will be converted into XSPK Coins. Alongside this milestone, XSPK Coins will be listed on up to seven international crypto exchanges." image="/images/IMG_20260121_204921.jpg" isReversed={true} imageFit="cover" />
               </div>
             </div>
           </div>

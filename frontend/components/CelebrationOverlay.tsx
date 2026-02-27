@@ -17,7 +17,7 @@ export default function CelebrationOverlay() {
         const tryPlayAudio = () => {
             if (!audioRef.current) {
                 const audio = new Audio('/audio/calm-music.mp3');
-                audio.volume = 0.02; // Very light volume, only noticed if concentrated
+                audio.volume = 0.05; // Subtle volume, calm and non-intrusive
                 audio.loop = true;
                 audioRef.current = audio;
             }
