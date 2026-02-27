@@ -158,7 +158,7 @@ export default function Home() {
             <div className="card-premium p-2 py-5 transform hover:scale-[1.02] transition-all duration-500 border-glow-animated overflow-visible">
               <SubscriptionPriceCard
                 title="Global Pro"
-                price="$53.05"
+                price="$53.50"
                 isPopular={true}
                 features={[
                   "Entry level access",
