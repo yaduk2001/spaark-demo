@@ -1,0 +1,76 @@
+/* Add to end of globals.css */
+
+/* BENTO GRID */
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* BUTTONS */
+.btn-pill {
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    background: white;
+    color: black;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.875rem;
+    transition: all 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-pill-outline {
+    padding: 1rem 2.5rem;
+    border-radius: 9999px;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-weight: 900;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    padding: 0.875rem 2rem;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.space-y-8>*+* {
+    margin-top: 2rem;
+}
+
+.lg\:mix-blend-normal {
+    mix-blend-mode: normal;
+}
+
+.sm\:flex-row {
+    flex-direction: column;
+}
+
+@media (min-width: 640px) {
+    .sm\:flex-row {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1024px) {
+    .lg\:pt-48 {
+        padding-top: 12rem;
+    }
+}
