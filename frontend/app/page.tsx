@@ -387,33 +387,88 @@ export default function Home() {
           <div className="mb-20">
             <h3 className="text-4xl font-black uppercase text-center text-white mb-2 mt-12">RANK ACHIEVERS REWARDS</h3>
             <p className="text-center text-zinc-500 font-bold tracking-widest uppercase mb-12">Eligible for Spaark Staking Community Only</p>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6">
               {[
-                { reward: "$2.25", label: "1st Rank Achievement Reward", subtext: "1st Direct 6 enrollment Supervisor" },
-                { reward: "$13.5", label: "2nd Rank Achievement Reward", subtext: "2nd level 36 team growth partners Assistant Manager" },
-                { reward: "$81.00", label: "3rd Rank Achievement Reward", subtext: "3rd 216 team growth partners Manager" },
-                { reward: "$486.00 + Phone", label: "4th Rank Achievement Reward", subtext: "1296 Team Growth Partners Senior Manager" },
-                { reward: "$2,916.00 or Bike + 4Night & 5Days Singapore Tour", label: "5th Rank Achievement Reward", subtext: "7776 Team Growth Partners Regional Manager" },
-                { reward: "$17,496.00 or Car + 7 Night & 8 Days Switzerland Tour", label: "6th Rank Achievement Reward", subtext: "46656 Team Growth Partners Director" },
-              ].map((item, i) => (
-                <div key={i} className="card-premium p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-500">
-                  <div className="text-xl font-bold text-white mb-6 min-h-[4rem] flex items-center">{item.subtext}</div>
-                  {item.reward.includes("Tour") ? (() => {
-                    const plusIdx = item.reward.indexOf(" + ");
-                    const main = item.reward.substring(0, plusIdx);
-                    const tour = item.reward.substring(plusIdx + 3);
-                    return (
-                      <div className="mb-6 flex flex-col items-center gap-2">
-                        <div className="text-4xl font-black text-[#D4AF37] animate-gold-pulse">{main}</div>
-                        <div className="text-sm font-bold text-white bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-xl px-4 py-2 leading-snug">+ {tour}</div>
+                { desc: "1st Direct 6 Enrollment", rank: "Supervisor", reward: "$2.25", label: "1st Rank Achievement Reward" },
+                { desc: "2nd level 36 Team Growth Partners", rank: "Assistant Manager", reward: "$13.5", label: "2nd Rank Achievement Reward" },
+                { desc: "3rd 216 Team Growth Partners", rank: "Manager", reward: "$81.00", label: "3rd Rank Achievement Reward" },
+                { desc: "1296 Team Growth Partners", rank: "Senior Manager", reward: "$486.00 + Phone", label: "4th Rank Achievement Reward" },
+                { desc: "7776 Team Growth Partners", rank: "Regional Manager", reward: "$2,916.00 or Bike + 4Night & 5Days Singapore Tour", label: "5th Rank Achievement Reward" },
+                { desc: "46656 Team Growth Partners", rank: "Director", reward: "$17,496.00 or Car + 7 Night & 8 Days Switzerland Tour", label: "6th Rank Achievement Reward" },
+              ].map((item, i) => {
+                const hasTour = item.reward.includes("Tour");
+                const hasOr = item.reward.includes(" or ");
+                let mainReward = item.reward;
+                let tourPart = "";
+                if (hasTour) {
+                  const plusIdx = item.reward.indexOf(" + ");
+                  mainReward = item.reward.substring(0, plusIdx);
+                  tourPart = item.reward.substring(plusIdx + 3);
+                }
+                // Extract cash and physical for "or" rewards
+                let cashPart = mainReward;
+                let physicalPart = "";
+                if (hasOr && hasTour) {
+                  const orIdx = mainReward.indexOf(" or ");
+                  cashPart = mainReward.substring(0, orIdx);
+                  physicalPart = mainReward.substring(orIdx + 4);
+                }
+
+                return (
+                  <div key={i} className="relative flex flex-col items-center text-center p-6 bg-black/80 border border-[#D4AF37]/40 rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 group">
+                    {/* Sparkle bg */}
+                    <div className="absolute inset-0 pointer-events-none opacity-20 group-hover:opacity-30 transition-opacity"
+                      style={{ backgroundImage: 'radial-gradient(#D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
+                    {/* Corner ornaments */}
+                    <span className="absolute top-2 left-2 text-[#D4AF37]/60 text-lg leading-none select-none">✦</span>
+                    <span className="absolute top-2 right-2 text-[#D4AF37]/60 text-lg leading-none select-none">✦</span>
+                    <span className="absolute bottom-2 left-2 text-[#D4AF37]/60 text-lg leading-none select-none">✦</span>
+                    <span className="absolute bottom-2 right-2 text-[#D4AF37]/60 text-lg leading-none select-none">✦</span>
+
+                    <div className="relative z-10 flex flex-col items-center w-full">
+                      {/* Description */}
+                      <p className="text-sm text-white/80 font-medium mb-3 leading-snug">{item.desc}</p>
+
+                      {/* Decorative divider */}
+                      <div className="flex items-center w-full gap-2 mb-3">
+                        <div className="flex-1 h-px bg-[#D4AF37]/50" />
+                        <span className="text-[#D4AF37] text-xs">◆</span>
+                        <div className="flex-1 h-px bg-[#D4AF37]/50" />
                       </div>
-                    );
-                  })() : (
-                    <div className="text-4xl font-black text-[#D4AF37] mb-6 animate-gold-pulse">{item.reward}</div>
-                  )}
-                  <div className="mt-auto px-4 py-2 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-wider text-zinc-400">{item.label}</div>
-                </div>
-              ))}
+
+                      {/* Rank title — Playfair Display italic */}
+                      <h3 className="text-4xl font-bold italic text-[#D4AF37] leading-tight mb-1"
+                        style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
+                        {item.rank}
+                      </h3>
+
+                      {/* Decorative divider */}
+                      <div className="flex items-center w-full gap-2 mt-3 mb-4">
+                        <div className="flex-1 h-px bg-[#D4AF37]/50" />
+                        <span className="text-[#D4AF37] text-xs">◆</span>
+                        <div className="flex-1 h-px bg-[#D4AF37]/50" />
+                      </div>
+
+                      {/* Reward */}
+                      {hasTour ? (
+                        <div className="flex flex-col items-center gap-1 mb-4">
+                          <div className="text-3xl font-black text-[#D4AF37]">{cashPart}</div>
+                          <div className="text-xs font-bold text-zinc-400 uppercase tracking-widest">or</div>
+                          <div className="text-xs font-bold text-white uppercase tracking-wide">{physicalPart}</div>
+                          <div className="mt-1 text-xs font-semibold text-[#D4AF37]/80 bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-lg px-3 py-1">+ {tourPart}</div>
+                        </div>
+                      ) : (
+                        <div className="text-3xl font-black text-[#D4AF37] mb-4">{item.reward}</div>
+                      )}
+
+                      {/* Label badge */}
+                      <div className="mt-auto px-4 py-2 rounded-lg border border-[#D4AF37]/30 bg-[#D4AF37]/5 text-[10px] font-black uppercase tracking-widest text-zinc-400 w-full">
+                        {item.label}
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
