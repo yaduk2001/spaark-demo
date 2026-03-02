@@ -400,46 +400,6 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent w-full" />
-
-              {/* SECTION 3: Withdrawal Income */}
-              <div>
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/40 shrink-0">
-                    <Coins size={24} />
-                  </div>
-                  <h3 className="text-2xl font-black text-white uppercase tracking-wider">Withdrawal Income</h3>
-                </div>
-                <div className="bg-black/40 rounded-2xl p-6 border border-white/5 space-y-6">
-                  {/* Highlighted Royalty Pool */}
-                  <div className="bg-[#D4AF37]/10 border border-[#D4AF37]/30 rounded-xl p-6 flex flex-col md:flex-row justify-between gap-4">
-                    <div className="md:w-1/3">
-                      <p className="text-xl font-bold text-[#D4AF37] uppercase mb-1 drop-shadow-md">Royalty Distribution Criteria</p>
-                    </div>
-                    <div className="text-sm text-zinc-300 md:w-2/3 md:text-left border-l md:border-l-0 md:border-r-0 border-white/10 pl-4 md:pl-0 space-y-2">
-                      <p><span className="text-[#D4AF37] font-bold mr-1">1.</span> A $1 Royalty distribution will be directed from each new partner enrolment and added to the Royalty Pool. All such contributions will be accumulated for a full calendar month.</p>
-                      <p><span className="text-[#D4AF37] font-bold mr-1">2.</span> At the end of the month, the total accumulated royalty amount will be calculated and distributed among eligible partners based on their rank and fulfillment of the requirement eligibility criteria.</p>
-                    </div>
-                  </div>
-
-                  {/* Levels Grid */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    {[
-                      { level: "Level 1: Manager", value: "10%", req: "1 direct referral" },
-                      { level: "Level 2: Sr. Manager", value: "20%", req: "2 direct referrals" },
-                      { level: "Level 3: Reg. Manager", value: "30%", req: "3 direct referrals" },
-                      { level: "Level 4: Director", value: "40%", req: "3 direct referrals" }
-                    ].map((tier, i) => (
-                      <div key={i} className="bg-white/5 rounded-xl p-4 text-center border border-white/5 pointer-events-none">
-                        <p className="text-xs font-bold text-zinc-400 uppercase mb-2">{tier.level}</p>
-                        <p className="text-xl font-black text-white mb-2">{tier.value}</p>
-                        <p className="text-[10px] text-zinc-500 uppercase tracking-widest leading-tight">{tier.req}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
             </div>
           </div>
 
@@ -651,6 +611,36 @@ export default function Home() {
                   </div>
                 </div>
 
+              </div>
+            </div>
+          </div>
+
+          {/* Withdrawal Income */}
+          <div className="mb-20">
+            <h3 className="text-4xl font-black uppercase text-center text-white mb-12">WITHDRAWAL INCOME</h3>
+            <div className="card-premium p-6 md:p-8 lg:p-12 gold-glow-strong overflow-hidden relative border border-[#D4AF37]/30">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/40 shrink-0">
+                  <Coins size={24} />
+                </div>
+                <h4 className="text-2xl font-black text-white uppercase tracking-wider">Withdrawal Income</h4>
+              </div>
+              <p className="text-zinc-400 leading-relaxed mb-8 border-l-2 border-[#D4AF37]/50 pl-4">
+                Partners are eligible to withdraw income based on their achieved rank level. The percentage below reflects the share of the royalty pool distributed monthly to each qualifying rank.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                {[
+                  { level: "Level 1: Manager", value: "10%", req: "1 direct referral" },
+                  { level: "Level 2: Sr. Manager", value: "20%", req: "2 direct referrals" },
+                  { level: "Level 3: Reg. Manager", value: "30%", req: "3 direct referrals" },
+                  { level: "Level 4: Director", value: "40%", req: "3 direct referrals" }
+                ].map((tier, i) => (
+                  <div key={i} className="bg-black/40 rounded-xl p-5 text-center border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-colors">
+                    <p className="text-xs font-bold text-zinc-400 uppercase mb-3">{tier.level}</p>
+                    <p className="text-3xl font-black text-[#D4AF37] mb-2">{tier.value}</p>
+                    <p className="text-[10px] text-zinc-500 uppercase tracking-widest leading-tight">{tier.req}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
