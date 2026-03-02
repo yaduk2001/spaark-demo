@@ -228,7 +228,7 @@ export default function Home() {
         {/* Abstract Background element */}
         <div className="absolute top-0 right-0 w-full h-[600px] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#D4AF37]/10 via-zinc-950 to-zinc-950 pointer-events-none -z-10" />
 
-        <div className="max-w-4xl mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black uppercase text-white tracking-tight mb-4 text-center">
               The Power Behind <span className="text-[#D4AF37]">Spaark Exchange</span>
@@ -236,31 +236,31 @@ export default function Home() {
             <div className="h-1 w-24 bg-[#D4AF37] mx-auto shadow-[0_0_15px_rgba(212,175,55,0.4)]" />
           </div>
 
-          <div className="space-y-6">
-            <div className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 transition-all duration-300">
-              <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">Scalable</h3>
-              <p className="text-zinc-400 font-medium leading-relaxed text-lg">Multi-platform growth architecture designed to expand seamlessly across global markets and diverse user segments.</p>
-            </div>
+          {/* Row 1: 3 cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            {[
+              { title: "Scalable", desc: "Multi-platform growth architecture designed to expand seamlessly across global markets and diverse user segments." },
+              { title: "Platforms", desc: "Modular digital infrastructure enabling flexible integration of new technologies and business models." },
+              { title: "Advancing", desc: "Real-time innovation through continuous development, testing, and deployment of blockchain solutions." },
+            ].map((card, i) => (
+              <div key={i} className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center min-h-[200px]">
+                <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-3">{card.title}</h3>
+                <p className="text-zinc-400 font-medium leading-relaxed">{card.desc}</p>
+              </div>
+            ))}
+          </div>
 
-            <div className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 transition-all duration-300">
-              <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">Platforms</h3>
-              <p className="text-zinc-400 font-medium leading-relaxed text-lg">Modular digital infrastructure enabling flexible integration of new technologies and business models.</p>
-            </div>
-
-            <div className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 transition-all duration-300">
-              <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">Advancing</h3>
-              <p className="text-zinc-400 font-medium leading-relaxed text-lg">Real-time innovation through continuous development, testing, and deployment of blockchain solutions.</p>
-            </div>
-
-            <div className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 transition-all duration-300">
-              <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">Revolutionary</h3>
-              <p className="text-zinc-400 font-medium leading-relaxed text-lg">Empowering global users with decentralized tools that challenge traditional financial systems and unlock new opportunities.</p>
-            </div>
-
-            <div className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 transition-all duration-300">
-              <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">Knowledge</h3>
-              <p className="text-zinc-400 font-medium leading-relaxed text-lg">Community-driven insights fuelling education, collaboration, and shared growth across the SPARK ecosystem.</p>
-            </div>
+          {/* Row 2: 2 cards centered */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:max-w-3xl md:mx-auto">
+            {[
+              { title: "Revolutionary", desc: "Empowering global users with decentralized tools that challenge traditional financial systems and unlock new opportunities." },
+              { title: "Knowledge", desc: "Community-driven insights fuelling education, collaboration, and shared growth across the SPARK ecosystem." },
+            ].map((card, i) => (
+              <div key={i} className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center min-h-[200px]">
+                <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-3">{card.title}</h3>
+                <p className="text-zinc-400 font-medium leading-relaxed">{card.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
