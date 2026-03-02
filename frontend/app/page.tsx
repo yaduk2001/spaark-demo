@@ -173,45 +173,13 @@ export default function Home() {
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2032" title="Spaark Exchange" description="Launch of Spaark Exchange. XSPK Coins will be listed on up to seven international crypto exchanges. Alongside this milestone, development of the Spaark Network Blockchain will officially commence." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
+                <FuturePlanCard step="2032" title="Spaark's Own Blockchain Network" description="The Smart Blockchain Backend will be started in 2032. Launch of Spaark Exchange. XSPK Coins will be listed on up to seven international crypto exchanges. Alongside this milestone, development of the Spaark Network Blockchain will officially commence." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2036" title="Official Launch of Spaark Blockchain" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. The Smart Blockchain Backend will be started in 2032, and XSPK Tokens will be converted into XSPK Coins. Alongside this milestone, XSPK Coins will be listed on up to seven international crypto exchanges." image="/images/IMG_20260121_204921.jpg" isReversed={true} imageFit="cover" />
+                <FuturePlanCard step="2036" title="Official Launch of Spaark Blockchain" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. XSPK Tokens will be converted into XSPK Coins. Alongside this milestone, XSPK Coins will be listed on up to seven international crypto exchanges." image="/images/IMG_20260121_204921.jpg" isReversed={true} imageFit="cover" />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Subscription Section */}
-      <section className="py-20 px-6 relative z-10 pattern-geometric overflow-visible" id="subscription">
-
-
-        <div className="max-w-7xl mx-auto overflow-visible relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-2">ACCESS THE FUTURE</h2>
-            <p className="text-[#D4AF37] font-bold uppercase tracking-widest text-sm">Choose your entry point</p>
-          </div>
-
-          <div className="max-w-md mx-auto overflow-visible">
-            <div className="card-premium p-2 py-5 transform hover:scale-[1.02] transition-all duration-500 border-glow-animated overflow-visible">
-              <SubscriptionPriceCard
-                title="Global Pro"
-                price="$53.50"
-                isPopular={true}
-                features={[
-                  "Entry level access",
-                  "Community participation",
-                  "royalty reward eligibility",
-                  "XSPK Token Purchase Access",
-                  "9000 Spaark XSPK Tokens included",
-                  "Full Staking Rewards",
-                  "24/7 Priority Support"
-                ]}
-                delay={0.2}
-              />
             </div>
           </div>
         </div>
@@ -249,6 +217,38 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Subscription Section */}
+      <section className="py-20 px-6 relative z-10 pattern-geometric overflow-visible" id="subscription">
+
+
+        <div className="max-w-7xl mx-auto overflow-visible relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-2">ACCESS THE FUTURE</h2>
+            <p className="text-[#D4AF37] font-bold uppercase tracking-widest text-sm">Choose your entry point</p>
+          </div>
+
+          <div className="max-w-md mx-auto overflow-visible">
+            <div className="card-premium p-2 py-5 transform hover:scale-[1.02] transition-all duration-500 border-glow-animated overflow-visible">
+              <SubscriptionPriceCard
+                title="Global Pro"
+                price="$53.50"
+                isPopular={true}
+                features={[
+                  "Entry level access",
+                  "Community participation",
+                  "royalty reward eligibility",
+                  "XSPK Token Purchase Access",
+                  "9000 Spaark XSPK Tokens included",
+                  "Full Staking Rewards",
+                  "24/7 Priority Support"
+                ]}
+                delay={0.2}
+              />
+            </div>
           </div>
         </div>
       </section>
