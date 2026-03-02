@@ -394,10 +394,10 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative z-10 p-8 lg:p-12 border border-white/10 rounded-3xl gold-glow-strong">
-              <div className="flex items-center gap-4 mb-8">
-                <Coins className="text-[#D4AF37] animate-gold-pulse" size={32} />
-                <h3 className="text-3xl font-black uppercase text-white">EXAMPLE OF COMMUNITY DEVELOPMENT CALCULATION</h3>
+            <div className="relative z-10 p-4 sm:p-6 lg:p-12 border border-white/10 rounded-3xl gold-glow-strong">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6 sm:mb-8 text-center sm:text-left">
+                <Coins className="text-[#D4AF37] animate-gold-pulse shrink-0" size={32} />
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black uppercase text-white">EXAMPLE OF COMMUNITY DEVELOPMENT CALCULATION</h3>
               </div>
               <div className="flex flex-col font-mono text-zinc-300">
                 {[
@@ -409,16 +409,16 @@ export default function Home() {
                   { l: "Level 5: $1.75 x 7,776 Team Growth Partners", v: "$13,608.00" },
                   { l: "Level 6: $2.625 x 46,656 Team Growth Partners", v: "$122,472.00" },
                 ].map((r, i) => (
-                  <div key={i} className="flex justify-between border-b border-white/10 py-3 text-zinc-300">
-                    <span className="drop-shadow-[0_2px_2px_rgba(0,0,0,1)]">{r.l}</span>
-                    <span className="font-black drop-shadow-[0_2px_3px_rgba(0,0,0,1)] text-white">
+                  <div key={i} className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-4 border-b border-white/10 py-3 text-zinc-300">
+                    <span className="drop-shadow-[0_2px_2px_rgba(0,0,0,1)] text-xs sm:text-sm md:text-base">{r.l}</span>
+                    <span className="font-black drop-shadow-[0_2px_3px_rgba(0,0,0,1)] text-white text-left sm:text-right text-sm sm:text-base">
                       {r.v}
                     </span>
                   </div>
                 ))}
-                <div className="col-span-full mt-6 p-6 rounded-xl bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex justify-between items-center gold-glow-strong">
-                  <span className="text-white font-black uppercase tracking-widest text-xl">Total team building earning</span>
-                  <span className="text-white font-black text-4xl">$138,191.25</span>
+                <div className="col-span-full mt-6 p-4 sm:p-6 rounded-xl bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-0 gold-glow-strong">
+                  <span className="text-white font-black uppercase tracking-widest text-xs sm:text-sm lg:text-xl">Total team building earning</span>
+                  <span className="text-white font-black text-2xl sm:text-3xl lg:text-4xl">$138,191.25</span>
                 </div>
               </div>
             </div>
