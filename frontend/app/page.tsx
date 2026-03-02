@@ -187,6 +187,84 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Spark with Geometric Background */}
+      <section className="py-20 px-6 bg-zinc-900/20 z-10 relative pattern-circuit overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/3.jpeg"
+            alt="Geometric Patterns"
+            fill
+            className="object-cover opacity-5"
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-center text-white mb-16">WHY CHOOSE SPAARK EXCHANGE?</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { title: "Decentralized Power", desc: "Full control of your assets with our non-custodial architecture.", icon: Network, image: "/images/7.jpeg" },
+              { title: "Instant Rewards", desc: "Real-time settlement for all community and staking rewards.", icon: Zap, image: "/images/6.jpeg" },
+              { title: "Global Community", desc: "Join a network of thousands of like-minded innovators.", icon: Users, image: "/images/4.jpeg" }
+            ].map((card, i) => (
+              <div key={i} className="card-angular p-10 flex flex-col items-center text-center hover:-translate-y-2 transition-all duration-300 gold-glow relative overflow-hidden group">
+                <div className="absolute inset-0 opacity-50 group-hover:opacity-70 transition-opacity">
+                  <Image src={card.image} alt={card.title} fill className="object-cover" />
+                </div>
+                <div className="relative z-10">
+                  <div className="w-20 h-20 rounded-full bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] mb-6 border border-[#D4AF37]/40 animate-gold-pulse">
+                    <card.icon size={36} />
+                  </div>
+                  <h3 className="text-2xl font-bold text-white uppercase italic mb-4">{card.title}</h3>
+                  <p className="text-zinc-400 font-medium leading-relaxed">{card.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* The Power Behind Spaark Exchange */}
+      <section className="py-20 px-6 bg-zinc-900/10 relative z-10 border-t border-white/5 overflow-hidden">
+        {/* Abstract Background element */}
+        <div className="absolute top-0 right-0 w-full h-[600px] bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-[#D4AF37]/10 via-zinc-950 to-zinc-950 pointer-events-none -z-10" />
+
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-black uppercase text-white tracking-tight mb-4 text-center">
+              The Power Behind <span className="text-[#D4AF37]">Spaark Exchange</span>
+            </h2>
+            <div className="h-1 w-24 bg-[#D4AF37] mx-auto shadow-[0_0_15px_rgba(212,175,55,0.4)]" />
+          </div>
+
+          <div className="space-y-6">
+            <div className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 transition-all duration-300">
+              <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">Scalable</h3>
+              <p className="text-zinc-400 font-medium leading-relaxed text-lg">Multi-platform growth architecture designed to expand seamlessly across global markets and diverse user segments.</p>
+            </div>
+
+            <div className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 transition-all duration-300">
+              <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">Platforms</h3>
+              <p className="text-zinc-400 font-medium leading-relaxed text-lg">Modular digital infrastructure enabling flexible integration of new technologies and business models.</p>
+            </div>
+
+            <div className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 transition-all duration-300">
+              <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">Advancing</h3>
+              <p className="text-zinc-400 font-medium leading-relaxed text-lg">Real-time innovation through continuous development, testing, and deployment of blockchain solutions.</p>
+            </div>
+
+            <div className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 transition-all duration-300">
+              <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">Revolutionary</h3>
+              <p className="text-zinc-400 font-medium leading-relaxed text-lg">Empowering global users with decentralized tools that challenge traditional financial systems and unlock new opportunities.</p>
+            </div>
+
+            <div className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 transition-all duration-300">
+              <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-2">Knowledge</h3>
+              <p className="text-zinc-400 font-medium leading-relaxed text-lg">Community-driven insights fuelling education, collaboration, and shared growth across the SPARK ecosystem.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Future Plans */}
       <section className="py-20 px-6 bg-zinc-900/40 relative z-10 pattern-overlay">
         <div className="max-w-7xl mx-auto">
@@ -224,42 +302,6 @@ export default function Home() {
                 <FuturePlanCard step="2036" title="Official Launch of Spaark Blockchain" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. XSPK Tokens will be converted into XSPK Coins. This milestone focuses on exponentially boosting the network's scalability, security, and global transaction speed. It empowers developers to build within the Spaark ecosystem." image="/images/IMG_20260121_204921.jpg" isReversed={true} imageFit="cover" />
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Why Choose Spark with Geometric Background */}
-      <section className="py-20 px-6 bg-zinc-900/20 z-10 relative pattern-circuit overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/3.jpeg"
-            alt="Geometric Patterns"
-            fill
-            className="object-cover opacity-5"
-          />
-        </div>
-
-        <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-center text-white mb-16">WHY CHOOSE SPAARK EXCHANGE?</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: "Decentralized Power", desc: "Full control of your assets with our non-custodial architecture.", icon: Network, image: "/images/7.jpeg" },
-              { title: "Instant Rewards", desc: "Real-time settlement for all community and staking rewards.", icon: Zap, image: "/images/6.jpeg" },
-              { title: "Global Community", desc: "Join a network of thousands of like-minded innovators.", icon: Users, image: "/images/4.jpeg" }
-            ].map((card, i) => (
-              <div key={i} className="card-angular p-10 flex flex-col items-center text-center hover:-translate-y-2 transition-all duration-300 gold-glow relative overflow-hidden group">
-                <div className="absolute inset-0 opacity-50 group-hover:opacity-70 transition-opacity">
-                  <Image src={card.image} alt={card.title} fill className="object-cover" />
-                </div>
-                <div className="relative z-10">
-                  <div className="w-20 h-20 rounded-full bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] mb-6 border border-[#D4AF37]/40 animate-gold-pulse">
-                    <card.icon size={36} />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white uppercase italic mb-4">{card.title}</h3>
-                  <p className="text-zinc-400 font-medium leading-relaxed">{card.desc}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
