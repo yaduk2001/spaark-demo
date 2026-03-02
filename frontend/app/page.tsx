@@ -239,11 +239,11 @@ export default function Home() {
           {/* Row 1: 3 cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             {[
-              { title: "Scalable", desc: "Multi-platform growth architecture designed to expand seamlessly across global markets and diverse user segments.", image: "/images/IMG_20260302_151619.png", pos: "center center" },
-              { title: "Platforms", desc: "Modular digital infrastructure enabling flexible integration of new technologies and business models.", image: "/images/IMG_20260302_151705.png", pos: "center center" },
-              { title: "Advancing", desc: "Real-time innovation through continuous development, testing, and deployment of blockchain solutions.", image: "/images/IMG_20260302_152019.png", pos: "30% center" },
+              { title: "Scalable", desc: "Multi-platform growth architecture designed to expand seamlessly across global markets and diverse user segments.", image: "/images/IMG_20260302_151619.png", pos: "center top" },
+              { title: "Platforms", desc: "Modular digital infrastructure enabling flexible integration of new technologies and business models.", image: "/images/IMG_20260302_151705.png", pos: "center top" },
+              { title: "Advancing", desc: "Real-time innovation through continuous development, testing, and deployment of blockchain solutions.", image: "/images/IMG_20260302_152019.png", pos: "center top" },
             ].map((card, i) => (
-              <div key={i} className="card-angular border-l-4 border-l-[#D4AF37] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center min-h-[220px] relative overflow-hidden group">
+              <div key={i} className="card-angular border-l-4 border-l-[#D4AF37] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-end min-h-[280px] relative overflow-hidden group">
                 <div className="absolute inset-0 z-0">
                   <Image
                     src={card.image}
@@ -262,13 +262,13 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Row 2: 2 cards centered */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:max-w-3xl md:mx-auto">
+          {/* Row 2: 2 cards aligned under first 2 columns */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              { title: "Revolutionary", desc: "Empowering global users with decentralized tools that challenge traditional financial systems and unlock new opportunities.", image: "/images/IMG_20260302_151934.png", pos: "center center" },
-              { title: "Knowledge", desc: "Community-driven insights fuelling education, collaboration, and shared growth across the SPARK ecosystem.", image: "/images/IMG_20260302_152103.png", pos: "center center" },
+              { title: "Revolutionary", desc: "Empowering global users with decentralized tools that challenge traditional financial systems and unlock new opportunities.", image: "/images/IMG_20260302_151934.png", pos: "center top" },
+              { title: "Knowledge", desc: "Community-driven insights fuelling education, collaboration, and shared growth across the SPARK ecosystem.", image: "/images/IMG_20260302_152103.png", pos: "center top" },
             ].map((card, i) => (
-              <div key={i} className="card-angular border-l-4 border-l-[#D4AF37] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center min-h-[220px] relative overflow-hidden group">
+              <div key={i} className="card-angular border-l-4 border-l-[#D4AF37] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-end min-h-[280px] relative overflow-hidden group">
                 <div className="absolute inset-0 z-0">
                   <Image
                     src={card.image}
