@@ -9,7 +9,7 @@ import NFTCoin from "@/components/NFTCoin";
 import { useWeb3 } from "@/hooks/useWeb3";
 import { ECOSYSTEM_ABI, USDT_ABI, VIP_NFT_ABI, CONTRACT_ADDRESSES, toUSDT } from "@/lib/contracts";
 
-const DEFAULT_METADATA_URI = "ipfs://bafkreidsxou4ow5horunkabaamfnjuzukkv42uuqe2u5dvoobpzwehctsi"; 
+const DEFAULT_METADATA_URI = "ipfs://bafkreidsxou4ow5horunkabaamfnjuzukkv42uuqe2u5dvoobpzwehctsi";
 const VIP_PRICE_USDT = "10";
 const RPC_URL = process.env.NEXT_PUBLIC_RPC_URL!;
 
@@ -37,11 +37,11 @@ export default function MintPage() {
 
         try {
             setStatus('checking');
-            
+
             // 1. Setup Providers
             // READ-ONLY Provider (Uses your fast RPC Node)
             const rpcProvider = new JsonRpcProvider(RPC_URL);
-            
+
             // WRITE Provider (Uses User's Wallet)
             if (!window.ethereum) throw new Error("No crypto wallet found");
             const walletProvider = new BrowserProvider(window.ethereum);
@@ -70,13 +70,13 @@ export default function MintPage() {
 
             const balance = await usdtRead.balanceOf(address);
             const priceInWei = toUSDT(VIP_PRICE_USDT);
-            
+
             if (balance < priceInWei) {
                 throw new Error(`Insufficient USDT. Required: ${VIP_PRICE_USDT} USDT.`);
             }
 
             const allowance = await usdtRead.allowance(address, CONTRACT_ADDRESSES.ECOSYSTEM);
-            
+
             // 4. Perform Writes (Using Wallet)
             if (allowance < priceInWei) {
                 setStatus('approving');
@@ -114,7 +114,6 @@ export default function MintPage() {
     const benefits = [
         { icon: <Shield className="text-brand-purple" />, title: "Instant VIP Status", desc: "Gain immediate access to premium community channels and private events." },
         { icon: <Sparkles className="text-brand-gold" />, title: "Token Multiplier", desc: "Holders receive a 2.5x multiplier on all $PROJECT token farming rewards." },
-        { icon: <Coins className="text-green-500" />, title: "Dev Fund Voting", desc: "Shape the future. Vote on the allocation of the ecosystem development fund." },
     ];
 
     return (
@@ -175,7 +174,7 @@ export default function MintPage() {
                             </div>
 
                             <div className="px-8 space-y-6 mt-6">
-                                
+
                                 {/* Price Display */}
                                 <div className="p-6 rounded-2xl bg-white/5 border border-white/10 space-y-6">
                                     <div className="flex justify-between items-center">
@@ -185,7 +184,7 @@ export default function MintPage() {
                                             {isConnected && <p className="text-[10px] text-brand-gold uppercase tracking-widest">Connected</p>}
                                         </div>
                                     </div>
-                                    
+
                                     <div className="pt-4 border-t border-white/10 flex justify-between items-center">
                                         <p className="text-zinc-400">Total Payment</p>
                                         <p className="text-2xl font-bold text-brand-gold">10.00 USDT</p>
@@ -199,7 +198,7 @@ export default function MintPage() {
                                             onClick={connectWallet}
                                             className="w-full py-5 bg-white/10 border border-white/20 text-white rounded-2xl font-bold text-lg hover:bg-white hover:text-black transition-all flex items-center justify-center gap-3 group"
                                         >
-                                            <Wallet size={20} className="group-hover:scale-110 transition-transform"/>
+                                            <Wallet size={20} className="group-hover:scale-110 transition-transform" />
                                             Connect Wallet
                                         </button>
                                     ) : status === 'success' ? (
@@ -235,7 +234,7 @@ export default function MintPage() {
                                         <span className="text-xs text-zinc-600 font-mono">
                                             {address?.substring(0, 6)}...{address?.substring(address.length - 4)}
                                         </span>
-                                        <button 
+                                        <button
                                             onClick={disconnectWallet}
                                             className="text-xs text-red-500/50 hover:text-red-500 transition-colors"
                                         >
@@ -258,7 +257,7 @@ export default function MintPage() {
                                                 <div className="flex-1">
                                                     <p>{error}</p>
                                                     {error.includes("registered") && (
-                                                        <button 
+                                                        <button
                                                             onClick={() => router.push('/register')}
                                                             className="text-xs underline mt-2 hover:text-white"
                                                         >
@@ -266,7 +265,7 @@ export default function MintPage() {
                                                         </button>
                                                     )}
                                                 </div>
-                                                <button onClick={() => setError(null)}><X size={14}/></button>
+                                                <button onClick={() => setError(null)}><X size={14} /></button>
                                             </div>
                                         </motion.div>
                                     )}

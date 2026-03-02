@@ -662,21 +662,6 @@ export default function Home() {
 
           {/* Staking Calculations */}
           <div className="relative mb-20 overflow-visible">
-            <div className="absolute inset-0 -z-10 opacity-90 pointer-events-none transform scale-150 flex items-center justify-center">
-              <div className="relative w-full h-full">
-                <div className="absolute inset-0 gold-particles opacity-30" />
-                <div className="absolute inset-0 opacity-20"
-                  style={{ backgroundImage: 'radial-gradient(#D4AF37 1px, transparent 1px)', backgroundSize: '30px 30px' }}
-                />
-                <Image
-                  src="/images/4.jpeg"
-                  alt="Background Human"
-                  fill
-                  className="object-contain mix-blend-screen brightness-125 contrast-125"
-                  priority
-                />
-              </div>
-            </div>
             <div className="relative z-10 p-4 sm:p-6 lg:p-12 border border-white/10 rounded-3xl gold-glow-strong">
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6 sm:mb-8 text-center sm:text-left">
                 <Coins className="text-[#D4AF37] animate-gold-pulse shrink-0" size={32} />

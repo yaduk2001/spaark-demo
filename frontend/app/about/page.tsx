@@ -94,9 +94,6 @@ export default function AboutPage() {
                     >
                         {/* Vision Card */}
                         <motion.div variants={fadeInUp} className="card-premium p-12 flex flex-col justify-between min-h-[400px] group relative overflow-hidden">
-                            <div className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity">
-                                <Image src="/images/4.jpeg" alt="Vision" fill className="object-cover" />
-                            </div>
                             <div className="relative z-10">
                                 <div className="flex items-start justify-between mb-8">
                                     <div className="w-16 h-16 rounded-2xl bg-[#FACC15]/20 flex items-center justify-center text-[#FACC15] border border-[#FACC15]/30">
@@ -115,9 +112,6 @@ export default function AboutPage() {
 
                         {/* Mission Card */}
                         <motion.div variants={fadeInUp} className="card-angular p-12 flex flex-col justify-between min-h-[400px] group relative overflow-hidden">
-                            <div className="absolute inset-0 opacity-50 group-hover:opacity-70 transition-opacity">
-                                <Image src="/images/6.jpeg" alt="Mission" fill className="object-cover" />
-                            </div>
                             <div className="relative z-10">
                                 <div className="flex items-start justify-between mb-8">
                                     <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-white border border-white/20">
@@ -206,7 +200,7 @@ export default function AboutPage() {
                             <FuturePlanCard step="2031" title="E book library official launch" description="Launch of our comprehensive digital E-book library providing educational resources and content for the global Spaark community." isReversed={true} image="/images/IMG_20260121_210255 (1).jpg" imageFit="cover" />
                         </div>
                         <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                            <FuturePlanCard step="2032" title="Spaark Exchange" description="Launch of Spaark Exchange. In 2032, XSPK Coins will be listed on up to seven international crypto exchanges. Alongside this milestone, development of the Spaark Network Blockchain will officially commence." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
+                            <FuturePlanCard step="2032" title="Spaark's Own Blockchain Network" description="The Smart Blockchain Backend will be started in 2032. This foundational upgrade aims to significantly boost network transaction capabilities and robust security protocols. It securely sets the stage for a fully decentralized, highly scalable architecture." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
                         </div>
                         <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
                             <FuturePlanCard step="2036" title="Spaark Blockchain officially launching" description="Deployment of Spaark Blockchain, a proprietary blockchain infrastructure focused on security, scalability, and enterprise-grade performance." isReversed={true} image="/images/IMG_20260121_204921.jpg" imageFit="cover" />
