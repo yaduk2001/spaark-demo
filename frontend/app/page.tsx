@@ -173,7 +173,7 @@ export default function Home() {
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2032" title="Spaark's Own Blockchain Network" description="The Smart Blockchain Backend will be started in 2032. Launch of Spaark Exchange. XSPK Coins will be listed on up to seven international crypto exchanges. Alongside this milestone, development of the Spaark Network Blockchain will officially commence." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
+                <FuturePlanCard step="2032" title="Spaark's Own Blockchain Network" description="The Smart Blockchain Backend will be started in 2032. This foundational upgrade aims to significantly boost network transaction capabilities and robust security protocols. It securely sets the stage for a fully decentralized, highly scalable architecture." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
