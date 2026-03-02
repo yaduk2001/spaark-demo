@@ -239,13 +239,19 @@ export default function Home() {
           {/* Row 1: 3 cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
             {[
-              { title: "Scalable", desc: "Multi-platform growth architecture designed to expand seamlessly across global markets and diverse user segments." },
-              { title: "Platforms", desc: "Modular digital infrastructure enabling flexible integration of new technologies and business models." },
-              { title: "Advancing", desc: "Real-time innovation through continuous development, testing, and deployment of blockchain solutions." },
+              { title: "Scalable", desc: "Multi-platform growth architecture designed to expand seamlessly across global markets and diverse user segments.", image: "/images/IMG_20260302_151619.png" },
+              { title: "Platforms", desc: "Modular digital infrastructure enabling flexible integration of new technologies and business models.", image: "/images/IMG_20260302_151705.png" },
+              { title: "Advancing", desc: "Real-time innovation through continuous development, testing, and deployment of blockchain solutions.", image: "/images/IMG_20260302_152019.png" },
             ].map((card, i) => (
-              <div key={i} className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center min-h-[200px]">
-                <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-3">{card.title}</h3>
-                <p className="text-zinc-400 font-medium leading-relaxed">{card.desc}</p>
+              <div key={i} className="card-angular border-l-4 border-l-[#D4AF37] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center min-h-[200px] relative overflow-hidden group">
+                <div className="absolute inset-0 z-0">
+                  <Image src={card.image} alt={card.title} fill className="object-cover opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/25 to-black/40 pointer-events-none" />
+                </div>
+                <div className="relative z-10 p-8">
+                  <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-3">{card.title}</h3>
+                  <p className="text-zinc-300 font-medium leading-relaxed">{card.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -253,12 +259,18 @@ export default function Home() {
           {/* Row 2: 2 cards centered */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:max-w-3xl md:mx-auto">
             {[
-              { title: "Revolutionary", desc: "Empowering global users with decentralized tools that challenge traditional financial systems and unlock new opportunities." },
-              { title: "Knowledge", desc: "Community-driven insights fuelling education, collaboration, and shared growth across the SPARK ecosystem." },
+              { title: "Revolutionary", desc: "Empowering global users with decentralized tools that challenge traditional financial systems and unlock new opportunities.", image: "/images/IMG_20260302_151934.png" },
+              { title: "Knowledge", desc: "Community-driven insights fuelling education, collaboration, and shared growth across the SPARK ecosystem.", image: "/images/IMG_20260302_152103.png" },
             ].map((card, i) => (
-              <div key={i} className="card-angular p-8 border-l-4 border-l-[#D4AF37] hover:bg-white/5 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center min-h-[200px]">
-                <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-3">{card.title}</h3>
-                <p className="text-zinc-400 font-medium leading-relaxed">{card.desc}</p>
+              <div key={i} className="card-angular border-l-4 border-l-[#D4AF37] hover:-translate-y-1 transition-all duration-300 flex flex-col justify-center min-h-[200px] relative overflow-hidden group">
+                <div className="absolute inset-0 z-0">
+                  <Image src={card.image} alt={card.title} fill className="object-cover opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/25 to-black/40 pointer-events-none" />
+                </div>
+                <div className="relative z-10 p-8">
+                  <h3 className="text-2xl font-black text-white uppercase tracking-wider mb-3">{card.title}</h3>
+                  <p className="text-zinc-300 font-medium leading-relaxed">{card.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -739,7 +751,7 @@ export default function Home() {
                 <Coins className="text-[#D4AF37] animate-gold-pulse shrink-0" size={32} />
                 <h3 className="text-xl sm:text-2xl lg:text-3xl font-black uppercase text-white">EXAMPLE OF COMMUNITY DEVELOPMENT CALCULATION</h3>
               </div>
-              <div className="flex flex-col font-mono text-zinc-300 relative z-10">
+              <div className="flex flex-col font-mono text-white relative z-10">
                 {[
                   { l: "Direct Reward ($15 x 6)", v: "$90.00" },
                   { l: "Level 1: $0.875 x 6 Team Growth Partners", v: "$5.25" },
@@ -749,8 +761,8 @@ export default function Home() {
                   { l: "Level 5: $1.75 x 7,776 Team Growth Partners", v: "$13,608.00" },
                   { l: "Level 6: $2.625 x 46,656 Team Growth Partners", v: "$122,472.00" },
                 ].map((r, i) => (
-                  <div key={i} className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-4 border-b border-white/10 py-3 text-zinc-300">
-                    <span className="drop-shadow-[0_2px_2px_rgba(0,0,0,1)] text-xs sm:text-sm md:text-base">{r.l}</span>
+                  <div key={i} className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-4 border-b border-white/20 py-3 text-white">
+                    <span className="text-white font-semibold drop-shadow-[0_2px_6px_rgba(0,0,0,1)] text-xs sm:text-sm md:text-base">{r.l}</span>
                     <span className="font-black drop-shadow-[0_2px_3px_rgba(0,0,0,1)] text-white text-left sm:text-right text-sm sm:text-base">
                       {r.v}
                     </span>
