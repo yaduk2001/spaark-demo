@@ -120,7 +120,7 @@ export default function Home() {
           <div>
             <h2 className="text-4xl font-black uppercase tracking-tight text-white mb-8 corner-brackets relative">WHO WE ARE</h2>
             <p className="text-lg text-zinc-400 mb-10 leading-relaxed border-l-2 border-zinc-800 pl-6">
-              Spaark Global Tech is a global technology and digital innovation company headquartered in Dubai and Australia, strategically positioned to operate across International Markets. We focus on developing scalable digital platforms across Financial Technology, Online Commerce, Blockchain, Infrastructure, and Digital Entertainment. Our organization is built on strong governance, long-term strategic planning, and sustainable innovation. By combining advanced technology with structured business models, Spaark Global Tech aims to create a connected digital ecosystem that supports growth for both the company and its global user community.
+              Spaark Exchange is a global technology and digital innovation company headquartered in Dubai and Australia, strategically positioned to operate across International Markets. We focus on developing scalable digital platforms across Financial Technology, Online Commerce, Blockchain, Infrastructure, and Digital Entertainment. Our organization is built on strong governance, long-term strategic planning, and sustainable innovation. By combining advanced technology with structured business models, Spaark Exchange aims to create a connected digital ecosystem that supports growth for both the company and its global user community.
             </p>
 
             <div className="space-y-4">
@@ -139,6 +139,47 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Future Plans */}
+      <section className="py-20 px-6 bg-zinc-900/40 relative z-10 pattern-overlay">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-4xl font-black uppercase text-center text-white mb-4">FUTURE PLANS</h2>
+          <p className="text-center text-zinc-400 mb-16">The roadmap to global adoption and technological dominance.</p>
+
+          <div className="space-y-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
+                <FuturePlanCard step="2028" title="Official Launch of Spaark Exchange & XSPK Tokens" description="Launching of Spaark Token, a proprietary digital asset designed to support ecosystem Transactions, Rewards, and Platform Utility." image="/images/IMG_20260121_204808.jpg" imageFit="cover" />
+              </div>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
+                <FuturePlanCard step="2029" title="Official Launch of Spaark Online Market Hub" description="Introduction of a Global Online Market Hub enabling Digital Commerce, Services, and Entrepreneurial participation through Spaark-powered platform." image="/images/IMG_20260121_210255 (1).jpg" isReversed={true} imageFit="contain" />
+              </div>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
+                <FuturePlanCard step="2030" title="Official Launch of Spaark Online Games" description="Expansion into Online Gaming Platforms, integrating Digital Economies and user engagement within the broader Spaark Ecosystem. Focused on Kids Education and Cognitive Development." image="/images/IMG_20260121_204726.jpg" imageFit="cover" />
+              </div>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
+                <FuturePlanCard step="2031" title="Official Launch of Spaark E-Book Library" description="Launch of our comprehensive digital E-book library providing educational resources and content for the global Spaark community." image="/images/IMG_20260121_210255 (1).jpg" isReversed={true} imageFit="cover" />
+              </div>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
+                <FuturePlanCard step="2032" title="Spaark Exchange" description="Launch of Spaark Exchange. XSPK Coins will be listed on up to seven international crypto exchanges. Alongside this milestone, development of the Spaark Network Blockchain will officially commence." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
+              </div>
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
+                <FuturePlanCard step="2036" title="Official Launch of Spaark Blockchain" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. The Smart Blockchain Backend will be started in 2032, and XSPK Tokens will be converted into XSPK Coins. Alongside this milestone, XSPK Coins will be listed on up to seven international crypto exchanges." image="/images/IMG_20260121_204921.jpg" isReversed={true} imageFit="cover" />
+              </div>
             </div>
           </div>
         </div>
@@ -474,46 +515,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Future Plans */}
-      <section className="py-20 px-6 bg-zinc-900/40 relative z-10 pattern-overlay">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black uppercase text-center text-white mb-4">FUTURE PLANS</h2>
-          <p className="text-center text-zinc-400 mb-16">The roadmap to global adoption and technological dominance.</p>
 
-          <div className="space-y-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2028" title="Official Launch of Spaark Exchange & XSPK Tokens" description="Launching of Spaark Token, a proprietary digital asset designed to support ecosystem Transactions, Rewards, and Platform Utility." image="/images/IMG_20260121_204808.jpg" imageFit="cover" />
-              </div>
-            </div>
-            <div className="max-w-4xl mx-auto">
-              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2029" title="Official Launch of Spaark Online Market Hub" description="Introduction of a Global Online Market Hub enabling Digital Commerce, Services, and Entrepreneurial participation through Spaark-powered platform." image="/images/IMG_20260121_210255 (1).jpg" isReversed={true} imageFit="contain" />
-              </div>
-            </div>
-            <div className="max-w-4xl mx-auto">
-              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2030" title="Official Launch of Spaark Online Games" description="Expansion into Online Gaming Platforms, integrating Digital Economies and user engagement within the broader Spaark Ecosystem. Focused on Kids Education and Cognitive Development." image="/images/IMG_20260121_204726.jpg" imageFit="cover" />
-              </div>
-            </div>
-            <div className="max-w-4xl mx-auto">
-              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2031" title="Official Launch of Spaark E-Book Library" description="Launch of our comprehensive digital E-book library providing educational resources and content for the global Spaark community." image="/images/IMG_20260121_210255 (1).jpg" isReversed={true} imageFit="cover" />
-              </div>
-            </div>
-            <div className="max-w-4xl mx-auto">
-              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2032" title="Spaark Exchange" description="Launch of Spaark Exchange. XSPK Coins will be listed on up to seven international crypto exchanges. Alongside this milestone, development of the Spaark Network Blockchain will officially commence." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
-              </div>
-            </div>
-            <div className="max-w-4xl mx-auto">
-              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2036" title="Official Launch of Spaark Blockchain" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. The Smart Blockchain Backend will be started in 2032, and XSPK Tokens will be converted into XSPK Coins. Alongside this milestone, XSPK Coins will be listed on up to seven international crypto exchanges." image="/images/IMG_20260121_204921.jpg" isReversed={true} imageFit="cover" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* User Benefits */}
       <section className="py-20 px-6 border-t border-white/5 relative z-10">
