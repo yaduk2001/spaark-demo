@@ -527,6 +527,68 @@ export default function Home() {
                 </div>
               </div>
 
+              <div className="h-px bg-gradient-to-r from-transparent via-[#D4AF37]/30 to-transparent w-full" />
+
+              {/* BENEFITS SUMMARY */}
+              <div className="bg-black/50 rounded-2xl p-6 md:p-8 border border-[#D4AF37]/30">
+                {/* Taglines */}
+                <div className="flex flex-wrap gap-3 mb-6">
+                  <span className="px-4 py-1.5 rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/10 text-[#D4AF37] text-xs font-bold uppercase tracking-widest">
+                    Your Growth Partner Journey
+                  </span>
+                  <span className="px-4 py-1.5 rounded-full border border-[#D4AF37]/50 bg-[#D4AF37]/10 text-[#D4AF37] text-xs font-bold uppercase tracking-widest">
+                    Community Building &amp; Engagement
+                  </span>
+                </div>
+
+                {/* Benefits label */}
+                <p className="text-xs font-black uppercase tracking-[0.25em] text-zinc-500 mb-3">Benefits:</p>
+                <p className="text-sm text-zinc-400 leading-relaxed mb-6 border-l-2 border-[#D4AF37]/40 pl-4">
+                  A comprehensive multi-tier rewards program designed to incentivize early adoption, community building, and sustained engagement within the Spaark ecosystem.
+                </p>
+
+                {/* Pricing */}
+                <div className="flex flex-wrap items-end gap-6 mb-8 p-5 rounded-xl bg-[#D4AF37]/5 border border-[#D4AF37]/20">
+                  <div>
+                    <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-1">Business Start-Up</p>
+                    <p className="text-4xl font-black text-[#D4AF37] drop-shadow-lg">$50</p>
+                  </div>
+                  <div className="h-10 w-px bg-[#D4AF37]/30 hidden sm:block" />
+                  <div>
+                    <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-1">Monthly Subscription</p>
+                    <p className="text-4xl font-black text-white">$3.50</p>
+                  </div>
+                </div>
+
+                {/* Feature checkmarks */}
+                <ul className="grid sm:grid-cols-2 gap-3">
+                  {[
+                    "Entry level access",
+                    "Community participation",
+                    "Royalty reward eligibility",
+                    "XSPK Tokens purchase access",
+                    "Full staking rewards",
+                    "24×7 priority support",
+                    "Receive 9,000 Spaark Tokens (valued at $10) upon enrolment",
+                  ].map((feat, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="mt-0.5 text-[#D4AF37] text-lg leading-none shrink-0">✔️</span>
+                      <span className="text-zinc-300 text-sm font-medium leading-snug">{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* CTA */}
+                <div className="mt-8 flex justify-center">
+                  <a
+                    href="#subscription"
+                    className="inline-flex items-center gap-3 px-8 py-3 rounded-full bg-gradient-to-r from-[#BF953F] via-[#D4AF37] to-[#9f7928] text-black font-black uppercase tracking-widest text-sm hover:scale-105 transition-transform duration-300 shadow-[0_0_20px_rgba(212,175,55,0.4)] gold-glow"
+                  >
+                    Let&apos;s GET STARTED <span className="text-lg">»»</span>
+                  </a>
+                </div>
+              </div>
+
             </div>
           </div>
 
