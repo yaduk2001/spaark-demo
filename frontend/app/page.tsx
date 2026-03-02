@@ -786,12 +786,22 @@ export default function Home() {
 
           {/* Staking Calculations */}
           <div className="relative mb-20 overflow-visible">
-            <div className="relative z-10 p-4 sm:p-6 lg:p-12 border border-white/10 rounded-3xl gold-glow-strong">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6 sm:mb-8 text-center sm:text-left">
+            <div className="relative z-10 p-4 sm:p-6 lg:p-12 border border-white/10 rounded-3xl gold-glow-strong overflow-hidden">
+              {/* Background image */}
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/images/IMG_20260302_144611.png"
+                  alt="Community Development Calculation Background"
+                  fill
+                  className="object-cover opacity-20"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
+              </div>
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6 sm:mb-8 text-center sm:text-left relative z-10">
                 <Coins className="text-[#D4AF37] animate-gold-pulse shrink-0" size={32} />
                 <h3 className="text-xl sm:text-2xl lg:text-3xl font-black uppercase text-white">EXAMPLE OF COMMUNITY DEVELOPMENT CALCULATION</h3>
               </div>
-              <div className="flex flex-col font-mono text-zinc-300">
+              <div className="flex flex-col font-mono text-zinc-300 relative z-10">
                 {[
                   { l: "Direct Reward ($15 x 6)", v: "$90.00" },
                   { l: "Level 1: $0.875 x 6 Team Growth Partners", v: "$5.25" },
