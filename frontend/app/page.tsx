@@ -265,6 +265,71 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Logic at the Core of Spaark */}
+      <section className="py-20 px-6 bg-zinc-950 relative z-10 border-t border-white/5">
+        <div className="absolute inset-0 pointer-events-none z-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#D4AF37]/5 blur-[120px] rounded-full" />
+        </div>
+        <div className="max-w-5xl mx-auto relative z-10">
+          {/* Header */}
+          <div className="text-center mb-6">
+            <h2 className="text-3xl md:text-5xl font-black uppercase text-white tracking-tight mb-4">
+              The Logic at the Core of <span className="text-[#D4AF37]">Spaark</span>
+            </h2>
+            <div className="h-1 w-24 bg-[#D4AF37] mx-auto shadow-[0_0_15px_rgba(212,175,55,0.4)] mb-8" />
+            <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl mx-auto border-l-4 border-[#D4AF37]/40 pl-6 text-left">
+              A reliable blockchain ecosystem must act like a thriving community — scalable, rewarding, multidimensional, and forward-looking. Spaark operates through interconnected modes, addressing key challenges in digital finance and commerce.
+            </p>
+          </div>
+
+          {/* 6 Intelligence Modes Grid */}
+          <div className="grid md:grid-cols-2 gap-6 mt-12">
+            {[
+              {
+                title: "Logical Rewards",
+                desc: "Staking and milestone calculations.",
+                icon: Coins,
+              },
+              {
+                title: "Collaborative Integration",
+                desc: "Multi-wallet fund distribution.",
+                icon: Network,
+              },
+              {
+                title: "Community Intelligence",
+                desc: "Affiliate and network building.",
+                icon: Users,
+              },
+              {
+                title: "Trend Intelligence",
+                desc: "Market hub forecasting.",
+                icon: Globe,
+              },
+              {
+                title: "Risk Intelligence",
+                desc: "Secure token trading.",
+                icon: ShieldCheck,
+              },
+              {
+                title: "Visionary Expansion",
+                desc: "Blockchain deployment foresight.",
+                icon: Zap,
+              },
+            ].map((item, i) => (
+              <div key={i} className="card-angular p-7 flex items-start gap-5 hover:bg-white/5 hover:-translate-y-1 transition-all duration-300 group">
+                <div className="mt-1 w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/30 group-hover:bg-[#D4AF37]/25 transition-colors duration-300">
+                  <item.icon size={24} />
+                </div>
+                <div>
+                  <h3 className="text-lg font-black text-white uppercase tracking-wide mb-1">{item.title}</h3>
+                  <p className="text-zinc-400 font-medium leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Future Plans */}
       <section className="py-20 px-6 bg-zinc-900/40 relative z-10 pattern-overlay">
         <div className="max-w-7xl mx-auto">
@@ -415,56 +480,6 @@ export default function Home() {
               </div>
               <div className="glass-card-premium p-1">
                 <RewardCard title="Tiers 5-6" items={[{ label: "Level 5", value: "$1.75" }, { label: "Level 6", value: "$2.685" }]} />
-              </div>
-            </div>
-          </div>
-
-          {/* Staking Calculations */}
-          <div className="relative mb-20 overflow-visible">
-            <div className="absolute inset-0 -z-10 opacity-90 pointer-events-none transform scale-150 flex items-center justify-center">
-              <div className="relative w-full h-full">
-                {/* Golden Dots / Particle backgrounds */}
-                <div className="absolute inset-0 gold-particles opacity-30" />
-                <div className="absolute inset-0 opacity-20"
-                  style={{ backgroundImage: 'radial-gradient(#D4AF37 1px, transparent 1px)', backgroundSize: '30px 30px' }}
-                />
-
-                <Image
-                  src="/images/4.jpeg"
-                  alt="Background Human"
-                  fill
-                  className="object-contain mix-blend-screen brightness-125 contrast-125"
-                  priority
-                />
-              </div>
-            </div>
-
-            <div className="relative z-10 p-4 sm:p-6 lg:p-12 border border-white/10 rounded-3xl gold-glow-strong">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6 sm:mb-8 text-center sm:text-left">
-                <Coins className="text-[#D4AF37] animate-gold-pulse shrink-0" size={32} />
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black uppercase text-white">EXAMPLE OF COMMUNITY DEVELOPMENT CALCULATION</h3>
-              </div>
-              <div className="flex flex-col font-mono text-zinc-300">
-                {[
-                  { l: "Direct Reward ($15 x 6)", v: "$90.00" },
-                  { l: "Level 1: $0.875 x 6 Team Growth Partners", v: "$5.25" },
-                  { l: "Level 2: $0.875 x 36 Team Growth Partners", v: "$31.50" },
-                  { l: "Level 3: $1.3125 x 216 Team Growth Partners", v: "$283.50" },
-                  { l: "Level 4: $1.3125 x 1,296 Team Growth Partners", v: "$1,701.00" },
-                  { l: "Level 5: $1.75 x 7,776 Team Growth Partners", v: "$13,608.00" },
-                  { l: "Level 6: $2.625 x 46,656 Team Growth Partners", v: "$122,472.00" },
-                ].map((r, i) => (
-                  <div key={i} className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-4 border-b border-white/10 py-3 text-zinc-300">
-                    <span className="drop-shadow-[0_2px_2px_rgba(0,0,0,1)] text-xs sm:text-sm md:text-base">{r.l}</span>
-                    <span className="font-black drop-shadow-[0_2px_3px_rgba(0,0,0,1)] text-white text-left sm:text-right text-sm sm:text-base">
-                      {r.v}
-                    </span>
-                  </div>
-                ))}
-                <div className="col-span-full mt-6 p-4 sm:p-6 rounded-xl bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-0 gold-glow-strong">
-                  <span className="text-white font-black uppercase tracking-widest text-xs sm:text-sm lg:text-xl">Total team building earning</span>
-                  <span className="text-white font-black text-2xl sm:text-3xl lg:text-4xl">$138,191.25</span>
-                </div>
               </div>
             </div>
           </div>
@@ -641,6 +656,53 @@ export default function Home() {
                     <p className="text-[10px] text-zinc-500 uppercase tracking-widest leading-tight">{tier.req}</p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Staking Calculations */}
+          <div className="relative mb-20 overflow-visible">
+            <div className="absolute inset-0 -z-10 opacity-90 pointer-events-none transform scale-150 flex items-center justify-center">
+              <div className="relative w-full h-full">
+                <div className="absolute inset-0 gold-particles opacity-30" />
+                <div className="absolute inset-0 opacity-20"
+                  style={{ backgroundImage: 'radial-gradient(#D4AF37 1px, transparent 1px)', backgroundSize: '30px 30px' }}
+                />
+                <Image
+                  src="/images/4.jpeg"
+                  alt="Background Human"
+                  fill
+                  className="object-contain mix-blend-screen brightness-125 contrast-125"
+                  priority
+                />
+              </div>
+            </div>
+            <div className="relative z-10 p-4 sm:p-6 lg:p-12 border border-white/10 rounded-3xl gold-glow-strong">
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-4 mb-6 sm:mb-8 text-center sm:text-left">
+                <Coins className="text-[#D4AF37] animate-gold-pulse shrink-0" size={32} />
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-black uppercase text-white">EXAMPLE OF COMMUNITY DEVELOPMENT CALCULATION</h3>
+              </div>
+              <div className="flex flex-col font-mono text-zinc-300">
+                {[
+                  { l: "Direct Reward ($15 x 6)", v: "$90.00" },
+                  { l: "Level 1: $0.875 x 6 Team Growth Partners", v: "$5.25" },
+                  { l: "Level 2: $0.875 x 36 Team Growth Partners", v: "$31.50" },
+                  { l: "Level 3: $1.3125 x 216 Team Growth Partners", v: "$283.50" },
+                  { l: "Level 4: $1.3125 x 1,296 Team Growth Partners", v: "$1,701.00" },
+                  { l: "Level 5: $1.75 x 7,776 Team Growth Partners", v: "$13,608.00" },
+                  { l: "Level 6: $2.625 x 46,656 Team Growth Partners", v: "$122,472.00" },
+                ].map((r, i) => (
+                  <div key={i} className="flex flex-col sm:flex-row justify-between gap-1 sm:gap-4 border-b border-white/10 py-3 text-zinc-300">
+                    <span className="drop-shadow-[0_2px_2px_rgba(0,0,0,1)] text-xs sm:text-sm md:text-base">{r.l}</span>
+                    <span className="font-black drop-shadow-[0_2px_3px_rgba(0,0,0,1)] text-white text-left sm:text-right text-sm sm:text-base">
+                      {r.v}
+                    </span>
+                  </div>
+                ))}
+                <div className="col-span-full mt-6 p-4 sm:p-6 rounded-xl bg-[#D4AF37]/20 border border-[#D4AF37]/40 flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-0 gold-glow-strong">
+                  <span className="text-white font-black uppercase tracking-widest text-xs sm:text-sm lg:text-xl">Total team building earning</span>
+                  <span className="text-white font-black text-2xl sm:text-3xl lg:text-4xl">$138,191.25</span>
+                </div>
               </div>
             </div>
           </div>
