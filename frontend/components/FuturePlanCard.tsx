@@ -25,7 +25,7 @@ const FuturePlanCard = ({ step, title, description, image, delay = 0, isReversed
             {/* Text Section */}
             <div className="flex-1 p-8 lg:p-12 relative flex flex-col justify-center group-hover:bg-zinc-900/50 transition-all duration-500">
                 {/* Massive Background Number */}
-                <div className={`absolute top-1/2 -translate-y-1/2 ${isReversed ? "right-8" : "left-8"} text-[180px] lg:text-[220px] font-black text-white/5 pointer-events-none transition-all duration-500 group-hover:text-[#FACC15]/10 leading-none`}>
+                <div className={`absolute top-1/2 -translate-y-1/2 ${isReversed ? "right-4 lg:right-8" : "left-4 lg:left-8"} text-[100px] md:text-[180px] lg:text-[220px] font-black text-white/5 pointer-events-none transition-all duration-500 group-hover:text-[#FACC15]/10 leading-none`}>
                     {step}
                 </div>
 
@@ -33,7 +33,7 @@ const FuturePlanCard = ({ step, title, description, image, delay = 0, isReversed
                     <div className="inline-block px-4 py-2 rounded-lg bg-[#0EA5E9]/10 border border-[#0EA5E9]/20 text-[#0EA5E9] font-black uppercase tracking-[0.2em] text-xs shadow-[0_0_20px_rgba(14,165,233,0.1)] group-hover:bg-[#FACC15]/10 group-hover:border-[#FACC15]/20 group-hover:text-[#FACC15] group-hover:shadow-[0_0_20px_rgba(250,204,21,0.2)] transition-all duration-300">
                         {step}
                     </div>
-                    <h3 className="text-4xl lg:text-5xl font-black uppercase tracking-tight text-white group-hover:text-[#FACC15] transition-all duration-300 leading-tight">
+                    <h3 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tight text-white group-hover:text-[#FACC15] transition-all duration-300 leading-tight">
                         {title}
                     </h3>
                     <p className="text-base text-zinc-400 font-medium leading-relaxed border-l-2 border-[#FACC15]/30 pl-6 group-hover:border-[#FACC15] group-hover:text-zinc-300 transition-all duration-300 max-w-xl">

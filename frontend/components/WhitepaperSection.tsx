@@ -9,7 +9,7 @@ export default function WhitepaperSection() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <section className="py-32 px-6 bg-black relative overflow-hidden border-t border-white/5">
+        <section className="py-20 md:py-32 px-4 md:px-6 bg-black relative overflow-hidden border-t border-white/5">
             {/* Ambient Background Noise */}
             <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay" />
 
@@ -30,7 +30,7 @@ export default function WhitepaperSection() {
                             initial={{ opacity: 0, scale: 0.95, y: 20 }}
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-                            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-full max-w-md bg-zinc-950 border border-[#D4AF37]/30 p-8 rounded-3xl"
+                            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90%] max-w-md bg-zinc-950 border border-[#D4AF37]/30 p-6 md:p-8 rounded-3xl"
                         >
                             <button
                                 onClick={() => setIsMenuOpen(false)}
@@ -103,14 +103,14 @@ export default function WhitepaperSection() {
                     {/* Text Content */}
                     <div className="space-y-8">
                         <motion.div variants={revealUp}>
-                            <span className="inline-block px-4 py-2 bg-white/5 border border-white/10 rounded-none text-xs font-black uppercase tracking-[0.3em] text-zinc-400 mb-6">
+                            <span className="inline-block px-3 md:px-4 py-1.5 md:py-2 bg-white/5 border border-white/10 rounded-none text-[10px] md:text-xs font-black uppercase tracking-[0.3em] text-zinc-400 mb-4 md:mb-6">
                                 Protocol Architecture
                             </span>
-                            <h2 className="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-6">
+                            <h2 className="text-4xl md:text-5xl md:text-6xl font-black text-white uppercase tracking-tighter leading-[0.9] mb-4 md:mb-6">
                                 Trust In <br />
                                 <span className="text-zinc-600">Code.</span>
                             </h2>
-                            <p className="text-xl text-zinc-400 font-bold max-w-lg leading-relaxed border-l-2 border-[#D4AF37]/50 pl-6">
+                            <p className="text-lg md:text-xl text-zinc-400 font-bold max-w-lg leading-relaxed border-l-2 border-[#D4AF37]/50 pl-4 md:pl-6">
                                 Complete technical documentation of the Spaark Global ecosystem. Transparent, verified, and immutable.
                             </p>
                         </motion.div>
@@ -125,8 +125,8 @@ export default function WhitepaperSection() {
                     </div>
 
                     {/* Visual / Card */}
-                    <motion.div variants={revealUp} className="relative">
-                        <div className="relative aspect-[4/5] max-h-[600px] bg-zinc-900 border border-white/5 p-8 flex flex-col justify-between group overflow-hidden">
+                    <motion.div variants={revealUp} className="relative mt-8 md:mt-0">
+                        <div className="relative aspect-square md:aspect-[4/5] max-h-[600px] bg-zinc-900 border border-white/5 p-6 md:p-8 flex flex-col justify-between group overflow-hidden">
                             <div className="absolute inset-0 bg-[#D4AF37]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
                             {/* Decorative Grid */}
@@ -143,11 +143,11 @@ export default function WhitepaperSection() {
                                 </div>
                             </div>
 
-                            <div className="relative z-10">
-                                <h2 className="text-3xl md:text-4xl font-black mb-6">
+                            <div className="relative z-10 mt-8 md:mt-0">
+                                <h2 className="text-2xl md:text-3xl lg:text-4xl font-black mb-4 md:mb-6">
                                     <span className="text-[#D4AF37]">Spaark Exchange</span> Whitepaper
                                 </h2>
-                                <p className="text-zinc-400 text-lg mb-8 max-w-2xl mx-auto">
+                                <p className="text-zinc-400 text-base md:text-lg mb-4 md:mb-8 max-w-2xl mx-auto">
                                     Dive deep into the technical architecture, tokenomics, and strategic vision of the Spaark Exchange ecosystem.
                                 </p>
                             </div>

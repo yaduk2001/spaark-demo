@@ -31,16 +31,16 @@ const RewardCard: React.FC<RewardCardProps> = ({ title, icon, items, delay = 0, 
                 <div className="shimmer-gradient" />
             </div>
 
-            <div className="flex items-center gap-6 mb-10 relative z-10 p-6 pb-6">
+            <div className="flex items-center gap-4 md:gap-6 mb-6 md:mb-10 relative z-10 p-4 md:p-6 pb-4 md:pb-6">
                 {icon && (
-                    <div className="w-16 h-16 rounded-2xl bg-[#FACC15]/5 flex items-center justify-center text-[#FACC15] shrink-0 border border-[#FACC15]/10 group-hover:bg-[#FACC15] group-hover:text-black transition-colors duration-500">
+                    <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-[#FACC15]/5 flex items-center justify-center text-[#FACC15] shrink-0 border border-[#FACC15]/10 group-hover:bg-[#FACC15] group-hover:text-black transition-colors duration-500">
                         {icon}
                     </div>
                 )}
-                <h3 className="text-xl font-bold uppercase tracking-tight text-white group-hover:text-[#FACC15] transition-colors">{title}</h3>
+                <h3 className="text-lg md:text-xl font-bold uppercase tracking-tight text-white group-hover:text-[#FACC15] transition-colors">{title}</h3>
             </div>
 
-            <div className="space-y-6 flex-1 relative z-10 px-6 pb-6">
+            <div className="space-y-4 md:space-y-6 flex-1 relative z-10 px-4 md:px-6 pb-4 md:pb-6">
                 {items.map((item, i) => (
                     <div
                         key={i}
@@ -49,9 +49,9 @@ const RewardCard: React.FC<RewardCardProps> = ({ title, icon, items, delay = 0, 
                             : "bg-white/5 border-white/5 group-hover:bg-white/10"
                             }`}
                     >
-                        <div className="flex justify-between items-center gap-4 mb-3">
-                            <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest group-hover:text-zinc-300 transition-colors">{item.label}</span>
-                            <span className={`font-black text-xl text-right leading-none transition-all duration-300 ${item.highlight ? "text-[#FACC15]" : "text-white group-hover:text-[#FACC15]"}`}>
+                        <div className="flex justify-between items-center gap-2 md:gap-4 mb-2 md:mb-3">
+                            <span className="text-zinc-500 text-[10px] md:text-xs font-bold uppercase tracking-widest group-hover:text-zinc-300 transition-colors">{item.label}</span>
+                            <span className={`font-black text-lg md:text-xl text-right leading-none transition-all duration-300 ${item.highlight ? "text-[#FACC15]" : "text-white group-hover:text-[#FACC15]"}`}>
                                 {item.value}
                             </span>
                         </div>

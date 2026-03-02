@@ -61,9 +61,9 @@ export default function Footer() {
                 <div className="absolute inset-0 bg-grid-gold opacity-[0.03] pointer-events-none" />
                 <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
-                <div className="relative max-w-7xl mx-auto px-6 py-16">
+                <div className="relative max-w-7xl mx-auto px-4 md:px-6 py-12 md:py-16">
 
-                    <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_2fr] gap-12 lg:gap-16 mb-12">
+                    <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_2fr] gap-10 md:gap-12 lg:gap-16 mb-12">
 
                         {/* Brand Column */}
                         <div className="max-w-md">
@@ -84,7 +84,7 @@ export default function Footer() {
                         </div>
 
                         {/* Links Grid */}
-                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 lg:gap-12">
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
                             <div>
                                 <h4 className="text-sm font-black uppercase tracking-wider text-white mb-6">Platform</h4>
                                 <ul className="space-y-4">
@@ -127,13 +127,13 @@ export default function Footer() {
                     </div>
 
                     {/* Bottom Bar */}
-                    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-white/5">
-                        <p className="text-xs text-zinc-600 font-bold tracking-widest uppercase">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-white/5 text-center md:text-left">
+                        <p className="text-[10px] md:text-xs text-zinc-600 font-bold tracking-widest uppercase">
                             © {new Date().getFullYear()} Spaark Global Tech.
                         </p>
-                        <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/5">
+                        <div className="flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-white/5 border border-white/5">
                             <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                            <span className="text-[10px] font-bold text-emerald-500 uppercase tracking-widest">All Systems Normal</span>
+                            <span className="text-[8px] md:text-[10px] font-bold text-emerald-500 uppercase tracking-widest">All Systems Normal</span>
                         </div>
                     </div>
                 </div>

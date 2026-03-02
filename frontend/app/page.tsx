@@ -45,9 +45,9 @@ export default function Home() {
               WE DON'T LAUNCH. WE ARRIVE.
             </div>
 
-            <h1 className="text-5xl lg:text-7xl font-black leading-none mb-6 tracking-tight text-white uppercase">
+            <h1 className="text-4xl md:text-5xl lg:text-7xl font-black leading-[1.1] md:leading-none mb-6 tracking-tight text-white uppercase">
               SPAARK <span className="text-shimmer block mt-2">EXCHANGE</span>
-              <span className="block text-2xl lg:text-3xl mt-2 text-zinc-500 font-bold tracking-widest">REVOLUTION</span>
+              <span className="block text-xl md:text-2xl lg:text-3xl mt-2 text-zinc-500 font-bold tracking-widest">REVOLUTION</span>
             </h1>
 
             <p className="text-xl text-zinc-300 font-medium mb-10 max-w-xl leading-relaxed border-l-4 border-[#D4AF37] pl-6">
@@ -67,7 +67,7 @@ export default function Home() {
             transition={{ duration: 1 }}
             className="flex justify-center relative"
           >
-            <div className="card-angular p-8 w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] relative animate-float-subtle gold-glow-strong">
+            <div className="card-angular p-4 md:p-8 w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] relative animate-float-subtle gold-glow-strong scale-90 md:scale-100">
               <SparkCoin />
               {/* Shadow element separate from rotation to stay on the "floor" or behind */}
               <div className="absolute inset-0 z-[-1] rounded-full drop-shadow-[0_30px_80px_rgba(212,175,55,0.4)]" />
@@ -109,7 +109,7 @@ export default function Home() {
               <div className="w-16 h-16 rounded-2xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] mb-6 border border-[#D4AF37]/40 gold-glow">
                 <Network size={32} />
               </div>
-              <h3 className="text-3xl font-black mb-4 text-white uppercase tracking-tight">Global <span className="text-metallic">Connectivity</span></h3>
+              <h3 className="text-2xl md:text-3xl font-black mb-4 text-white uppercase tracking-tight">Global <span className="text-metallic">Connectivity</span></h3>
               <p className="text-zinc-300 font-medium leading-relaxed">
                 Connecting markets, gamers, and investors in a unified blockchain ecosystem.
               </p>
@@ -118,7 +118,7 @@ export default function Home() {
 
           {/* Text Content */}
           <div>
-            <h2 className="text-4xl font-black uppercase tracking-tight text-white mb-8 corner-brackets relative">WHO WE ARE</h2>
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-8 corner-brackets relative">WHO WE ARE</h2>
             <p className="text-lg text-zinc-400 mb-10 leading-relaxed border-l-2 border-zinc-800 pl-6">
               Spaark Exchange is a global technology and digital innovation company headquartered in Dubai and Australia, strategically positioned to operate across International Markets. We focus on developing scalable digital platforms across Financial Technology, Online Commerce, Blockchain, Infrastructure, and Digital Entertainment. Our organization is built on strong governance, long-term strategic planning, and sustainable innovation. By combining advanced technology with structured business models, Spaark Exchange aims to create a connected digital ecosystem that supports growth for both the company and its global user community.
             </p>
@@ -147,7 +147,7 @@ export default function Home() {
       {/* Future Plans */}
       <section className="py-20 px-6 bg-zinc-900/40 relative z-10 pattern-overlay">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black uppercase text-center text-white mb-4">FUTURE PLANS</h2>
+          <h2 className="text-3xl md:text-4xl font-black uppercase text-center text-white mb-4">FUTURE PLANS</h2>
           <p className="text-center text-zinc-400 mb-16">The roadmap to global adoption and technological dominance.</p>
 
           <div className="space-y-8">
@@ -191,7 +191,7 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto overflow-visible relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-black uppercase tracking-tight text-white mb-2">ACCESS THE FUTURE</h2>
+            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-2">ACCESS THE FUTURE</h2>
             <p className="text-[#D4AF37] font-bold uppercase tracking-widest text-sm">Choose your entry point</p>
           </div>
 
@@ -229,7 +229,7 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <h2 className="text-4xl font-black uppercase tracking-tight text-center text-white mb-16">WHY CHOOSE SPAARK EXCHANGE?</h2>
+          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-center text-white mb-16">WHY CHOOSE SPAARK EXCHANGE?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               { title: "Decentralized Power", desc: "Full control of your assets with our non-custodial architecture.", icon: Network, image: "/images/7.jpeg" },
@@ -258,10 +258,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <span className="text-[#D4AF37] font-bold tracking-[0.3em] uppercase mb-2 block text-sm">Valid for Spaark Staking Community</span>
-            <h2 className="text-5xl font-black uppercase text-white">SPAARK EXCHANGE BUSINESS STARTUP</h2>
+            <h2 className="text-3xl md:text-5xl font-black uppercase text-white">SPAARK EXCHANGE BUSINESS STARTUP</h2>
           </div>
 
-          <div className="card-premium p-8 md:p-12 mb-16 max-w-6xl mx-auto gold-glow-strong overflow-hidden relative border border-[#D4AF37]/30">
+          <div className="card-premium p-6 md:p-8 lg:p-12 mb-16 max-w-6xl mx-auto gold-glow-strong overflow-hidden relative border border-[#D4AF37]/30">
             {/* Background Accent */}
             <div className="absolute inset-0 z-0 pointer-events-none">
               <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
@@ -478,7 +478,7 @@ export default function Home() {
                       </div>
 
                       {/* Rank title — Playfair Display italic */}
-                      <h3 className="text-4xl font-bold italic text-[#D4AF37] leading-tight mb-1"
+                      <h3 className="text-3xl md:text-4xl font-bold italic text-[#D4AF37] leading-tight mb-1"
                         style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
                         {item.rank}
                       </h3>
@@ -578,7 +578,7 @@ export default function Home() {
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#D4AF37]/15 text-[#D4AF37] text-xs font-bold uppercase tracking-widest mb-4 gold-glow">
             <Gem size={12} /> Member Perks
           </div>
-          <h2 className="text-4xl font-black mb-4 text-white uppercase">USER BENEFITS</h2>
+          <h2 className="text-3xl md:text-4xl font-black mb-4 text-white uppercase">USER BENEFITS</h2>
           <p className="text-zinc-500 mb-16">Everything you need to succeed in the digital economy.</p>
 
           <div className="grid md:grid-cols-4 gap-6">
