@@ -202,12 +202,12 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-center text-white mb-16">WHY CHOOSE SPAARK EXCHANGE?</h2>
           <div className="grid md:grid-cols-3 gap-8">
             {[
-              { title: "Decentralized Power", desc: "Full control of your assets with our non-custodial architecture.", icon: Network, image: "/images/7.jpeg" },
-              { title: "Instant Rewards", desc: "Real-time settlement for all community and staking rewards.", icon: Zap, image: "/images/6.jpeg" },
-              { title: "Global Community", desc: "Join a network of thousands of like-minded innovators.", icon: Users, image: "/images/4.jpeg" }
+              { title: "Decentralized Power", desc: "Full control of your assets with our non-custodial architecture.", icon: Network, image: "/images/blockchain-technology-network-concept-block-chain-text-blockchain-technology-network-concept-block-chain-text-icon-112455461.webp" },
+              { title: "Instant Rewards", desc: "Real-time settlement for all community and staking rewards.", icon: Zap, image: "/images/digital-background-security-systems-and-data-protection.webp" },
+              { title: "Global Community", desc: "Join a network of thousands of like-minded innovators.", icon: Users, image: "/images/digital-security-concept.webp" }
             ].map((card, i) => (
               <div key={i} className="card-angular p-10 flex flex-col items-center text-center hover:-translate-y-2 transition-all duration-300 gold-glow relative overflow-hidden group">
-                <div className="absolute inset-0 opacity-50 group-hover:opacity-70 transition-opacity">
+                <div className="absolute inset-0 opacity-40 group-hover:opacity-60 transition-opacity duration-500">
                   <Image src={card.image} alt={card.title} fill className="object-cover" />
                 </div>
                 <div className="relative z-10">
