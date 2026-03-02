@@ -479,7 +479,7 @@ export default function Home() {
                 <RewardCard title="Tiers 3-4" items={[{ label: "Level 3", value: "$1.3125" }, { label: "Level 4", value: "$1.3125" }]} />
               </div>
               <div className="glass-card-premium p-1">
-                <RewardCard title="Tiers 5-6" items={[{ label: "Level 5", value: "$1.75" }, { label: "Level 6", value: "$2.685" }]} />
+                <RewardCard title="Tiers 5-6" items={[{ label: "Level 5", value: "$1.75" }, { label: "Level 6", value: "$2.625" }]} />
               </div>
             </div>
           </div>
