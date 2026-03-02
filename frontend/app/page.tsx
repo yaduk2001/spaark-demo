@@ -144,6 +144,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Globally Positioned Section */}
+      <section className="py-20 px-6 bg-zinc-950 relative z-10 border-t border-white/5 pattern-circuit">
+        <div className="absolute inset-0 z-0">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-[#D4AF37]/5 blur-[120px] rounded-full pointer-events-none" />
+        </div>
+
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center mb-16 px-4">
+            <h2 className="text-3xl md:text-4xl font-black uppercase text-white mb-6 tracking-tight">Globally Positioned for Trusted Blockchain Services</h2>
+            <div className="h-1 w-24 bg-[#D4AF37] mx-auto shadow-[0_0_15px_rgba(212,175,55,0.4)]" />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="card-angular p-8 flex flex-col hover:-translate-y-2 transition-all duration-300 gold-glow relative group bg-zinc-900/40 backdrop-blur-sm">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/5 rounded-bl-[100px] -z-10 group-hover:bg-[#D4AF37]/10 transition-colors duration-500" />
+              <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30 mb-6">
+                <Globe size={24} />
+              </div>
+              <h3 className="text-xl font-bold text-white uppercase italic mb-4">Dubai Headquarters United Arab Emirates</h3>
+              <p className="text-zinc-400 font-medium leading-relaxed">Strategic positioning in the world's leading blockchain and digital asset hub, providing access to progressive regulatory frameworks and international markets.</p>
+            </div>
+
+            <div className="card-angular p-8 flex flex-col hover:-translate-y-2 transition-all duration-300 gold-glow relative group bg-zinc-900/40 backdrop-blur-sm">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/5 rounded-bl-[100px] -z-10 group-hover:bg-[#D4AF37]/10 transition-colors duration-500" />
+              <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30 mb-6">
+                <ShieldCheck size={24} />
+              </div>
+              <h3 className="text-xl font-bold text-white uppercase italic mb-4">Australia Registry Commonwealth of Australia.</h3>
+              <p className="text-zinc-400 font-medium leading-relaxed">Registered entity benefiting from Australia's robust financial regulatory environment and FinTech innovation ecosystem.</p>
+            </div>
+
+            <div className="card-angular p-8 flex flex-col hover:-translate-y-2 transition-all duration-300 gold-glow relative group bg-zinc-900/40 backdrop-blur-sm">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/5 rounded-bl-[100px] -z-10 group-hover:bg-[#D4AF37]/10 transition-colors duration-500" />
+              <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30 mb-6">
+                <Network size={24} />
+              </div>
+              <h3 className="text-xl font-bold text-white uppercase italic mb-4">United States of America.</h3>
+              <p className="text-zinc-400 font-medium leading-relaxed">Positioned within a premier global hub for technological advancement and venture capital, fostering high-level institutional partnerships and large-scale growth.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Future Plans */}
       <section className="py-20 px-6 bg-zinc-900/40 relative z-10 pattern-overlay">
         <div className="max-w-7xl mx-auto">
