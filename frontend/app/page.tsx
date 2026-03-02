@@ -178,7 +178,7 @@ export default function Home() {
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2036" title="Official Launch of Spaark Blockchain" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. XSPK Tokens will be converted into XSPK Coins. Alongside this milestone, XSPK Coins will be listed on up to seven international crypto exchanges." image="/images/IMG_20260121_204921.jpg" isReversed={true} imageFit="cover" />
+                <FuturePlanCard step="2036" title="Official Launch of Spaark Blockchain" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. XSPK Tokens will be converted into XSPK Coins. This milestone focuses on exponentially boosting the network's scalability, security, and global transaction speed. It empowers developers to build within the Spaark ecosystem." image="/images/IMG_20260121_204921.jpg" isReversed={true} imageFit="cover" />
               </div>
             </div>
           </div>
