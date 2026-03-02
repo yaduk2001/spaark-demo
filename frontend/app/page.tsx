@@ -512,10 +512,65 @@ export default function Home() {
               })}
             </div>
           </div>
+
+          {/* Royalty Poster Section */}
+          <div className="mb-20">
+            <h3 className="text-4xl font-black uppercase text-center text-white mb-12">ROYALTY REWARDS</h3>
+            <div className="bg-black/60 border border-[#D4AF37]/30 rounded-3xl p-8 lg:p-12 gold-glow-strong">
+
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+
+                {/* Image Side */}
+                <div className="relative w-full aspect-square md:aspect-auto md:h-[600px] rounded-2xl overflow-hidden border border-[#D4AF37]/40 shadow-[0_0_30px_rgba(212,175,55,0.2)]">
+                  <Image
+                    src="/images/IMG_20260302_101156.jpg"
+                    alt="Monthly Royalty Criteria"
+                    fill
+                    className="object-cover"
+                  />
+                  {/* Subtle overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                </div>
+
+                {/* Text Content Side */}
+                <div className="space-y-8">
+                  <div className="space-y-4">
+                    <h4 className="text-2xl font-black text-[#D4AF37] uppercase leading-tight">
+                      Monthly Royalty Criteria <br />
+                      <span className="text-white text-xl">for Manager and Above Rank Achievers</span>
+                    </h4>
+                    <p className="text-zinc-300 leading-relaxed text-sm lg:text-base border-l-2 border-[#D4AF37]/50 pl-4">
+                      Let us understand how the royalty criteria are defined in the Spaark Exchange Community Development System.
+                      From every new community member who joins each day, <strong className="text-white">$1 is allocated</strong> and added to the business royalty pool.
+                      At the end of each month, the total amount accumulated in the royalty pool is calculated and distributed according to rank levels.
+                    </p>
+                  </div>
+
+                  <div className="space-y-4">
+                    {[
+                      { rank: "Manager Level", pct: "10%", desc: "of the royalty pool is equally divided among all partners who have achieved the Manager rank." },
+                      { rank: "Senior Manager Level", pct: "20%", desc: "of the royalty pool is equally divided every month among all partners holding the Senior Manager rank." },
+                      { rank: "Regional Manager Level", pct: "30%", desc: "of the royalty pool is equally divided every month among all Regional Manager-level partners." },
+                      { rank: "Director Level", pct: "40%", desc: "of the royalty pool is equally divided among all partners who have achieved the Director rank." }
+                    ].map((item, i) => (
+                      <div key={i} className="flex gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-[#D4AF37]/40 transition-colors">
+                        <div className="mt-1 w-10 h-10 rounded-full bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] font-black text-sm shrink-0 border border-[#D4AF37]/30">
+                          {item.pct}
+                        </div>
+                        <div>
+                          <h5 className="text-white font-bold uppercase tracking-wider text-sm mb-1">{item.rank}</h5>
+                          <p className="text-zinc-400 text-sm">{item.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-
-
 
       {/* User Benefits */}
       <section className="py-20 px-6 border-t border-white/5 relative z-10">
