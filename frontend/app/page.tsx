@@ -432,7 +432,7 @@ export default function Home() {
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
-                <FuturePlanCard step="2034" title="Official Launch of Spaark Ecommerce Shoppi" description={`"Where Technology meets trust" — While others sell products, Spaark Ecommerce builds Shopping experience for the future.`} image="/images/IMG_20260303_213017.png" isReversed={true} imageFit="contain" />
+                <FuturePlanCard step="2034" title="Official Launch of Spaark E-commerce Shoppi" description={`"Where Technology meets trust" — While others sell products, Spaark Ecommerce builds Shopping experience for the future.`} image="/images/IMG_20260303_213017.png" isReversed={true} imageFit="contain" />
                 <div className="absolute inset-x-0 inset-y-0 pointer-events-none rounded-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.05)", clipPath: "polygon(0 0, 50% 0, 50% 100%, 0 100%)" }} />
               </div>
             </div>
