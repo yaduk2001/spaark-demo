@@ -123,19 +123,24 @@ export default function Home() {
               Spaark Exchange is a global technology and digital innovation company headquartered in Dubai and Australia, strategically positioned to operate across International Markets. We focus on developing scalable digital platforms across Financial Technology, Online Commerce, Blockchain, Infrastructure, and Digital Entertainment. Our organization is built on strong governance, long-term strategic planning, and sustainable innovation. By combining advanced technology with structured business models, Spaark Exchange aims to create a connected digital ecosystem that supports growth for both the company and its global user community.
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-6">
               {[
-                { title: "Vision", desc: "Our Vision is to become a globally recognized technology enterprise that connects Digital, Finance, Online Commerce, and Blockchain Innovation while providing structured opportunities for customers and partners to build sustainable, High-Growth Online Businesses within the Spaark Ecosystem.", icon: Zap },
-                { title: "Mission", desc: "Our Mission is to develop secure, scalable, and future-ready digital platforms that empower individuals and businesses to participate in the Global Digital Economy through transparent and innovative online business models.", icon: Globe },
-                { title: "Values", desc: "Clarity. Safety. Reliability. Unity and Innovation embody Spaark's core values.", icon: ShieldCheck }
+                { title: "Mission", desc: "Our Mission is to develop secure, scalable, and future-ready digital platforms that empower individuals and businesses to participate in the Global Digital Economy through transparent and innovative online business models.", icon: Globe, image: "/images/IMG_20260303_103515.png" },
+                { title: "Vision", desc: "Our Vision is to become a globally recognized technology enterprise that connects Digital, Finance, Online Commerce, and Blockchain Innovation while providing structured opportunities for customers and partners to build sustainable, High-Growth Online Businesses within the Spaark Ecosystem.", icon: Zap, image: "/images/IMG_20260303_103605.png" },
+                { title: "Values", desc: "Clarity. Safety. Reliability. Unity and Innovation embody Spaark's core values.", icon: ShieldCheck, image: "/images/IMG_20260303_103709.png" }
               ].map((item, i) => (
-                <div key={i} className="card-angular p-6 flex gap-6 hover:bg-white/5 transition-all duration-300 hover:-translate-y-1">
-                  <div className="mt-1 w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/30">
-                    <item.icon size={24} />
+                <div key={i} className="card-angular overflow-hidden flex flex-col md:flex-row gap-0 hover:bg-white/5 transition-all duration-300 hover:-translate-y-1">
+                  <div className="relative h-48 md:h-auto md:w-2/5 shrink-0">
+                    <Image src={item.image} alt={item.title} fill className="object-cover" />
                   </div>
-                  <div>
-                    <h4 className="text-lg font-bold text-white uppercase tracking-wide mb-2">{item.title}</h4>
-                    <p className="text-sm text-zinc-400 leading-relaxed">{item.desc}</p>
+                  <div className="p-6 md:p-8 flex gap-6 md:w-3/5">
+                    <div className="mt-1 w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/30">
+                      <item.icon size={24} />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-bold text-white uppercase tracking-wide mb-3">{item.title}</h4>
+                      <p className="text-sm text-zinc-400 leading-relaxed">{item.desc}</p>
+                    </div>
                   </div>
                 </div>
               ))}
