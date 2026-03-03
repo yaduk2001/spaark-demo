@@ -123,26 +123,46 @@ export default function Home() {
               Spaark Exchange is a global technology and digital innovation company headquartered in Dubai and Australia, strategically positioned to operate across International Markets. We focus on developing scalable digital platforms across Financial Technology, Online Commerce, Blockchain, Infrastructure, and Digital Entertainment. Our organization is built on strong governance, long-term strategic planning, and sustainable innovation. By combining advanced technology with structured business models, Spaark Exchange aims to create a connected digital ecosystem that supports growth for both the company and its global user community.
             </p>
 
-            <div className="space-y-6">
+            <div className="space-y-5">
               {[
                 { title: "Mission", desc: "Our Mission is to develop secure, scalable, and future-ready digital platforms that empower individuals and businesses to participate in the Global Digital Economy through transparent and innovative online business models.", icon: Globe, image: "/images/IMG_20260303_103515.png" },
                 { title: "Vision", desc: "Our Vision is to become a globally recognized technology enterprise that connects Digital, Finance, Online Commerce, and Blockchain Innovation while providing structured opportunities for customers and partners to build sustainable, High-Growth Online Businesses within the Spaark Ecosystem.", icon: Zap, image: "/images/IMG_20260303_103605.png" },
                 { title: "Values", desc: "Clarity. Safety. Reliability. Unity and Innovation embody Spaark's core values.", icon: ShieldCheck, image: "/images/IMG_20260303_103709.png" }
               ].map((item, i) => (
-                <div key={i} className="card-angular relative overflow-hidden hover:-translate-y-1 transition-all duration-300 group">
-                  {/* Background image */}
+                <div
+                  key={i}
+                  className="relative overflow-hidden transition-all duration-300 hover:-translate-y-1 group"
+                  style={{
+                    minHeight: "160px",
+                    clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%)",
+                    border: "1px solid rgba(212,175,55,0.25)",
+                    background: "rgba(5,5,5,0.6)",
+                    backdropFilter: "blur(12px)",
+                    boxShadow: "0 8px 32px rgba(0,0,0,0.7), 0 0 20px rgba(212,175,55,0.08)",
+                  }}
+                >
+                  {/* Full background image */}
                   <div className="absolute inset-0 z-0">
-                    <Image src={item.image} alt={item.title} fill className="object-cover opacity-40 group-hover:opacity-55 transition-opacity duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 pointer-events-none" />
+                    <Image
+                      src={item.image}
+                      alt={item.title}
+                      fill
+                      className="object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-700"
+                    />
+                    {/* Bottom-up dark shelf for text */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 pointer-events-none" />
+                    {/* Gold left accent line */}
+                    <div className="absolute left-0 inset-y-0 w-1 bg-gradient-to-b from-[#D4AF37]/80 via-[#D4AF37]/40 to-transparent pointer-events-none" />
                   </div>
+
                   {/* Content */}
-                  <div className="relative z-10 p-6 flex gap-6">
-                    <div className="mt-1 w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/30">
-                      <item.icon size={24} />
+                  <div className="relative z-10 p-6 flex items-center gap-5">
+                    <div className="w-14 h-14 rounded-2xl bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/40 shadow-[0_0_16px_rgba(212,175,55,0.3)] backdrop-blur-sm">
+                      <item.icon size={26} />
                     </div>
                     <div>
-                      <h4 className="text-xl font-bold text-white uppercase tracking-wide mb-3">{item.title}</h4>
-                      <p className="text-sm text-zinc-300 leading-relaxed">{item.desc}</p>
+                      <h4 className="text-xl font-black text-white uppercase tracking-widest mb-2 drop-shadow-[0_2px_8px_rgba(0,0,0,1)]">{item.title}</h4>
+                      <p className="text-sm text-zinc-300 leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">{item.desc}</p>
                     </div>
                   </div>
                 </div>
