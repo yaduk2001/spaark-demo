@@ -616,32 +616,32 @@ export default function Home() {
             <h3 className="text-3xl font-black mb-8 uppercase text-center text-white">SPAARK COMMUNITY DEVELOPMENT 6 LEVEL REWARDS</h3>
             <div className="grid md:grid-cols-3 gap-8">
               {/* Card 1 */}
-              <div className="relative overflow-hidden rounded-xl">
+              <div className="relative overflow-hidden rounded-xl border border-[#BF953F]/25" style={{ boxShadow: "0 8px 30px rgba(0,0,0,0.7)" }}>
                 <div className="absolute inset-0 z-0">
-                  <Image src="/images/IMG_20260303_114431.jpg" alt="Tiers 1-2" fill className="object-cover opacity-60" style={{ filter: "brightness(1.1) contrast(1.05) saturate(1.1)" }} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 pointer-events-none" />
+                  <Image src="/images/IMG_20260303_114431.jpg" alt="Tiers 1-2" fill className="object-cover" style={{ opacity: 0.75, filter: "brightness(1.12) contrast(1.08) saturate(1.15)" }} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10 pointer-events-none" />
                 </div>
-                <div className="relative z-10 glass-card p-1" style={{ background: "rgba(5,5,5,0.45)", backdropFilter: "blur(10px)" }}>
+                <div className="relative z-10" style={{ background: "rgba(3,3,3,0.35)" }}>
                   <RewardCard title="Tiers 1-2" items={[{ label: "Level 1", value: "$0.875" }, { label: "Level 2", value: "$0.875" }]} />
                 </div>
               </div>
               {/* Card 2 */}
-              <div className="relative overflow-hidden rounded-xl">
+              <div className="relative overflow-hidden rounded-xl border border-[#BF953F]/25" style={{ boxShadow: "0 8px 30px rgba(0,0,0,0.7)" }}>
                 <div className="absolute inset-0 z-0">
-                  <Image src="/images/IMG_20260303_114547.jpg" alt="Tiers 3-4" fill className="object-cover opacity-60" style={{ filter: "brightness(1.1) contrast(1.05) saturate(1.1)" }} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 pointer-events-none" />
+                  <Image src="/images/IMG_20260303_114547.jpg" alt="Tiers 3-4" fill className="object-cover" style={{ opacity: 0.75, filter: "brightness(1.12) contrast(1.08) saturate(1.15)" }} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10 pointer-events-none" />
                 </div>
-                <div className="relative z-10 glass-card p-1" style={{ background: "rgba(5,5,5,0.45)", backdropFilter: "blur(10px)" }}>
+                <div className="relative z-10" style={{ background: "rgba(3,3,3,0.35)" }}>
                   <RewardCard title="Tiers 3-4" items={[{ label: "Level 3", value: "$1.3125" }, { label: "Level 4", value: "$1.3125" }]} />
                 </div>
               </div>
               {/* Card 3 */}
-              <div className="relative overflow-hidden rounded-xl">
+              <div className="relative overflow-hidden rounded-xl border border-[#BF953F]/50" style={{ boxShadow: "0 0 30px rgba(191,149,63,0.15), 0 8px 30px rgba(0,0,0,0.7)" }}>
                 <div className="absolute inset-0 z-0">
-                  <Image src="/images/IMG_20260303_114608.png" alt="Tiers 5-6" fill className="object-cover opacity-60" style={{ filter: "brightness(1.1) contrast(1.05) saturate(1.1)" }} />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 pointer-events-none" />
+                  <Image src="/images/IMG_20260303_114608.png" alt="Tiers 5-6" fill className="object-cover" style={{ opacity: 0.75, filter: "brightness(1.12) contrast(1.08) saturate(1.15)" }} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10 pointer-events-none" />
                 </div>
-                <div className="relative z-10 glass-card-premium p-1" style={{ background: "rgba(5,5,5,0.45)", backdropFilter: "blur(10px)" }}>
+                <div className="relative z-10" style={{ background: "rgba(3,3,3,0.35)" }}>
                   <RewardCard title="Tiers 5-6" items={[{ label: "Level 5", value: "$1.75" }, { label: "Level 6", value: "$2.625" }]} />
                 </div>
               </div>
