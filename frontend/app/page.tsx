@@ -880,17 +880,34 @@ export default function Home() {
 
           <div className="grid md:grid-cols-4 gap-6">
             {[
-              { title: "Exclusive Access", desc: "Early entry to all Spaark ecosystem launches and presales." },
-              { title: "Passive Income", desc: "Earn daily rewards through our verified staking pools." },
-              { title: "Global Networking", desc: "Connect with entrepreneurs and investors worldwide." },
-              { title: "Governance", desc: "Voting rights in the Spaark DAO for future developments." }
+              { title: "Exclusive Access", desc: "Early entry to all Spaark ecosystem launches and presales.", image: "/images/IMG_20260303_120428.jpg" },
+              { title: "Passive Income", desc: "Earn daily rewards through our verified staking pools.", image: "/images/IMG_20260303_120644.jpg" },
+              { title: "Global Networking", desc: "Connect with entrepreneurs and investors worldwide.", image: "/images/IMG_20260303_120816.jpg" },
+              { title: "Governance", desc: "Voting rights in the Spaark DAO for future developments.", image: "/images/IMG_20260303_121005.jpg" }
             ].map((item, i) => (
-              <div key={i} className="card-angular p-6 hover:bg-white/5 transition-all duration-300 hover:-translate-y-2 gold-glow">
-                <div className="w-12 h-12 bg-[#D4AF37]/15 rounded-xl mx-auto mb-4 flex items-center justify-center text-[#D4AF37] animate-gold-pulse">
-                  <Star size={24} />
+              <div key={i} className="card-angular relative overflow-hidden transition-all duration-300 hover:-translate-y-2 group gold-glow"
+                style={{ minHeight: "260px" }}>
+                {/* Background image */}
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    className="object-cover opacity-65 group-hover:opacity-85 group-hover:scale-110 transition-all duration-700"
+                    style={{ filter: "brightness(1.1) contrast(1.1)" }}
+                  />
+                  {/* Dark overlay for readability */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/40 pointer-events-none" />
                 </div>
-                <h4 className="font-bold text-lg mb-2 text-white">{item.title}</h4>
-                <p className="text-sm text-zinc-400 leading-relaxed">{item.desc}</p>
+
+                {/* Content */}
+                <div className="relative z-10 p-6 flex flex-col items-center h-full justify-end">
+                  <div className="w-12 h-12 bg-[#D4AF37]/20 rounded-xl mb-4 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/50 shadow-[0_0_15px_rgba(212,175,55,0.3)] backdrop-blur-sm group-hover:scale-110 transition-transform duration-500">
+                    <Star size={24} />
+                  </div>
+                  <h4 className="font-black text-lg mb-2 text-white uppercase tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,1)] text-center">{item.title}</h4>
+                  <p className="text-sm text-zinc-300 leading-relaxed text-center drop-shadow-[0_1px_3px_rgba(0,0,0,0.9)]">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
