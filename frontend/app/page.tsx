@@ -403,7 +403,7 @@ export default function Home() {
           <div className="space-y-8">
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
-                <FuturePlanCard step="2028" title="Official Launch of Spaark Exchange & XSPK Tokens" description="Launching of Spaark Token, a proprietary digital asset designed to support ecosystem Transactions, Rewards, and Platform Utility." image="/images/IMG-20260303-WA0038.jpg" imageFit="cover" />
+                <FuturePlanCard step="2028" title="Official Launch of Spaark Exchange & XSPK Tokens" description="Launching of Spaark Token, a proprietary digital asset designed to support ecosystem Transactions, Rewards, and Platform Utility." image="/images/IMG-20260303-WA0038.jpg" imageFit="contain" />
                 <div className="absolute inset-x-0 inset-y-0 bottom-1/2 pointer-events-none rounded-t-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.1)" }} />
               </div>
             </div>
@@ -824,10 +824,19 @@ export default function Home() {
                   { level: "Level 3: Reg. Manager", value: "30%", req: "3 direct referrals" },
                   { level: "Level 4: Director", value: "40%", req: "3 direct referrals" }
                 ].map((tier, i) => (
-                  <div key={i} className="bg-black/40 rounded-xl p-5 text-center border border-[#D4AF37]/20 hover:border-[#D4AF37]/50 transition-colors">
-                    <p className="text-xs font-bold text-zinc-400 uppercase mb-3">{tier.level}</p>
-                    <p className="text-3xl font-black text-[#D4AF37] mb-2">{tier.value}</p>
-                    <p className="text-[10px] text-zinc-500 uppercase tracking-widest leading-tight">{tier.req}</p>
+                  <div key={i} className="relative overflow-hidden bg-black/40 rounded-xl p-5 text-center border border-[#D4AF37]/20 hover:border-[#D4AF37]/60 transition-colors group gold-glow hover:-translate-y-1">
+                    {/* Background Image */}
+                    <div className="absolute inset-0 z-0 opacity-45 group-hover:opacity-75 transition-opacity duration-700">
+                      <Image src="/images/IMG_20260303_191456.png" alt={tier.level} fill className="object-cover" style={{ filter: "brightness(1.1) contrast(1.1) saturate(1.1)" }} />
+                      {/* Gradient overlay to ensure text readability */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/70 to-black/30 pointer-events-none" />
+                    </div>
+                    {/* Content */}
+                    <div className="relative z-10 flex flex-col h-full justify-between">
+                      <p className="text-xs font-bold text-zinc-300 uppercase mb-3 drop-shadow-md">{tier.level}</p>
+                      <p className="text-3xl font-black text-[#D4AF37] mb-2 drop-shadow-lg">{tier.value}</p>
+                      <p className="text-[10px] text-zinc-400 uppercase tracking-widest leading-tight drop-shadow-md">{tier.req}</p>
+                    </div>
                   </div>
                 ))}
               </div>

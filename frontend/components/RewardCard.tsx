@@ -50,8 +50,8 @@ const RewardCard: React.FC<RewardCardProps> = ({ title, icon, items, delay = 0, 
                             }`}
                     >
                         <div className="flex justify-between items-center gap-2 md:gap-4 mb-2 md:mb-3">
-                            <span className="text-zinc-500 text-[10px] md:text-xs font-bold uppercase tracking-widest group-hover:text-zinc-300 transition-colors">{item.label}</span>
-                            <span className={`font-black text-lg md:text-xl text-right leading-none transition-all duration-300 ${item.highlight ? "text-[#FACC15]" : "text-white group-hover:text-[#FACC15]"}`}>
+                            <span className="text-zinc-200 text-xs md:text-sm font-black uppercase tracking-widest drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] group-hover:text-white transition-colors">{item.label}</span>
+                            <span className={`font-black text-xl md:text-2xl text-right leading-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] transition-all duration-300 ${item.highlight ? "text-[#FACC15]" : "text-white group-hover:text-[#FACC15]"}`}>
                                 {item.value}
                             </span>
                         </div>
