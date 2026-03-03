@@ -432,7 +432,7 @@ export default function Home() {
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
-                <FuturePlanCard step="2034" title="Official Launch of Spaark E-Commerce Shoopi" description={`"Where Technology meets trust" — While others sell products, Spaark E-Commerce builds Shopping experience for the future.`} image="/images/IMG_20260303_213017.png" isReversed={true} imageFit="contain" />
+                <FuturePlanCard step="2034" title="Official Launch of Spaark Ecommerce Shoppi" description={`"Where Technology meets trust" — While others sell products, Spaark Ecommerce builds Shopping experience for the future.`} image="/images/IMG_20260303_213017.png" isReversed={true} imageFit="contain" />
                 <div className="absolute inset-x-0 inset-y-0 pointer-events-none rounded-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.05)", clipPath: "polygon(0 0, 50% 0, 50% 100%, 0 100%)" }} />
               </div>
             </div>
@@ -583,7 +583,7 @@ export default function Home() {
                   </div>
                   <div className="h-10 w-px bg-[#D4AF37]/30 hidden sm:block" />
                   <div>
-                    <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-1">Monthly Subscription</p>
+                    <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-1">Lifetime Subscription</p>
                     <p className="text-4xl font-black text-white">$3.50</p>
                   </div>
                 </div>
@@ -664,11 +664,11 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-6">
               {[
                 { desc: "1st Direct 6 Enrollment", rank: "Supervisor", reward: "$2.25", label: "1st Rank Achievement Reward", bgImage: "/images/IMG_20260303_202155.png" },
-                { desc: "2nd level 36 Team Growth Partners", rank: "Assistant Manager", reward: "$13.5", label: "2nd Rank Achievement Reward", bgImage: "/images/IMG_20260303_201813.jpg" },
-                { desc: "3rd 216 Team Growth Partners", rank: "Manager", reward: "$81.00", label: "3rd Rank Achievement Reward", bgImage: "/images/IMG_20260303_192232.png" },
-                { desc: "1296 Team Growth Partners", rank: "Senior Manager", reward: "$486.00 + Phone", label: "4th Rank Achievement Reward", bgImage: "/images/IMG_20260303_195946.png" },
-                { desc: "7776 Team Growth Partners", rank: "Regional Manager", reward: "$2,916.00 or Bike + 4Night & 5Days Singapore Tour", label: "5th Rank Achievement Reward", bgImage: "/images/IMG_20260303_200225.png" },
-                { desc: "46656 Team Growth Partners", rank: "Director", reward: "$17,496.00 or Car + 7 Night & 8 Days Switzerland Tour", label: "6th Rank Achievement Reward", bgImage: "/images/IMG_20260303_200512.png" },
+                { desc: "36 growth Partners at 2nd level", rank: "Assistant Manager", reward: "$13.5", label: "2nd Rank Achievement Reward", bgImage: "/images/IMG_20260303_201813.jpg" },
+                { desc: "216 growth partners at the 3rd level", rank: "Manager", reward: "$81.00", label: "3rd Rank Achievement Reward", bgImage: "/images/IMG_20260303_192232.png" },
+                { desc: "1296 growth Partners at 4th level", rank: "Senior Manager", reward: "$486.00 + Phone", label: "4th Rank Achievement Reward", bgImage: "/images/IMG_20260303_195946.png" },
+                { desc: "7776 growth Partners at the 5th level", rank: "Regional Manager", reward: "$2,916.00 or Bike + 4Night & 5Days Singapore Tour", label: "5th Rank Achievement Reward", bgImage: "/images/IMG_20260303_200225.png" },
+                { desc: "46656 growth Partners at the 6th level", rank: "Director", reward: "$17,496.00 or Car + 7 Night & 8 Days Switzerland Tour", label: "6th Rank Achievement Reward", bgImage: "/images/IMG_20260303_200512.png" },
               ].map((item: any, i) => {
                 const hasTour = item.reward.includes("Tour");
                 const hasOr = item.reward.includes(" or ");

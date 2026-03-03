@@ -64,7 +64,7 @@ export default function AboutPage() {
                         className="max-w-4xl mx-auto space-y-8"
                     >
                         <p className="text-xl lg:text-2xl text-white leading-relaxed">
-                            <strong className="text-[#FACC15]">SPAARK GLOBAL TECH</strong> is a global technology and digital innovation company headquartered in <strong className="text-white">Dubai and Australia</strong>.
+                            <strong className="text-[#FACC15]">SPAARK Exchange</strong> is a global technology and digital innovation company headquartered in <strong className="text-white">Dubai and Australia</strong>.
                         </p>
                         <p className="text-zinc-400 text-xl leading-relaxed">
                             We focus on developing scalable digital platforms across Financial Technology, Online Commerce, Blockchain Infrastructure, and Digital Entertainment. Our organization is built on strong Governance, Long-Term Strategic planning, and sustainable innovation.
@@ -207,7 +207,7 @@ export default function AboutPage() {
                             <div className="absolute inset-x-0 inset-y-0 bottom-1/2 pointer-events-none rounded-t-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.1)" }} />
                         </div>
                         <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
-                            <FuturePlanCard step="2034" title="Official Launch of Spaark E-Commerce Shoopi" description={`"Where Technology meets trust" — While others sell products, Spaark E-Commerce builds Shopping experience for the future.`} image="/images/IMG_20260303_213017.png" isReversed={true} imageFit="contain" />
+                            <FuturePlanCard step="2034" title="Official Launch of Spaark Ecommerce Shoopi" description={`"Where Technology meets trust" — While others sell products, Spaark Ecommerce builds Shopping experience for the future.`} image="/images/IMG_20260303_213017.png" isReversed={true} imageFit="contain" />
                             <div className="absolute inset-x-0 inset-y-0 pointer-events-none rounded-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.05)", clipPath: "polygon(0 0, 50% 0, 50% 100%, 0 100%)" }} />
                         </div>
                         <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
