@@ -441,8 +441,20 @@ export default function Home() {
       </section>
 
       {/* Subscription Section */}
-      <section className="py-20 px-6 relative z-10 pattern-geometric overflow-visible" id="subscription">
-
+      <section className="py-20 px-6 relative z-10 overflow-hidden" id="subscription">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/IMG_20260303_113107.png"
+            alt="Access the Future Background"
+            fill
+            className="object-cover"
+            style={{ filter: "brightness(1.1) contrast(1.08) saturate(1.15)" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/65 to-black/80 pointer-events-none" />
+          {/* Gold center glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#D4AF37]/10 blur-[100px] rounded-full pointer-events-none" />
+        </div>
 
         <div className="max-w-7xl mx-auto overflow-visible relative z-10">
           <div className="text-center mb-16">
