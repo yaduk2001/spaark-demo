@@ -147,10 +147,11 @@ export default function Home() {
                       src={item.image}
                       alt={item.title}
                       fill
-                      className="object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-700"
+                      className="object-cover opacity-75 group-hover:opacity-88 group-hover:scale-105 transition-all duration-700"
+                      style={{ filter: "brightness(1.1) contrast(1.05) saturate(1.15)" }}
                     />
                     {/* Bottom-up dark shelf for text */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/20 pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-black/10 pointer-events-none" />
                     {/* Gold left accent line */}
                     <div className="absolute left-0 inset-y-0 w-1 bg-gradient-to-b from-[#D4AF37]/80 via-[#D4AF37]/40 to-transparent pointer-events-none" />
                   </div>
