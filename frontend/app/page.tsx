@@ -129,17 +129,20 @@ export default function Home() {
                 { title: "Vision", desc: "Our Vision is to become a globally recognized technology enterprise that connects Digital, Finance, Online Commerce, and Blockchain Innovation while providing structured opportunities for customers and partners to build sustainable, High-Growth Online Businesses within the Spaark Ecosystem.", icon: Zap, image: "/images/IMG_20260303_103605.png" },
                 { title: "Values", desc: "Clarity. Safety. Reliability. Unity and Innovation embody Spaark's core values.", icon: ShieldCheck, image: "/images/IMG_20260303_103709.png" }
               ].map((item, i) => (
-                <div key={i} className="card-angular overflow-hidden flex flex-col md:flex-row gap-0 hover:bg-white/5 transition-all duration-300 hover:-translate-y-1">
-                  <div className="relative h-48 md:h-auto md:w-2/5 shrink-0">
-                    <Image src={item.image} alt={item.title} fill className="object-cover" />
+                <div key={i} className="card-angular relative overflow-hidden hover:-translate-y-1 transition-all duration-300 group">
+                  {/* Background image */}
+                  <div className="absolute inset-0 z-0">
+                    <Image src={item.image} alt={item.title} fill className="object-cover opacity-40 group-hover:opacity-55 transition-opacity duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40 pointer-events-none" />
                   </div>
-                  <div className="p-6 md:p-8 flex gap-6 md:w-3/5">
+                  {/* Content */}
+                  <div className="relative z-10 p-6 flex gap-6">
                     <div className="mt-1 w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/30">
                       <item.icon size={24} />
                     </div>
                     <div>
                       <h4 className="text-xl font-bold text-white uppercase tracking-wide mb-3">{item.title}</h4>
-                      <p className="text-sm text-zinc-400 leading-relaxed">{item.desc}</p>
+                      <p className="text-sm text-zinc-300 leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 </div>
