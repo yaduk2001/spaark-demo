@@ -441,21 +441,7 @@ export default function Home() {
       </section>
 
       {/* Subscription Section */}
-      <section className="py-20 px-6 relative z-10 overflow-hidden" id="subscription">
-        {/* Background image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/IMG_20260303_113107.png"
-            alt="Access the Future Background"
-            fill
-            className="object-cover"
-            style={{ filter: "brightness(1.1) contrast(1.08) saturate(1.15)" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/65 to-black/80 pointer-events-none" />
-          {/* Gold center glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[#D4AF37]/10 blur-[100px] rounded-full pointer-events-none" />
-        </div>
-
+      <section className="py-20 px-6 relative z-10 pattern-geometric overflow-visible" id="subscription">
         <div className="max-w-7xl mx-auto overflow-visible relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-2">ACCESS THE FUTURE</h2>
@@ -463,22 +449,37 @@ export default function Home() {
           </div>
 
           <div className="max-w-md mx-auto overflow-visible">
-            <div className="card-premium p-2 py-5 transform hover:scale-[1.02] transition-all duration-500 border-glow-animated overflow-visible">
-              <SubscriptionPriceCard
-                title="Global Pro"
-                price="$53.50"
-                isPopular={true}
-                features={[
-                  "Entry level access",
-                  "Community participation",
-                  "royalty reward eligibility",
-                  "XSPK Token Purchase Access",
-                  "9000 Spaark XSPK Tokens included",
-                  "Full Staking Rewards",
-                  "24/7 Priority Support"
-                ]}
-                delay={0.2}
-              />
+            {/* Global Pro card with background image */}
+            <div className="relative overflow-hidden rounded-2xl border-glow-animated">
+              {/* Background image directly on the card */}
+              <div className="absolute inset-0 z-0 rounded-2xl overflow-hidden">
+                <Image
+                  src="/images/IMG_20260303_113107.png"
+                  alt="Global Pro Background"
+                  fill
+                  className="object-cover"
+                  style={{ opacity: 0.72, filter: "brightness(1.12) contrast(1.08) saturate(1.15)" }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/25 pointer-events-none" />
+              </div>
+              <div className="relative z-10 card-premium p-2 py-5 transform hover:scale-[1.02] transition-all duration-500 overflow-visible"
+                style={{ background: "rgba(5,5,5,0.40)" }}>
+                <SubscriptionPriceCard
+                  title="Global Pro"
+                  price="$53.50"
+                  isPopular={true}
+                  features={[
+                    "Entry level access",
+                    "Community participation",
+                    "royalty reward eligibility",
+                    "XSPK Token Purchase Access",
+                    "9000 Spaark XSPK Tokens included",
+                    "Full Staking Rewards",
+                    "24/7 Priority Support"
+                  ]}
+                  delay={0.2}
+                />
+              </div>
             </div>
           </div>
         </div>
