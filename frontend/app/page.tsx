@@ -498,6 +498,8 @@ export default function Home() {
           <div className="card-premium p-6 md:p-8 lg:p-12 mb-16 max-w-6xl mx-auto gold-glow-strong overflow-hidden relative border border-[#D4AF37]/30">
             {/* Background Accent */}
             <div className="absolute inset-0 z-0 pointer-events-none">
+              <Image src="/images/IMG_20260303_191456.png" alt="Business Startup Background" fill className="object-cover opacity-30" style={{ filter: "brightness(1.1) contrast(1.1) saturate(1.1)" }} />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/60" />
               <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4AF37]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
               <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
             </div>
