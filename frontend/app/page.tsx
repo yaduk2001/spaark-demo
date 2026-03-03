@@ -316,10 +316,22 @@ export default function Home() {
       </section>
 
       {/* Logic at the Core of Spaark */}
-      <section className="py-20 px-6 bg-zinc-950 relative z-10 border-t border-white/5">
-        <div className="absolute inset-0 pointer-events-none z-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#D4AF37]/5 blur-[120px] rounded-full" />
+      <section className="py-20 px-6 relative z-10 border-t border-white/5 overflow-hidden">
+        {/* Background image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/IMG_20260303_112405.png"
+            alt="Logic Core Background"
+            fill
+            className="object-cover"
+            style={{ filter: "brightness(1.15) contrast(1.1) saturate(1.2)" }}
+          />
+          {/* Dark overlay for readability */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-black/85 pointer-events-none" />
+          {/* Subtle gold radial glow */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#D4AF37]/8 blur-[120px] rounded-full pointer-events-none" />
         </div>
+
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Header */}
           <div className="text-center mb-6">
@@ -327,7 +339,7 @@ export default function Home() {
               The Logic at the Core of <span className="text-[#D4AF37]">Spaark</span>
             </h2>
             <div className="h-1 w-24 bg-[#D4AF37] mx-auto shadow-[0_0_15px_rgba(212,175,55,0.4)] mb-8" />
-            <p className="text-zinc-400 text-lg leading-relaxed max-w-3xl mx-auto border-l-4 border-[#D4AF37]/40 pl-6 text-left">
+            <p className="text-zinc-300 text-lg leading-relaxed max-w-3xl mx-auto border-l-4 border-[#D4AF37]/40 pl-6 text-left">
               A reliable blockchain ecosystem must act like a thriving community — scalable, rewarding, multidimensional, and forward-looking. Spaark operates through interconnected modes, addressing key challenges in digital finance and commerce.
             </p>
           </div>
@@ -366,13 +378,14 @@ export default function Home() {
                 icon: Zap,
               },
             ].map((item, i) => (
-              <div key={i} className="card-angular p-7 flex items-start gap-5 hover:bg-white/5 hover:-translate-y-1 transition-all duration-300 group">
+              <div key={i} className="card-angular p-7 flex items-start gap-5 hover:bg-white/10 hover:-translate-y-1 transition-all duration-300 group"
+                style={{ background: "rgba(5,5,5,0.55)", backdropFilter: "blur(14px)" }}>
                 <div className="mt-1 w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] shrink-0 border border-[#D4AF37]/30 group-hover:bg-[#D4AF37]/25 transition-colors duration-300">
                   <item.icon size={24} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-black text-white uppercase tracking-wide mb-1">{item.title}</h3>
-                  <p className="text-zinc-400 font-medium leading-relaxed">{item.desc}</p>
+                  <h3 className="text-lg font-black text-white uppercase tracking-wide mb-1 drop-shadow-[0_2px_6px_rgba(0,0,0,1)]">{item.title}</h3>
+                  <p className="text-zinc-300 font-medium leading-relaxed drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">{item.desc}</p>
                 </div>
               </div>
             ))}
