@@ -403,7 +403,7 @@ export default function Home() {
           <div className="space-y-8">
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
-                <FuturePlanCard step="2028" title="Official Launch of Spaark Exchange & XSPK Tokens" description="Launching of Spaark Token, a proprietary digital asset designed to support ecosystem Transactions, Rewards, and Platform Utility." image="/images/IMG-20260303-WA0038.jpg" imageFit="contain" />
+                <FuturePlanCard step="2028" title="Official Launch of Spaark Exchange & XSPK Tokens" description="Launching of Spaark Token, a proprietary digital asset designed to support ecosystem Transactions, Rewards, and Platform Utility." image="/images/IMG_20260303_211157.png" imageFit="contain" />
                 <div className="absolute inset-x-0 inset-y-0 bottom-1/2 pointer-events-none rounded-t-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.1)" }} />
               </div>
             </div>
