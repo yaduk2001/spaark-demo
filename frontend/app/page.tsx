@@ -413,8 +413,9 @@ export default function Home() {
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
-              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2030" title="Official Launch of Spaark Online Games" description="Expansion into Online Gaming Platforms, integrating Digital Economies and user engagement within the broader Spaark Ecosystem. Focused on Kids Education and Cognitive Development." image="/images/IMG_20260121_204726.jpg" imageFit="cover" />
+              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
+                <FuturePlanCard step="2030" title="Official Launch of Spaark Online Games" description="Expansion into Online Gaming Platforms, integrating Digital Economies and user engagement within the broader Spaark Ecosystem. Focused on Kids Education and Cognitive Development." image="/images/IMG_20260303_214416.png" imageFit="contain" />
+                <div className="absolute inset-x-0 inset-y-0 bottom-1/2 pointer-events-none rounded-t-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.1)" }} />
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
@@ -423,8 +424,9 @@ export default function Home() {
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
-              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2032" title="Spaark's Own Blockchain Network" description="The Smart Blockchain Backend will be started in 2032. This foundational upgrade aims to significantly boost network transaction capabilities and robust security protocols. It securely sets the stage for a fully decentralized, highly scalable architecture." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
+              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
+                <FuturePlanCard step="2032" title="Spaark's Own Blockchain Network" description="The Smart Blockchain Backend will be started in 2032. This foundational upgrade aims to significantly boost network transaction capabilities and robust security protocols. It securely sets the stage for a fully decentralized, highly scalable architecture." image="/images/IMG_20260303_214632.png" imageFit="contain" />
+                <div className="absolute inset-x-0 inset-y-0 bottom-1/2 pointer-events-none rounded-t-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.1)" }} />
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
