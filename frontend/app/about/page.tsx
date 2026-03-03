@@ -187,26 +187,32 @@ export default function AboutPage() {
                     </div>
 
                     <div className="max-w-5xl mx-auto space-y-8">
-                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                            <FuturePlanCard step="2028" title="Spaark XSPK and Token Official Launch" description="Launching of Spaark Token, a proprietary digital asset designed to support ecosystem Transactions, Rewards, and Platform Utility." image="/images/IMG_20260121_204808.jpg" imageFit="cover" />
+                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
+                            <FuturePlanCard step="2028" title="Official Launch of Spaark Exchange & XSPK Tokens" description="Launching of Spaark Token, a proprietary digital asset designed to support ecosystem Transactions, Rewards, and Platform Utility." image="/images/IMG_20260303_211157.png" imageFit="contain" />
+                            <div className="absolute inset-x-0 inset-y-0 bottom-1/2 pointer-events-none rounded-t-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.1)" }} />
+                        </div>
+                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
+                            <FuturePlanCard step="2029" title="Official Launch of Spaark Online Market Hub" description="Introduction of a Global Online Market Hub enabling Digital Commerce, Services, and Entrepreneurial participation through Spaark-powered platform." image="/images/IMG_20260303_215228.png" isReversed={true} imageFit="contain" />
+                            <div className="absolute inset-x-0 inset-y-0 pointer-events-none rounded-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.05)", clipPath: "polygon(0 0, 50% 0, 50% 100%, 0 100%)" }} />
+                        </div>
+                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
+                            <FuturePlanCard step="2030" title="Official Launch of Spaark Online Games" description="Expansion into Online Gaming Platforms, integrating Digital Economies and user engagement within the broader Spaark Ecosystem. Focused on Kids Education and Cognitive Development." image="/images/IMG_20260303_214416.png" imageFit="contain" />
+                            <div className="absolute inset-x-0 inset-y-0 bottom-1/2 pointer-events-none rounded-t-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.1)" }} />
                         </div>
                         <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                            <FuturePlanCard step="2029" title="Spaark online hub official launch" description="Introduction of a Global Online Market Hub enabling Digital Commerce, Services, and Entrepreneurial participation through Spaark-powered platform." isReversed={true} image="/images/IMG_20260121_210255 (1).jpg" imageFit="contain" />
+                            <FuturePlanCard step="2031" title="Official Launch of Spaark E-Book Library" description="Launch of our comprehensive digital E-book library providing educational resources and content for the global Spaark community." image="/images/IMG_20260303_212538.png" isReversed={true} imageFit="contain" />
                         </div>
-                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                            <FuturePlanCard step="2030" title="Spaark online game official launch" description="Expansion into Online Gaming Platforms, integrating Digital Economies and user engagement within the broader Spaark Ecosystem." image="/images/IMG_20260121_204726.jpg" imageFit="cover" />
+                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
+                            <FuturePlanCard step="2032" title="Spaark's Own Blockchain Network" description="The Smart Blockchain Backend will be started in 2032. This foundational upgrade aims to significantly boost network transaction capabilities and robust security protocols. It securely sets the stage for a fully decentralized, highly scalable architecture." image="/images/IMG_20260303_214632.png" imageFit="contain" />
+                            <div className="absolute inset-x-0 inset-y-0 bottom-1/2 pointer-events-none rounded-t-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.1)" }} />
                         </div>
-                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                            <FuturePlanCard step="2031" title="E book library official launch" description="Launch of our comprehensive digital E-book library providing educational resources and content for the global Spaark community." isReversed={true} image="/images/IMG_20260121_210255 (1).jpg" imageFit="cover" />
+                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
+                            <FuturePlanCard step="2034" title="Official Launch of Spaark E-Commerce Shoopi" description={`"Where Technology meets trust" — While others sell products, Spaark E-Commerce builds Shopping experience for the future.`} image="/images/IMG_20260303_213017.png" isReversed={true} imageFit="contain" />
+                            <div className="absolute inset-x-0 inset-y-0 pointer-events-none rounded-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.05)", clipPath: "polygon(0 0, 50% 0, 50% 100%, 0 100%)" }} />
                         </div>
-                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                            <FuturePlanCard step="2032" title="Spaark's Own Blockchain Network" description="The Smart Blockchain Backend will be started in 2032. This foundational upgrade aims to significantly boost network transaction capabilities and robust security protocols. It securely sets the stage for a fully decentralized, highly scalable architecture." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
-                        </div>
-                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                            <FuturePlanCard step="2034" title="Official Launch of Spaark E-Commerce Shoopi" description={`"Where Technology meets trust" — While others sell products, Spaark E-Commerce builds Shopping experience for the future.`} isReversed={true} image="/images/IMG_20260121_210255 (1).jpg" imageFit="contain" />
-                        </div>
-                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                            <FuturePlanCard step="2036" title="Spaark Blockchain officially launching" description="Deployment of Spaark Blockchain, a proprietary blockchain infrastructure focused on security, scalability, and enterprise-grade performance." isReversed={true} image="/images/IMG_20260121_204921.jpg" imageFit="cover" />
+                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
+                            <FuturePlanCard step="2036" title="Official Launch of Spaark Blockchain" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. XSPK Tokens will be converted into XSPK Coins. This milestone focuses on exponentially boosting the network's scalability, security, and global transaction speed. It empowers developers to build within the Spaark ecosystem." image="/images/IMG_20260303_213600.png" isReversed={true} imageFit="contain" />
+                            <div className="absolute inset-x-0 inset-y-0 pointer-events-none rounded-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.05)", clipPath: "polygon(0 0, 50% 0, 50% 100%, 0 100%)" }} />
                         </div>
                     </div>
                 </div>
