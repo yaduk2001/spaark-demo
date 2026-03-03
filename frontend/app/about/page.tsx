@@ -203,6 +203,9 @@ export default function AboutPage() {
                             <FuturePlanCard step="2032" title="Spaark's Own Blockchain Network" description="The Smart Blockchain Backend will be started in 2032. This foundational upgrade aims to significantly boost network transaction capabilities and robust security protocols. It securely sets the stage for a fully decentralized, highly scalable architecture." image="/images/IMG_20260121_204833.jpg" imageFit="cover" />
                         </div>
                         <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
+                            <FuturePlanCard step="2034" title="Official Launch of Spaark E-Commerce Shoopi" description={`"Where Technology meets trust" — While others sell products, Spaark E-Commerce builds Shopping experience for the future.`} isReversed={true} image="/images/IMG_20260121_210255 (1).jpg" imageFit="contain" />
+                        </div>
+                        <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
                             <FuturePlanCard step="2036" title="Spaark Blockchain officially launching" description="Deployment of Spaark Blockchain, a proprietary blockchain infrastructure focused on security, scalability, and enterprise-grade performance." isReversed={true} image="/images/IMG_20260121_204921.jpg" imageFit="cover" />
                         </div>
                     </div>
