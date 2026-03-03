@@ -419,7 +419,7 @@ export default function Home() {
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2031" title="Official Launch of Spaark E-Book Library" description="Launch of our comprehensive digital E-book library providing educational resources and content for the global Spaark community." image="/images/IMG_20260303_212538.png" isReversed={true} imageFit="cover" />
+                <FuturePlanCard step="2031" title="Official Launch of Spaark E-Book Library" description="Launch of our comprehensive digital E-book library providing educational resources and content for the global Spaark community." image="/images/IMG_20260303_212538.png" isReversed={true} imageFit="contain" />
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
@@ -434,8 +434,9 @@ export default function Home() {
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
-              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2036" title="Official Launch of Spaark Blockchain" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. XSPK Tokens will be converted into XSPK Coins. This milestone focuses on exponentially boosting the network's scalability, security, and global transaction speed. It empowers developers to build within the Spaark ecosystem." image="/images/IMG_20260121_204921.jpg" isReversed={true} imageFit="cover" />
+              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
+                <FuturePlanCard step="2036" title="Official Launch of Spaark Blockchain" description="Spaark's Own Blockchain Network Launch powering the future of decentralized innovation. XSPK Tokens will be converted into XSPK Coins. This milestone focuses on exponentially boosting the network's scalability, security, and global transaction speed. It empowers developers to build within the Spaark ecosystem." image="/images/IMG_20260303_213600.png" isReversed={true} imageFit="contain" />
+                <div className="absolute inset-x-0 inset-y-0 pointer-events-none rounded-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.05)", clipPath: "polygon(0 0, 50% 0, 50% 100%, 0 100%)" }} />
               </div>
             </div>
           </div>
