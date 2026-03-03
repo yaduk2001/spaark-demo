@@ -655,13 +655,13 @@ export default function Home() {
             <p className="text-center text-zinc-500 font-bold tracking-widest uppercase mb-12">Eligible for Spaark Staking Community Only</p>
             <div className="grid md:grid-cols-3 gap-6">
               {[
-                { desc: "1st Direct 6 Enrollment", rank: "Supervisor", reward: "$2.25", label: "1st Rank Achievement Reward" },
-                { desc: "2nd level 36 Team Growth Partners", rank: "Assistant Manager", reward: "$13.5", label: "2nd Rank Achievement Reward" },
-                { desc: "3rd 216 Team Growth Partners", rank: "Manager", reward: "$81.00", label: "3rd Rank Achievement Reward" },
-                { desc: "1296 Team Growth Partners", rank: "Senior Manager", reward: "$486.00 + Phone", label: "4th Rank Achievement Reward" },
-                { desc: "7776 Team Growth Partners", rank: "Regional Manager", reward: "$2,916.00 or Bike + 4Night & 5Days Singapore Tour", label: "5th Rank Achievement Reward" },
-                { desc: "46656 Team Growth Partners", rank: "Director", reward: "$17,496.00 or Car + 7 Night & 8 Days Switzerland Tour", label: "6th Rank Achievement Reward" },
-              ].map((item, i) => {
+                { desc: "1st Direct 6 Enrollment", rank: "Supervisor", reward: "$2.25", label: "1st Rank Achievement Reward", bgImage: "/images/IMG_20260303_202155.png" },
+                { desc: "2nd level 36 Team Growth Partners", rank: "Assistant Manager", reward: "$13.5", label: "2nd Rank Achievement Reward", bgImage: "/images/IMG_20260303_201813.jpg" },
+                { desc: "3rd 216 Team Growth Partners", rank: "Manager", reward: "$81.00", label: "3rd Rank Achievement Reward", bgImage: "/images/IMG_20260303_192232.png" },
+                { desc: "1296 Team Growth Partners", rank: "Senior Manager", reward: "$486.00 + Phone", label: "4th Rank Achievement Reward", bgImage: "/images/IMG_20260303_195946.png" },
+                { desc: "7776 Team Growth Partners", rank: "Regional Manager", reward: "$2,916.00 or Bike + 4Night & 5Days Singapore Tour", label: "5th Rank Achievement Reward", bgImage: "/images/IMG_20260303_200225.png" },
+                { desc: "46656 Team Growth Partners", rank: "Director", reward: "$17,496.00 or Car + 7 Night & 8 Days Switzerland Tour", label: "6th Rank Achievement Reward", bgImage: "/images/IMG_20260303_200512.png" },
+              ].map((item: any, i) => {
                 const hasTour = item.reward.includes("Tour");
                 const hasOr = item.reward.includes(" or ");
                 let mainReward = item.reward;
@@ -682,6 +682,13 @@ export default function Home() {
 
                 return (
                   <div key={i} className="relative flex flex-col items-center text-center p-6 bg-black/80 border border-[#D4AF37]/40 rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 group">
+                    {/* Background Image */}
+                    {item.bgImage && (
+                      <div className="absolute inset-0 z-0 opacity-40 group-hover:opacity-70 transition-opacity duration-700">
+                        <Image src={item.bgImage} alt={item.rank} fill className="object-cover" style={{ filter: "brightness(1.1) contrast(1.1) saturate(1.1)" }} />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20 pointer-events-none" />
+                      </div>
+                    )}
                     {/* Sparkle bg */}
                     <div className="absolute inset-0 pointer-events-none opacity-20 group-hover:opacity-30 transition-opacity"
                       style={{ backgroundImage: 'radial-gradient(#D4AF37 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
