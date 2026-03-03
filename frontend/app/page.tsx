@@ -328,7 +328,7 @@ export default function Home() {
             style={{ filter: "brightness(1.15) contrast(1.1) saturate(1.2)" }}
           />
           {/* Dark overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/70 to-black/85 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/65 to-black/80 pointer-events-none" />
           {/* Subtle gold radial glow */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#D4AF37]/8 blur-[120px] rounded-full pointer-events-none" />
         </div>
@@ -615,14 +615,35 @@ export default function Home() {
           <div className="mb-20">
             <h3 className="text-3xl font-black mb-8 uppercase text-center text-white">SPAARK COMMUNITY DEVELOPMENT 6 LEVEL REWARDS</h3>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="glass-card p-1">
-                <RewardCard title="Tiers 1-2" items={[{ label: "Level 1", value: "$0.875" }, { label: "Level 2", value: "$0.875" }]} />
+              {/* Card 1 */}
+              <div className="relative overflow-hidden rounded-xl">
+                <div className="absolute inset-0 z-0">
+                  <Image src="/images/IMG_20260303_114431.jpg" alt="Tiers 1-2" fill className="object-cover opacity-60" style={{ filter: "brightness(1.1) contrast(1.05) saturate(1.1)" }} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 pointer-events-none" />
+                </div>
+                <div className="relative z-10 glass-card p-1" style={{ background: "rgba(5,5,5,0.45)", backdropFilter: "blur(10px)" }}>
+                  <RewardCard title="Tiers 1-2" items={[{ label: "Level 1", value: "$0.875" }, { label: "Level 2", value: "$0.875" }]} />
+                </div>
               </div>
-              <div className="glass-card p-1">
-                <RewardCard title="Tiers 3-4" items={[{ label: "Level 3", value: "$1.3125" }, { label: "Level 4", value: "$1.3125" }]} />
+              {/* Card 2 */}
+              <div className="relative overflow-hidden rounded-xl">
+                <div className="absolute inset-0 z-0">
+                  <Image src="/images/IMG_20260303_114547.jpg" alt="Tiers 3-4" fill className="object-cover opacity-60" style={{ filter: "brightness(1.1) contrast(1.05) saturate(1.1)" }} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 pointer-events-none" />
+                </div>
+                <div className="relative z-10 glass-card p-1" style={{ background: "rgba(5,5,5,0.45)", backdropFilter: "blur(10px)" }}>
+                  <RewardCard title="Tiers 3-4" items={[{ label: "Level 3", value: "$1.3125" }, { label: "Level 4", value: "$1.3125" }]} />
+                </div>
               </div>
-              <div className="glass-card-premium p-1">
-                <RewardCard title="Tiers 5-6" items={[{ label: "Level 5", value: "$1.75" }, { label: "Level 6", value: "$2.625" }]} />
+              {/* Card 3 */}
+              <div className="relative overflow-hidden rounded-xl">
+                <div className="absolute inset-0 z-0">
+                  <Image src="/images/IMG_20260303_114608.png" alt="Tiers 5-6" fill className="object-cover opacity-60" style={{ filter: "brightness(1.1) contrast(1.05) saturate(1.1)" }} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 pointer-events-none" />
+                </div>
+                <div className="relative z-10 glass-card-premium p-1" style={{ background: "rgba(5,5,5,0.45)", backdropFilter: "blur(10px)" }}>
+                  <RewardCard title="Tiers 5-6" items={[{ label: "Level 5", value: "$1.75" }, { label: "Level 6", value: "$2.625" }]} />
+                </div>
               </div>
             </div>
           </div>
