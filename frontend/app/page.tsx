@@ -419,7 +419,7 @@ export default function Home() {
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2031" title="Official Launch of Spaark E-Book Library" description="Launch of our comprehensive digital E-book library providing educational resources and content for the global Spaark community." image="/images/IMG_20260121_210255 (1).jpg" isReversed={true} imageFit="cover" />
+                <FuturePlanCard step="2031" title="Official Launch of Spaark E-Book Library" description="Launch of our comprehensive digital E-book library providing educational resources and content for the global Spaark community." image="/images/IMG_20260303_212538.png" isReversed={true} imageFit="cover" />
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
@@ -429,7 +429,7 @@ export default function Home() {
             </div>
             <div className="max-w-4xl mx-auto">
               <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
-                <FuturePlanCard step="2034" title="Official Launch of Spaark E-Commerce Shoopi" description={`"Where Technology meets trust" — While others sell products, Spaark E-Commerce builds Shopping experience for the future.`} image="/images/IMG-20260303-WA0036.jpg" isReversed={true} imageFit="contain" />
+                <FuturePlanCard step="2034" title="Official Launch of Spaark E-Commerce Shoopi" description={`"Where Technology meets trust" — While others sell products, Spaark E-Commerce builds Shopping experience for the future.`} image="/images/IMG_20260303_213017.png" isReversed={true} imageFit="contain" />
                 <div className="absolute inset-x-0 inset-y-0 pointer-events-none rounded-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.05)", clipPath: "polygon(0 0, 50% 0, 50% 100%, 0 100%)" }} />
               </div>
             </div>
@@ -465,7 +465,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/25 pointer-events-none" />
               </div>
               <div className="relative z-10 card-premium p-2 py-5 transform hover:scale-[1.02] transition-all duration-500 overflow-visible"
-                style={{ background: "rgba(5,5,5,0.40)" }}>
+                style={{ background: "rgba(5,5,5,0.25)", backdropFilter: "blur(4px)" }}>
                 <SubscriptionPriceCard
                   title="Global Pro"
                   price="$53.50"
