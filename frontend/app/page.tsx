@@ -402,8 +402,9 @@ export default function Home() {
 
           <div className="space-y-8">
             <div className="max-w-4xl mx-auto">
-              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible">
-                <FuturePlanCard step="2028" title="Official Launch of Spaark Exchange & XSPK Tokens" description="Launching of Spaark Token, a proprietary digital asset designed to support ecosystem Transactions, Rewards, and Platform Utility." image="/images/IMG_20260121_204808.jpg" imageFit="cover" />
+              <div className="card-angular hover:border-[#D4AF37]/50 transition-all duration-300 p-[2px] gold-glow overflow-visible relative group">
+                <FuturePlanCard step="2028" title="Official Launch of Spaark Exchange & XSPK Tokens" description="Launching of Spaark Token, a proprietary digital asset designed to support ecosystem Transactions, Rewards, and Platform Utility." image="/images/IMG-20260303-WA0038.jpg" imageFit="cover" />
+                <div className="absolute inset-x-0 inset-y-0 bottom-1/2 pointer-events-none rounded-t-xl" style={{ backdropFilter: "contrast(1.2) brightness(1.1) saturate(1.2) sepia(0.1)" }} />
               </div>
             </div>
             <div className="max-w-4xl mx-auto">
@@ -684,9 +685,9 @@ export default function Home() {
                   <div key={i} className="relative flex flex-col items-center text-center p-6 bg-black/80 border border-[#D4AF37]/40 rounded-xl overflow-hidden hover:scale-[1.02] transition-transform duration-500 group">
                     {/* Background Image */}
                     {item.bgImage && (
-                      <div className="absolute inset-0 z-0 opacity-40 group-hover:opacity-70 transition-opacity duration-700">
-                        <Image src={item.bgImage} alt={item.rank} fill className="object-cover" style={{ filter: "brightness(1.1) contrast(1.1) saturate(1.1)" }} />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20 pointer-events-none" />
+                      <div className="absolute inset-0 z-0 opacity-60 group-hover:opacity-85 transition-opacity duration-700">
+                        <Image src={item.bgImage} alt={item.rank} fill className="object-cover" style={{ filter: "brightness(1.15) contrast(1.1) saturate(1.1)" }} />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent pointer-events-none" />
                       </div>
                     )}
                     {/* Sparkle bg */}
