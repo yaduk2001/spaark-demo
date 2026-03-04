@@ -508,7 +508,7 @@ export default function Home() {
                 style={{ background: "rgba(5,5,5,0.25)", backdropFilter: "blur(4px)" }}>
                 <SubscriptionPriceCard
                   title="Global Pro"
-                  price="$53.50"
+                  price="$58.50"
                   isPopular={true}
                   features={[
                     "Entry level access",
