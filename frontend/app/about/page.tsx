@@ -94,16 +94,29 @@ export default function AboutPage() {
                     >
                         {/* Vision Card */}
                         <motion.div variants={fadeInUp} className="card-premium p-12 flex flex-col justify-between min-h-[400px] group relative overflow-hidden">
+                            {/* Background image */}
+                            <div className="absolute inset-0 z-0">
+                                <Image
+                                    src="/images/IMG_20260303_103605.png"
+                                    alt="Vision Background"
+                                    fill
+                                    className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700"
+                                    style={{ filter: "brightness(1.1) contrast(1.05) saturate(1.15)" }}
+                                />
+                                {/* Dark overlay for readability */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 pointer-events-none" />
+                            </div>
+
                             <div className="relative z-10">
                                 <div className="flex items-start justify-between mb-8">
-                                    <div className="w-16 h-16 rounded-2xl bg-[#FACC15]/20 flex items-center justify-center text-[#FACC15] border border-[#FACC15]/30">
+                                    <div className="w-16 h-16 rounded-2xl bg-[#FACC15]/20 flex items-center justify-center text-[#FACC15] border border-[#FACC15]/30 backdrop-blur-md">
                                         <Target size={32} />
                                     </div>
-                                    <h2 className="text-3xl font-black uppercase text-white/20 group-hover:text-[#FACC15]/20 transition-colors">Vision</h2>
+                                    <h2 className="text-3xl font-black uppercase text-white/40 drop-shadow-md">Vision</h2>
                                 </div>
                                 <div>
-                                    <h3 className="text-3xl font-bold text-white mb-6 uppercase">Our <span className="text-[#FACC15]">Vision</span></h3>
-                                    <p className="text-zinc-300 text-lg leading-relaxed">
+                                    <h3 className="text-3xl font-bold text-white mb-6 uppercase drop-shadow-lg">Our <span className="text-[#FACC15]">Vision</span></h3>
+                                    <p className="text-white drop-shadow-md text-lg leading-relaxed font-medium">
                                         To become a Globally recognized technology enterprise that connects Digital Finance, Online Commerce, and Blockchain Innovation— while providing structured opportunities for customers and partners to build sustainable, High-Growth Online Businesses within the SPAARK Ecosystem.
                                     </p>
                                 </div>
@@ -112,16 +125,29 @@ export default function AboutPage() {
 
                         {/* Mission Card */}
                         <motion.div variants={fadeInUp} className="card-angular p-12 flex flex-col justify-between min-h-[400px] group relative overflow-hidden">
+                            {/* Background image */}
+                            <div className="absolute inset-0 z-0">
+                                <Image
+                                    src="/images/IMG_20260303_103515.png"
+                                    alt="Mission Background"
+                                    fill
+                                    className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700"
+                                    style={{ filter: "brightness(1.1) contrast(1.05) saturate(1.15)" }}
+                                />
+                                {/* Dark overlay for readability */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 pointer-events-none" />
+                            </div>
+
                             <div className="relative z-10">
                                 <div className="flex items-start justify-between mb-8">
-                                    <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-white border border-white/20">
+                                    <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center text-white border border-white/30 backdrop-blur-md">
                                         <Rocket size={32} />
                                     </div>
-                                    <h2 className="text-3xl font-black uppercase text-white/20">Mission</h2>
+                                    <h2 className="text-3xl font-black uppercase text-white/40 drop-shadow-md">Mission</h2>
                                 </div>
                                 <div>
-                                    <h3 className="text-3xl font-bold text-white mb-6 uppercase">Our <span className="text-zinc-400">Mission</span></h3>
-                                    <p className="text-zinc-400 text-lg leading-relaxed">
+                                    <h3 className="text-3xl font-bold text-white mb-6 uppercase drop-shadow-lg">Our <span className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">Mission</span></h3>
+                                    <p className="text-white drop-shadow-md text-lg leading-relaxed font-medium">
                                         To Develop Secure, Scalable, and Future-ready digital platforms that empower Individuals and Businesses to participate in the Global Digital Economy through transparent and innovative online business models.
                                     </p>
                                 </div>
@@ -150,9 +176,9 @@ export default function AboutPage() {
 
                     <div className="grid md:grid-cols-3 gap-8">
                         {[
-                            { title: "Innovation", desc: "Pioneering new standards in blockchain utility and decentralized access.", icon: Lightbulb, image: "/images/7.jpeg" },
-                            { title: "Security", desc: "Enterprise-grade infrastructure ensuring the safety of your digital assets.", icon: Shield, image: "/images/5.jpeg" },
-                            { title: "Growth", desc: "Sustainable economic models designed for long-term community prosperity.", icon: Award, image: "/images/6.jpeg" }
+                            { title: "Innovation", desc: "Pioneering new standards in blockchain utility and decentralized access.", icon: Lightbulb, image: "/images/IMG_20260304_193514.png" },
+                            { title: "Security", desc: "Enterprise-grade infrastructure ensuring the safety of your digital assets.", icon: Shield, image: "/images/IMG_20260304_193445.png" },
+                            { title: "Growth", desc: "Sustainable economic models designed for long-term community prosperity.", icon: Award, image: "/images/IMG_20260304_193424.png" }
                         ].map((item, i) => (
                             <motion.div
                                 key={i}
@@ -162,15 +188,16 @@ export default function AboutPage() {
                                 viewport={{ once: true }}
                                 className="card-angular p-10 text-center hover:bg-white/5 transition-colors group relative overflow-hidden"
                             >
-                                <div className="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity">
-                                    <Image src={item.image} alt={item.title} fill className="object-cover" />
+                                <div className="absolute inset-0 z-0">
+                                    <Image src={item.image} alt={item.title} fill className="object-cover opacity-50 group-hover:opacity-90 transition-opacity duration-500" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
                                 </div>
                                 <div className="relative z-10">
-                                    <div className="w-20 h-20 mx-auto rounded-full bg-black border border-zinc-800 flex items-center justify-center text-zinc-400 group-hover:text-[#FACC15] group-hover:border-[#FACC15]/50 transition-all mb-8 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
+                                    <div className="w-20 h-20 mx-auto rounded-full bg-black/50 border border-zinc-800 flex items-center justify-center text-zinc-300 group-hover:text-[#FACC15] group-hover:border-[#FACC15]/50 group-hover:bg-black/80 transition-all duration-500 mb-8 shadow-[0_0_30px_rgba(0,0,0,0.5)] backdrop-blur-sm">
                                         <item.icon size={32} />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-white mb-4 uppercase">{item.title}</h3>
-                                    <p className="text-zinc-400 leading-relaxed">{item.desc}</p>
+                                    <h3 className="text-2xl font-bold text-white mb-4 uppercase drop-shadow-md">{item.title}</h3>
+                                    <p className="text-zinc-300 leading-relaxed font-medium drop-shadow-md">{item.desc}</p>
                                 </div>
                             </motion.div>
                         ))}
@@ -234,21 +261,34 @@ export default function AboutPage() {
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="card-premium p-12 md:p-24 text-center relative overflow-hidden"
+                        className="card-premium p-12 md:p-24 text-center relative overflow-hidden group"
                     >
-                        <div className="absolute top-0 right-0 p-12 opacity-10 pointer-events-none">
+                        {/* Custom background image */}
+                        <div className="absolute inset-0 z-0">
+                            <Image
+                                src="/images/IMG_20260304_193358.png"
+                                alt="Our Core Commitment Background"
+                                fill
+                                className="object-cover opacity-60 group-hover:opacity-80 transition-opacity duration-700 group-hover:scale-105"
+                                style={{ filter: "brightness(1.1) contrast(1.1)" }}
+                            />
+                            {/* Dark overlay for readability */}
+                            <div className="absolute inset-0 bg-black/60 z-0 pointer-events-none" />
+                        </div>
+
+                        <div className="absolute top-0 right-0 p-12 opacity-10 pointer-events-none z-0">
                             <ShieldCheck size={300} />
                         </div>
 
                         <div className="relative z-10 max-w-4xl mx-auto">
-                            <div className="w-20 h-20 mx-auto bg-[#FACC15] rounded-full flex items-center justify-center text-black mb-12 shadow-[0_0_40px_rgba(250,204,21,0.4)]">
+                            <div className="w-20 h-20 mx-auto bg-[#FACC15]/20 rounded-full flex items-center justify-center text-[#FACC15] mb-12 border border-[#FACC15]/40 shadow-[0_0_40px_rgba(250,204,21,0.2)] backdrop-blur-md">
                                 <Award size={40} />
                             </div>
-                            <h2 className="text-4xl md:text-6xl font-black text-white uppercase mb-12">Our Core <span className="text-[#FACC15]">Commitment</span></h2>
-                            <p className="text-xl md:text-2xl text-zinc-300 font-medium leading-relaxed mb-12">
+                            <h2 className="text-4xl md:text-6xl font-black text-white uppercase mb-12 drop-shadow-lg">Our Core <span className="text-[#FACC15]">Commitment</span></h2>
+                            <p className="text-xl md:text-2xl text-white drop-shadow-md font-medium leading-relaxed mb-12">
                                 &quot;We are dedicated to democratizing access to the digital economy. Every line of code we write and every partnership we forge is designed to put power back into the hands of the community.&quot;
                             </p>
-                            <div className="inline-block px-8 py-4 bg-white/5 rounded-full backdrop-blur-md border border-white/10">
+                            <div className="inline-block px-8 py-4 bg-black/40 rounded-full backdrop-blur-md border border-[#D4AF37]/30 shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
                                 <span className="text-white font-black tracking-widest uppercase text-sm">The Spaark Team</span>
                             </div>
                         </div>
