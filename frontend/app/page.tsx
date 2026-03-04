@@ -186,31 +186,67 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="card-angular p-8 flex flex-col hover:-translate-y-2 transition-all duration-300 gold-glow relative group bg-zinc-900/40 backdrop-blur-sm">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/5 rounded-bl-[100px] -z-10 group-hover:bg-[#D4AF37]/10 transition-colors duration-500" />
-              <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30 mb-6">
-                <Globe size={24} />
+            <div className="card-angular p-8 flex flex-col hover:-translate-y-2 transition-all duration-300 gold-glow relative group overflow-hidden" style={{ background: "rgba(5,5,5,0.7)", backdropFilter: "blur(12px)" }}>
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/images/IMG_20260304_130821.png"
+                  alt="Dubai Headquarters"
+                  fill
+                  className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  style={{ filter: "brightness(1.15) contrast(1.1) saturate(1.15)" }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10 pointer-events-none" />
               </div>
-              <h3 className="text-xl font-bold text-white uppercase italic mb-4">Dubai Headquarters United Arab Emirates</h3>
-              <p className="text-zinc-400 font-medium leading-relaxed">Strategic positioning in the world's leading blockchain and digital asset hub, providing access to progressive regulatory frameworks and international markets.</p>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/10 rounded-bl-[100px] z-0 group-hover:bg-[#D4AF37]/20 transition-colors duration-500" />
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/20 shadow-[0_0_15px_rgba(212,175,55,0.3)] flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/40 mb-6 backdrop-blur-md">
+                  <Globe size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-white uppercase italic mb-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">Dubai Headquarters United Arab Emirates</h3>
+                <p className="text-zinc-200 font-medium leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mt-auto">Strategic positioning in the world's leading blockchain and digital asset hub, providing access to progressive regulatory frameworks and international markets.</p>
+              </div>
             </div>
 
-            <div className="card-angular p-8 flex flex-col hover:-translate-y-2 transition-all duration-300 gold-glow relative group bg-zinc-900/40 backdrop-blur-sm">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/5 rounded-bl-[100px] -z-10 group-hover:bg-[#D4AF37]/10 transition-colors duration-500" />
-              <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30 mb-6">
-                <ShieldCheck size={24} />
+            <div className="card-angular p-8 flex flex-col hover:-translate-y-2 transition-all duration-300 gold-glow relative group overflow-hidden" style={{ background: "rgba(5,5,5,0.7)", backdropFilter: "blur(12px)" }}>
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/images/IMG_20260304_131119.png"
+                  alt="Australia Registry"
+                  fill
+                  className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  style={{ filter: "brightness(1.15) contrast(1.1) saturate(1.15)" }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10 pointer-events-none" />
               </div>
-              <h3 className="text-xl font-bold text-white uppercase italic mb-4">Australia Registry Commonwealth of Australia.</h3>
-              <p className="text-zinc-400 font-medium leading-relaxed">Registered entity benefiting from Australia's robust financial regulatory environment and FinTech innovation ecosystem.</p>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/10 rounded-bl-[100px] z-0 group-hover:bg-[#D4AF37]/20 transition-colors duration-500" />
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/20 shadow-[0_0_15px_rgba(212,175,55,0.3)] flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/40 mb-6 backdrop-blur-md">
+                  <ShieldCheck size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-white uppercase italic mb-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">Australia Registry Commonwealth of Australia.</h3>
+                <p className="text-zinc-200 font-medium leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mt-auto">Registered entity benefiting from Australia's robust financial regulatory environment and FinTech innovation ecosystem.</p>
+              </div>
             </div>
 
-            <div className="card-angular p-8 flex flex-col hover:-translate-y-2 transition-all duration-300 gold-glow relative group bg-zinc-900/40 backdrop-blur-sm">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/5 rounded-bl-[100px] -z-10 group-hover:bg-[#D4AF37]/10 transition-colors duration-500" />
-              <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/10 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30 mb-6">
-                <Network size={24} />
+            <div className="card-angular p-8 flex flex-col hover:-translate-y-2 transition-all duration-300 gold-glow relative group overflow-hidden" style={{ background: "rgba(5,5,5,0.7)", backdropFilter: "blur(12px)" }}>
+              <div className="absolute inset-0 z-0">
+                <Image
+                  src="/images/IMG_20260304_131411.png"
+                  alt="United States"
+                  fill
+                  className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  style={{ filter: "brightness(1.15) contrast(1.1) saturate(1.15)" }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10 pointer-events-none" />
               </div>
-              <h3 className="text-xl font-bold text-white uppercase italic mb-4">United States of America.</h3>
-              <p className="text-zinc-400 font-medium leading-relaxed">Positioned within a premier global hub for technological advancement and venture capital, fostering high-level institutional partnerships and large-scale growth.</p>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/10 rounded-bl-[100px] z-0 group-hover:bg-[#D4AF37]/20 transition-colors duration-500" />
+              <div className="relative z-10 flex flex-col h-full">
+                <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/20 shadow-[0_0_15px_rgba(212,175,55,0.3)] flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/40 mb-6 backdrop-blur-md">
+                  <Network size={24} />
+                </div>
+                <h3 className="text-xl font-bold text-white uppercase italic mb-4 drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">United States of America.</h3>
+                <p className="text-zinc-200 font-medium leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mt-auto">Positioned within a premier global hub for technological advancement and venture capital, fostering high-level institutional partnerships and large-scale growth.</p>
+              </div>
             </div>
           </div>
         </div>
