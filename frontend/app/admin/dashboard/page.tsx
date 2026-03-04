@@ -2,9 +2,9 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { ethers } from "ethers";
-import { 
-    Shield, Wallet, AlertTriangle, Loader2, RefreshCw, 
-    PauseCircle, PlayCircle, Settings, Key, CheckCircle, XCircle 
+import {
+    Shield, Wallet, AlertTriangle, Loader2, RefreshCw,
+    PauseCircle, PlayCircle, Settings, Key, CheckCircle, XCircle
 } from "lucide-react";
 
 // --- ABI IMPORTS ---
@@ -35,9 +35,9 @@ export default function BlockchainAdminDashboard() {
     const [signer, setSigner] = useState<ethers.JsonRpcSigner | null>(null);
     const [account, setAccount] = useState<string>("");
     const [isPaused, setIsPaused] = useState(false);
-    
+
     // UI State
-    const [activeTab, setActiveTab] = useState<"ecosystem" | "coin" | "nft">("ecosystem");
+    const [activeTab, setActiveTab] = useState<"ecosystem" | "coin" | "nft" | "audio">("ecosystem");
     const [loading, setLoading] = useState<LoadingState>({});
 
     // Notification State
@@ -46,7 +46,7 @@ export default function BlockchainAdminDashboard() {
         type: "success" | "error";
         message: string;
     }>({ show: false, type: "success", message: "" });
-    
+
     // Ecosystem Data
     const [walletConfig, setWalletConfig] = useState({
         admins: ["", "", ""],
@@ -86,8 +86,8 @@ export default function BlockchainAdminDashboard() {
         let msg = error?.reason || error?.message || "Unknown error";
 
         if (msg.includes("could not coalesce error")) {
-             const match = msg.match(/"message":\s*"([^"]+)"/);
-             if (match && match[1]) return match[1];
+            const match = msg.match(/"message":\s*"([^"]+)"/);
+            if (match && match[1]) return match[1];
         }
 
         const code = error?.code || error?.error?.code || error?.info?.error?.code;
@@ -132,11 +132,11 @@ export default function BlockchainAdminDashboard() {
                 const _provider = new ethers.BrowserProvider(window.ethereum);
                 const _signer = await _provider.getSigner();
                 const _account = await _signer.getAddress();
-                
+
                 setProvider(_provider);
                 setSigner(_signer);
                 setAccount(_account);
-                
+
                 // Initial Data Load
                 fetchContractState(_provider);
             } catch (err) {
@@ -151,7 +151,7 @@ export default function BlockchainAdminDashboard() {
     const fetchContractState = useCallback(async (_provider: ethers.BrowserProvider) => {
         try {
             const ecoContract = new ethers.Contract(CONTRACTS.ECOSYSTEM.address, CONTRACTS.ECOSYSTEM.abi.abi, _provider);
-            
+
             const [
                 paused,
                 admin0, admin1, admin2,
@@ -193,7 +193,7 @@ export default function BlockchainAdminDashboard() {
             return;
         }
         setLoading(prev => ({ ...prev, [id]: true }));
-        
+
         try {
             const tx = await txFn();
             const receipt = await tx.wait();
@@ -224,11 +224,11 @@ export default function BlockchainAdminDashboard() {
             showToast("error", "Invalid Ethereum Address format");
             return;
         }
-        
+
         const contract = new ethers.Contract(CONTRACTS.ECOSYSTEM.address, CONTRACTS.ECOSYSTEM.abi.abi, signer);
         let txPromise;
 
-        switch(type) {
+        switch (type) {
             case "admin": txPromise = () => contract.updateAdminWallet(index, newAddress); break;
             case "team": txPromise = () => contract.updateTeamDevWallet(index, newAddress); break;
             case "maint": txPromise = () => contract.updateMaintWallet(index, newAddress); break;
@@ -245,10 +245,10 @@ export default function BlockchainAdminDashboard() {
             return;
         }
         const contract = new ethers.Contract(CONTRACTS.ECOSYSTEM.address, CONTRACTS.ECOSYSTEM.abi.abi, signer);
-        
+
         try {
-            const parsedAmount = isUSDT 
-                ? ethers.parseUnits(amount, 6) 
+            const parsedAmount = isUSDT
+                ? ethers.parseUnits(amount, 6)
                 : ethers.parseUnits(amount, 18);
 
             executeTx("recover", () => contract.emergencyRecover(token, parsedAmount));
@@ -265,7 +265,7 @@ export default function BlockchainAdminDashboard() {
         }
         const conf = CONTRACTS[contractType];
         const contract = new ethers.Contract(conf.address, conf.abi.abi, signer);
-        
+
         executeTx(`minter-${contractType}`, () => contract.setMinter(targetAddress, status));
     };
 
@@ -283,16 +283,16 @@ export default function BlockchainAdminDashboard() {
                     </p>
                 </div>
                 <div className="md:col-span-7">
-                    <input 
-                        type="text" 
-                        placeholder="0x New Address..." 
+                    <input
+                        type="text"
+                        placeholder="0x New Address..."
                         className="w-full bg-black/20 border border-white/10 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-brand-purple"
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                     />
                 </div>
                 <div className="md:col-span-2 text-right">
-                    <button 
+                    <button
                         disabled={isLoading || !input}
                         onClick={() => updateWallet(type, index, input)}
                         className="w-full bg-white/10 hover:bg-brand-purple hover:text-white disabled:opacity-50 disabled:hover:bg-white/10 text-white text-xs font-bold py-2 px-4 rounded-lg transition-colors flex justify-center items-center gap-2"
@@ -309,15 +309,13 @@ export default function BlockchainAdminDashboard() {
         return (
             <div className="h-[60vh] flex flex-col items-center justify-center space-y-4">
                 {/* NOTIFICATION POPUP (Disconnected) */}
-                <div className={`fixed left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-md border transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-                    notification.show 
-                        ? "top-6 translate-y-0 opacity-100" 
+                <div className={`fixed left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-md border transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${notification.show
+                        ? "top-6 translate-y-0 opacity-100"
                         : "-top-10 -translate-y-full opacity-0 pointer-events-none"
-                } ${
-                    notification.type === "success" 
-                        ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400" 
+                    } ${notification.type === "success"
+                        ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
                         : "bg-red-500/10 border-red-500/20 text-red-400"
-                }`}>
+                    }`}>
                     {notification.type === "success" ? <CheckCircle size={22} /> : <XCircle size={22} />}
                     <div>
                         <h4 className="font-bold text-sm uppercase tracking-wider">
@@ -343,17 +341,15 @@ export default function BlockchainAdminDashboard() {
 
     return (
         <div className="space-y-8 max-w-6xl mx-auto pb-20 relative">
-            
+
             {/* NOTIFICATION POPUP (Connected) */}
-            <div className={`fixed left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-md border transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-                notification.show 
-                    ? "top-6 translate-y-0 opacity-100" 
+            <div className={`fixed left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-md border transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${notification.show
+                    ? "top-6 translate-y-0 opacity-100"
                     : "-top-10 -translate-y-full opacity-0 pointer-events-none"
-            } ${
-                notification.type === "success" 
-                    ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400" 
+                } ${notification.type === "success"
+                    ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
                     : "bg-red-500/10 border-red-500/20 text-red-400"
-            }`}>
+                }`}>
                 {notification.type === "success" ? <CheckCircle size={22} /> : <XCircle size={22} />}
                 <div>
                     <h4 className="font-bold text-sm uppercase tracking-wider">
@@ -379,36 +375,36 @@ export default function BlockchainAdminDashboard() {
                         Connected: <span className="text-emerald-500">{account}</span>
                     </p>
                 </div>
-                
+
                 {/* Global Status Indicators */}
                 <div className="flex gap-4">
-                     <div className={`px-4 py-2 rounded-xl border ${isPaused ? "bg-red-500/10 border-red-500/20 text-red-500" : "bg-emerald-500/10 border-emerald-500/20 text-emerald-500"} flex items-center gap-2`}>
+                    <div className={`px-4 py-2 rounded-xl border ${isPaused ? "bg-red-500/10 border-red-500/20 text-red-500" : "bg-emerald-500/10 border-emerald-500/20 text-emerald-500"} flex items-center gap-2`}>
                         {isPaused ? <PauseCircle size={18} /> : <CheckCircle size={18} />}
                         <span className="font-bold text-sm">{isPaused ? "SYSTEM PAUSED" : "SYSTEM ACTIVE"}</span>
-                     </div>
+                    </div>
                 </div>
             </header>
 
             {/* Navigation */}
-            <div className="flex gap-2 p-1 bg-white/5 rounded-xl w-fit">
-                {(["ecosystem", "coin", "nft"] as const).map((tab) => (
+            <div className="flex gap-2 p-1 bg-white/5 rounded-xl w-full overflow-x-auto md:w-fit">
+                {(["ecosystem", "coin", "nft", "audio"] as const).map((tab) => (
                     <button
                         key={tab}
-                        onClick={() => setActiveTab(tab)}
-                        className={`px-6 py-2 rounded-lg text-sm font-bold capitalize transition-all ${activeTab === tab ? "bg-brand-purple text-white shadow-lg" : "text-zinc-400 hover:text-white"}`}
+                        onClick={() => setActiveTab(tab as any)}
+                        className={`px-6 py-2 rounded-lg text-sm font-bold capitalize whitespace-nowrap transition-all ${activeTab === tab ? "bg-brand-purple text-white shadow-lg" : "text-zinc-400 hover:text-white"}`}
                     >
-                        {tab === "coin" ? "Spaark Coin" : tab === "nft" ? "VIP NFT" : "Ecosystem Core"}
+                        {tab === "coin" ? "Spaark Coin" : tab === "nft" ? "VIP NFT" : tab === "audio" ? "Website Audio" : "Ecosystem Core"}
                     </button>
                 ))}
             </div>
 
             {/* CONTENT AREA */}
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
-                
+
                 {/* --- ECOSYSTEM TAB --- */}
                 {activeTab === "ecosystem" && (
                     <div className="space-y-8">
-                        
+
                         {/* Emergency Controls */}
                         <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="glass-card p-6 border-red-500/20 bg-red-500/5 relative overflow-hidden group">
@@ -417,7 +413,7 @@ export default function BlockchainAdminDashboard() {
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-4">Emergency Brake</h3>
                                 <p className="text-zinc-400 text-sm mb-6">Pause all contract deposits and registrations. Withdrawals remain active.</p>
-                                <button 
+                                <button
                                     onClick={togglePause}
                                     disabled={loading["pause"]}
                                     className={`w-full py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition-all ${isPaused ? "bg-emerald-500 hover:bg-emerald-400 text-black" : "bg-red-500 hover:bg-red-400 text-white"}`}
@@ -457,19 +453,19 @@ export default function BlockchainAdminDashboard() {
                                 <Wallet size={18} className="text-brand-purple" />
                                 Wallet Configuration
                             </h3>
-                            
+
                             <div className="grid gap-2">
                                 {/* Admins */}
                                 {[0, 1, 2].map(i => (
-                                    <WalletRow key={`a-${i}`} label={`Admin Wallet ${i+1}`} current={walletConfig.admins[i]} type="admin" index={i} />
+                                    <WalletRow key={`a-${i}`} label={`Admin Wallet ${i + 1}`} current={walletConfig.admins[i]} type="admin" index={i} />
                                 ))}
                                 {/* Team Devs */}
                                 {[0, 1, 2].map(i => (
-                                    <WalletRow key={`t-${i}`} label={`Team Dev Wallet ${i+1}`} current={walletConfig.teamDevs[i]} type="team" index={i} />
+                                    <WalletRow key={`t-${i}`} label={`Team Dev Wallet ${i + 1}`} current={walletConfig.teamDevs[i]} type="team" index={i} />
                                 ))}
                                 {/* Maintenance */}
                                 {[0, 1, 2].map(i => (
-                                    <WalletRow key={`m-${i}`} label={`System Maint Wallet ${i+1}`} current={walletConfig.maints[i]} type="maint" index={i} />
+                                    <WalletRow key={`m-${i}`} label={`System Maint Wallet ${i + 1}`} current={walletConfig.maints[i]} type="maint" index={i} />
                                 ))}
                                 {/* Singles */}
                                 <WalletRow label="Future Project Wallet" current={walletConfig.future} type="future" index={0} />
@@ -489,7 +485,7 @@ export default function BlockchainAdminDashboard() {
                             <h2 className="text-2xl font-bold text-white">Spaark Coin Permissions</h2>
                             <p className="text-zinc-400">Manage addresses authorized to mint XSPK tokens.</p>
                         </div>
-                        
+
                         <form onSubmit={(e) => {
                             e.preventDefault();
                             const form = e.target as any;
@@ -523,7 +519,7 @@ export default function BlockchainAdminDashboard() {
                             <h2 className="text-2xl font-bold text-white">VIP NFT Permissions</h2>
                             <p className="text-zinc-400">Manage addresses authorized to mint VIP Cards.</p>
                         </div>
-                        
+
                         <form onSubmit={(e) => {
                             e.preventDefault();
                             const form = e.target as any;
@@ -542,6 +538,65 @@ export default function BlockchainAdminDashboard() {
                             </div>
                             <button disabled={loading["minter-VIP"]} className="w-full bg-purple-600 hover:bg-purple-500 text-white font-bold py-3 rounded-lg transition-colors">
                                 {loading["minter-VIP"] ? "Processing..." : "Update Minter Role"}
+                            </button>
+                        </form>
+                    </div>
+                )}
+
+                {/* --- AUDIO TAB --- */}
+                {activeTab === "audio" && (
+                    <div className="glass-card p-8 border-white/5 max-w-2xl mx-auto text-center space-y-6">
+                        <div className="w-16 h-16 bg-blue-500/20 rounded-full flex items-center justify-center mx-auto text-blue-400">
+                            <PlayCircle size={32} />
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-bold text-white">Website Audio Override</h2>
+                            <p className="text-zinc-400">Upload a background audio track to play continuously across the site at 0.15 volume.</p>
+                        </div>
+
+                        <form onSubmit={async (e) => {
+                            e.preventDefault();
+                            const form = e.target as HTMLFormElement;
+                            const fileInput = form.audioFile as HTMLInputElement;
+                            if (!fileInput.files || fileInput.files.length === 0) {
+                                showToast("error", "Please select an audio file first.");
+                                return;
+                            }
+
+                            setLoading(prev => ({ ...prev, audioUpload: true }));
+                            try {
+                                const formData = new FormData();
+                                formData.append('audio', fileInput.files[0]);
+
+                                const token = localStorage.getItem('token');
+                                const baseUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+                                const res = await fetch(`${baseUrl}/api/admin/audio`, {
+                                    method: 'POST',
+                                    headers: {
+                                        'Authorization': `Bearer ${token}`
+                                    },
+                                    body: formData
+                                });
+                                const data = await res.json();
+                                if (data.success) {
+                                    showToast("success", "Audio uploaded successfully! Please reload the page to hear it.");
+                                    form.reset();
+                                } else {
+                                    throw new Error(data.error || "Failed to upload audio");
+                                }
+                            } catch (err: any) {
+                                showToast("error", err.message);
+                            } finally {
+                                setLoading(prev => ({ ...prev, audioUpload: false }));
+                            }
+                        }} className="space-y-4 text-left bg-black/20 p-6 rounded-xl">
+                            <div>
+                                <label className="text-xs font-bold text-zinc-500 uppercase">Select Audio File (MP3/WAV)</label>
+                                <input type="file" name="audioFile" accept="audio/*" required className="w-full mt-1 bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-white file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-brand-purple file:text-white hover:file:bg-brand-purple/80 cursor-pointer" />
+                            </div>
+                            <button disabled={loading["audioUpload"]} className="w-full bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 rounded-lg transition-colors flex justify-center items-center">
+                                {loading["audioUpload"] ? <Loader2 className="animate-spin mr-2" size={18} /> : null}
+                                {loading["audioUpload"] ? "Uploading..." : "Upload Audio Track"}
                             </button>
                         </form>
                     </div>

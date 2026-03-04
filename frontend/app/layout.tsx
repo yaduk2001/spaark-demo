@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { AuthProvider } from "@/context/AuthContext";
 import CelebrationOverlay from "@/components/CelebrationOverlay";
+import GlobalAudioPlayer from "@/components/GlobalAudioPlayer";
 
 const inter = Inter({ subsets: ["latin"] });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", style: ["normal", "italic"] });
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${inter.className} ${playfair.variable}`}>
         <AuthProvider>
+          <GlobalAudioPlayer />
           <CelebrationOverlay />
           <Navbar />
           {children}

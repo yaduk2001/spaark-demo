@@ -8,7 +8,7 @@ import emailjs from "@emailjs/browser";
 export default function ContactPage() {
     const form = useRef<HTMLFormElement>(null);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    
+
     const [notification, setNotification] = useState<{
         show: boolean;
         type: "success" | "error";
@@ -54,13 +54,13 @@ export default function ContactPage() {
                     form.current,
                     PUBLIC_KEY
                 );
-                
+
                 setNotification({
                     show: true,
                     type: "success",
                     message: "Thank you! Your message has been sent to Support."
                 });
-                
+
                 setFormData({ name: "", email: "", subject: "", message: "" });
             }
         } catch (error) {
@@ -76,16 +76,14 @@ export default function ContactPage() {
     };
 
     return (
-        <div className="bg-rich-pattern min-h-screen text-white font-sans relative">            
-            <div className={`fixed left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-md border transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
-                notification.show 
-                    ? "top-6 translate-y-0 opacity-100" 
-                    : "-top-10 -translate-y-full opacity-0 pointer-events-none"
-            } ${
-                notification.type === "success" 
-                    ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400" 
+        <div className="bg-rich-pattern min-h-screen text-white font-sans relative">
+            <div className={`fixed left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-md border transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${notification.show
+                ? "top-6 translate-y-0 opacity-100"
+                : "-top-10 -translate-y-full opacity-0 pointer-events-none"
+                } ${notification.type === "success"
+                    ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400"
                     : "bg-red-500/10 border-red-500/20 text-red-400"
-            }`}>
+                }`}>
                 {notification.type === "success" ? <CheckCircle size={22} /> : <XCircle size={22} />}
                 <div>
                     <h4 className="font-bold text-sm uppercase tracking-wider">
@@ -96,8 +94,8 @@ export default function ContactPage() {
                     </p>
                 </div>
                 {/* Close button for popup */}
-                <button 
-                    onClick={() => setNotification(prev => ({ ...prev, show: false }))} 
+                <button
+                    onClick={() => setNotification(prev => ({ ...prev, show: false }))}
                     className="ml-4 hover:opacity-70"
                 >
                     <XCircle size={16} />
@@ -126,135 +124,183 @@ export default function ContactPage() {
                     <div className="grid lg:grid-cols-[1fr_1.5fr] gap-12">
                         {/* Contact Info */}
                         <div className="space-y-8">
-                            <div className="card-angular p-8">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30">
-                                        <Mail size={24} />
+                            <div
+                                className="card-angular p-8 relative overflow-hidden group"
+                                style={{
+                                    backgroundImage: "url('/images/IMG_20260304_173019.png')",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                }}
+                            >
+                                {/* Dark overlay for readability */}
+                                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors z-0"></div>
+
+                                <div className="relative z-10">
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30 backdrop-blur-sm">
+                                            <Mail size={24} />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl font-black uppercase text-white drop-shadow-md">Email Support</h3>
+                                            <p className="text-sm text-zinc-300 mt-1 drop-shadow-sm">Get a response within 24 hours</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 className="text-xl font-black uppercase text-white">Email Support</h3>
-                                        <p className="text-sm text-zinc-500 mt-1">Get a response within 24 hours</p>
-                                    </div>
+                                    <a href="mailto:sparkglobal94@gmail.com" className="text-[#D4AF37] hover:text-[#FACC15] transition-colors font-medium drop-shadow-md">
+                                        sparkglobal94@gmail.com
+                                    </a>
                                 </div>
-                                <a href="mailto:sparkglobal94@gmail.com" className="text-[#D4AF37] hover:text-[#FACC15] transition-colors font-medium">
-                                    sparkglobal94@gmail.com
-                                </a>
                             </div>
 
-                            <div className="card-angular p-8">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30">
-                                        <MapPin size={24} />
+                            <div
+                                className="card-angular p-8 relative overflow-hidden group"
+                                style={{
+                                    backgroundImage: "url('/images/IMG_20260304_175136.png')",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                }}
+                            >
+                                {/* Dark overlay for readability */}
+                                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors z-0"></div>
+
+                                <div className="relative z-10">
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30 backdrop-blur-sm">
+                                            <MapPin size={24} />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl font-black uppercase text-white drop-shadow-md">Headquarters</h3>
+                                            <p className="text-sm text-zinc-300 mt-1 drop-shadow-sm">Global offices</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 className="text-xl font-black uppercase text-white">Headquarters</h3>
-                                        <p className="text-sm text-zinc-500 mt-1">Global offices</p>
-                                    </div>
+                                    <p className="text-zinc-200 font-medium leading-relaxed mb-2 drop-shadow-sm">Dubai, UAE</p>
+                                    <p className="text-zinc-200 font-medium leading-relaxed drop-shadow-sm">Australia</p>
                                 </div>
-                                <p className="text-zinc-400 leading-relaxed mb-2">Dubai, UAE</p>
-                                <p className="text-zinc-400 leading-relaxed">Australia</p>
                             </div>
 
-                            <div className="card-angular p-8">
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/15 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30">
-                                        <Clock size={24} />
+                            <div
+                                className="card-angular p-8 relative overflow-hidden group"
+                                style={{
+                                    backgroundImage: "url('/images/IMG_20260304_175703.png')",
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
+                                }}
+                            >
+                                {/* Dark overlay for readability */}
+                                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/50 transition-colors z-0"></div>
+
+                                <div className="relative z-10">
+                                    <div className="flex items-center gap-4 mb-6">
+                                        <div className="w-12 h-12 rounded-xl bg-[#D4AF37]/20 flex items-center justify-center text-[#D4AF37] border border-[#D4AF37]/30 backdrop-blur-sm">
+                                            <Clock size={24} />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-xl font-black uppercase text-white drop-shadow-md">Support Hours</h3>
+                                            <p className="text-sm text-zinc-300 mt-1 drop-shadow-sm">We&apos;re always available</p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 className="text-xl font-black uppercase text-white">Support Hours</h3>
-                                        <p className="text-sm text-zinc-500 mt-1">We&apos;re always available</p>
-                                    </div>
+                                    <p className="text-zinc-200 font-medium leading-relaxed mb-2 drop-shadow-sm">24/7 Email Support</p>
+                                    <p className="text-zinc-200 font-medium leading-relaxed drop-shadow-sm">Live Chat: Mon-Fri, 9AM-6PM (Dubai Time)</p>
                                 </div>
-                                <p className="text-zinc-400 leading-relaxed mb-2">24/7 Email Support</p>
-                                <p className="text-zinc-400 leading-relaxed">Live Chat: Mon-Fri, 9AM-6PM (Dubai Time)</p>
                             </div>
                         </div>
 
                         {/* Contact Form */}
-                        <div className="card-premium p-8 lg:p-12">
-                            <h2 className="text-3xl font-black uppercase tracking-tight text-white mb-8">Send Us a Message</h2>
-                            <form ref={form} onSubmit={handleSubmit} className="space-y-6">
-                                <div>
-                                    <label htmlFor="name" className="block text-sm font-bold uppercase tracking-wider text-zinc-400 mb-2">
-                                        Your Name
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-600 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all"
-                                        placeholder="Enter your full name"
-                                    />
+                        <div
+                            className="card-premium p-8 lg:p-12 relative overflow-hidden group"
+                            style={{
+                                backgroundImage: "url('/images/IMG_20260304_180616.png')",
+                                backgroundSize: "cover",
+                                backgroundPosition: "center",
+                            }}
+                        >
+                            {/* Dark overlay for readability */}
+                            <div className="absolute inset-0 bg-black/70 group-hover:bg-black/60 transition-colors z-0"></div>
+
+                            <div className="relative z-10">
+                                <h2 className="text-3xl font-black uppercase tracking-tight text-white mb-8 drop-shadow-md">Send Us a Message</h2>
+                                <form ref={form} onSubmit={handleSubmit} className="space-y-6">
+                                    <div>
+                                        <label htmlFor="name" className="block text-sm font-bold uppercase tracking-wider text-zinc-300 mb-2 drop-shadow-sm">
+                                            Your Name
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="name"
+                                            name="name"
+                                            value={formData.name}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-600 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all"
+                                            placeholder="Enter your full name"
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-bold uppercase tracking-wider text-zinc-300 mb-2 drop-shadow-sm">
+                                            Email Address
+                                        </label>
+                                        <input
+                                            type="email"
+                                            id="email"
+                                            name="email"
+                                            value={formData.email}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-600 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all"
+                                            placeholder="your.email@example.com"
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="subject" className="block text-sm font-bold uppercase tracking-wider text-zinc-300 mb-2 drop-shadow-sm">
+                                            Subject
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="subject"
+                                            name="subject"
+                                            value={formData.subject}
+                                            onChange={handleChange}
+                                            required
+                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-600 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all"
+                                            placeholder="How can we help you?"
+                                        />
+                                    </div>
+
+                                    <div>
+                                        <label htmlFor="message" className="block text-sm font-bold uppercase tracking-wider text-zinc-300 mb-2 drop-shadow-sm">
+                                            Message
+                                        </label>
+                                        <textarea
+                                            id="message"
+                                            name="message"
+                                            value={formData.message}
+                                            onChange={handleChange}
+                                            required
+                                            rows={6}
+                                            className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-600 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all resize-none"
+                                            placeholder="Please provide details about your inquiry..."
+                                        />
+                                    </div>
+
+                                    <button
+                                        type="submit"
+                                        disabled={isSubmitting}
+                                        className="w-full btn-gold flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                                    >
+                                        {isSubmitting ? (
+                                            <>Sending... <Loader2 className="animate-spin" size={18} /></>
+                                        ) : (
+                                            <>Send Message <Send size={18} /></>
+                                        )}
+                                    </button>
+                                </form>
+
+                                <div className="mt-8 pt-8 border-t border-white/20">
+                                    <p className="text-sm text-zinc-300 text-center drop-shadow-sm">
+                                        By submitting this form, you agree to our <a href="/privacy" className="text-[#D4AF37] hover:text-[#FACC15] transition-colors font-bold drop-shadow-md">Privacy Policy</a>
+                                    </p>
                                 </div>
-
-                                <div>
-                                    <label htmlFor="email" className="block text-sm font-bold uppercase tracking-wider text-zinc-400 mb-2">
-                                        Email Address
-                                    </label>
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-600 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all"
-                                        placeholder="your.email@example.com"
-                                    />
-                                </div>
-
-                                <div>
-                                    <label htmlFor="subject" className="block text-sm font-bold uppercase tracking-wider text-zinc-400 mb-2">
-                                        Subject
-                                    </label>
-                                    <input
-                                        type="text"
-                                        id="subject"
-                                        name="subject"
-                                        value={formData.subject}
-                                        onChange={handleChange}
-                                        required
-                                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-600 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all"
-                                        placeholder="How can we help you?"
-                                    />
-                                </div>
-
-                                <div>
-                                    <label htmlFor="message" className="block text-sm font-bold uppercase tracking-wider text-zinc-400 mb-2">
-                                        Message
-                                    </label>
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                        required
-                                        rows={6}
-                                        className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-600 focus:outline-none focus:border-[#D4AF37] focus:bg-white/10 transition-all resize-none"
-                                        placeholder="Please provide details about your inquiry..."
-                                    />
-                                </div>
-
-                                <button
-                                    type="submit"
-                                    disabled={isSubmitting}
-                                    className="w-full btn-gold flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
-                                >
-                                    {isSubmitting ? (
-                                        <>Sending... <Loader2 className="animate-spin" size={18} /></>
-                                    ) : (
-                                        <>Send Message <Send size={18} /></>
-                                    )}
-                                </button>
-                            </form>
-
-                            <div className="mt-8 pt-8 border-t border-white/5">
-                                <p className="text-sm text-zinc-500 text-center">
-                                    By submitting this form, you agree to our <a href="/privacy" className="text-[#D4AF37] hover:text-[#FACC15] transition-colors">Privacy Policy</a>
-                                </p>
                             </div>
                         </div>
                     </div>
