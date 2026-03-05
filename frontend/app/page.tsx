@@ -615,12 +615,7 @@ export default function Home() {
                 <div className="flex flex-wrap items-end gap-6 mb-8 p-5 rounded-xl bg-[#D4AF37]/5 border border-[#D4AF37]/20">
                   <div>
                     <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-1">Business Start-Up</p>
-                    <p className="text-4xl font-black text-[#D4AF37] drop-shadow-lg">$50</p>
-                  </div>
-                  <div className="h-10 w-px bg-[#D4AF37]/30 hidden sm:block" />
-                  <div>
-                    <p className="text-xs font-bold text-zinc-500 uppercase tracking-widest mb-1">Lifetime Subscription</p>
-                    <p className="text-4xl font-black text-white">$3.50</p>
+                    <p className="text-4xl font-black text-[#D4AF37] drop-shadow-lg">$58.50</p>
                   </div>
                 </div>
 
